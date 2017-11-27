@@ -1,0 +1,13 @@
+{
+  "Device": {
+    "id": "1/6074",
+    "icon": "network_cloud2.png",
+    "title": "aaa",
+    "state": 1,
+    "switch": 1,
+    "type": 0,
+    "y": -154,
+    "x": 489,
+    "ip": "aaa"
+  }
+}

@@ -1,0 +1,361 @@
+{
+    "WebTopo": {
+        "NetView": {
+            "Groups": {
+                "Group": [
+                    {
+                        "id": "1/643856e2-49ef-4ba9-99ba-994a236c6a6c",
+                        "height": 300,
+                        "visible": 1,
+                        "Node": [
+                            {
+                                "id": "1/303"
+                            },
+                            {
+                                "id": "1/231"
+                            },
+                            {
+                                "id": "1/232"
+                            },
+                            {
+                                "id": "1/233"
+                            }
+                        ],
+                        "name": "testtest",
+                        "width": 300,
+                        "pid": "1/anqing/0",
+                        "type": "group",
+                        "y": 200,
+                        "zindex": 0,
+                        "x": 100
+                    },
+                    {
+                        "id": "1/2170d6fd-f2f6-4164-b6ae-5a81d09eb075",
+                        "height": 300,
+                        "visible": 1,
+                        "Node": [
+                            {
+                                "id": "1/303"
+                            },
+                            {
+                                "id": "1/231"
+                            },
+                            {
+                                "id": "1/232"
+                            },
+                            {
+                                "id": "1/233"
+                            }
+                        ],
+                        "name": "testtest",
+                        "width": 300,
+                        "pid": "1/anqing/0",
+                        "type": "group",
+                        "y": 200,
+                        "zindex": 0,
+                        "x": 100
+                    },
+                    {
+                        "id": "1/71f776f5-82ad-4a82-b734-543d3aa6a928",
+                        "height": 300,
+                        "visible": 1,
+                        "Node": [
+                            {
+                                "id": "1/303"
+                            },
+                            {
+                                "id": "1/231"
+                            },
+                            {
+                                "id": "1/232"
+                            },
+                            {
+                                "id": "1/233"
+                            }
+                        ],
+                        "name": "testtest",
+                        "width": 300,
+                        "pid": "1/anqing/0",
+                        "type": "group",
+                        "y": 200,
+                        "zindex": 0,
+                        "x": 100
+                    },
+                    {
+                        "id": "1/c9b1dd81-7f30-4cff-80cd-0914f572808b",
+                        "height": 300,
+                        "visible": 1,
+                        "Node": [
+                            {
+                                "id": "1/303"
+                            },
+                            {
+                                "id": "1/231"
+                            },
+                            {
+                                "id": "1/232"
+                            },
+                            {
+                                "id": "1/233"
+                            }
+                        ],
+                        "name": "testtest",
+                        "width": 300,
+                        "pid": "1/anqing/0",
+                        "type": "group",
+                        "y": 200,
+                        "zindex": 0,
+                        "x": 100
+                    }
+                ]
+            },
+            "id": "1/anqing/0",
+            "Links": {
+                "Link": [
+                    {
+                        "to": "1/dev/2012",
+                        "id": "1/2371/dev/20121/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/237",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/235",
+                        "id": "1/2351/dev/20121/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/dev/2012",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/dev/2018",
+                        "id": "1/dev/20171/dev/20181/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/dev/2017",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/232",
+                        "id": "1/2321/3031/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/303",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/233",
+                        "id": "1/2321/2331/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/232",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/dev/2012",
+                        "id": "1/dev/20121/dev/20181/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/dev/2018",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/231",
+                        "id": "1/2311/3031/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/303",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/237",
+                        "id": "1/2371/dev/20201/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/dev/2020",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/235",
+                        "id": "1/2351/dev/20201/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/dev/2020",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/235",
+                        "id": "1/2351/dev/20171/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/dev/2017",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/233",
+                        "id": "1/2311/2331/0",
+                        "visible": 1,
+                        "pid": "1/anqing/0",
+                        "from": "1/231",
+                        "type": "link"
+                    }
+                ]
+            },
+            "Objects": "",
+            "XY": {
+                "centerY": 0,
+                "centerX": 0,
+                "iMinY": 72,
+                "maxY": 379,
+                "iMinX": 100,
+                "maxX": 851,
+                "minX": 100,
+                "minY": 72
+            },
+            "Segments": "",
+            "p": [
+                {
+                    "content": "综合监控拓扑@_@安徽省网@_@安庆网络拓扑",
+                    "cls": "string",
+                    "k": "path"
+                },
+                {
+                    "content": "1/0@_@1/anhui/0@_@1/anqing/0",
+                    "cls": "string",
+                    "k": "pathPid"
+                }
+            ],
+            "name": "安庆网络拓扑",
+            "pid": "1/anqing/0",
+            "Nodes": {
+                "Node": [
+                    {
+                        "id": "1/dev/2020",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AH-AQ-S9306-1",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 379,
+                        "zindex": 0,
+                        "x": 851
+                    },
+                    {
+                        "id": "1/dev/2012",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AH_AQ_BOSS_NE40-2",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 218,
+                        "zindex": 0,
+                        "x": 661
+                    },
+                    {
+                        "id": "1/dev/2018",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AH-AQ-BOSS-S9306-3",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 75,
+                        "zindex": 0,
+                        "x": 658
+                    },
+                    {
+                        "id": "1/dev/2017",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AH-AQ-S9306-2",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 72,
+                        "zindex": 0,
+                        "x": 844
+                    },
+                    {
+                        "id": "1/303",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "OA NE20",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 102,
+                        "zindex": 0,
+                        "x": 145
+                    },
+                    {
+                        "id": "1/237",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AH-AQ-BOSS-S9303",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 378,
+                        "zindex": 0,
+                        "x": 657
+                    },
+                    {
+                        "id": "1/231",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "OA NE40",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 104,
+                        "zindex": 0,
+                        "x": 283
+                    },
+                    {
+                        "id": "1/232",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AH-AQ-OA-9303-1",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 311,
+                        "zindex": 0,
+                        "x": 148
+                    },
+                    {
+                        "id": "1/233",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "0A S9303-2",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 313,
+                        "zindex": 0,
+                        "x": 282
+                    },
+                    {
+                        "id": "1/234",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AQ-BOSS NE20",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 126,
+                        "zindex": 0,
+                        "x": 606
+                    },
+                    {
+                        "id": "1/235",
+                        "icon": "bj_sr.png",
+                        "visible": 1,
+                        "name": "AH-AQ-BOSS NE40-1",
+                        "pid": "1/anqing/0",
+                        "type": "node",
+                        "y": 218,
+                        "zindex": 0,
+                        "x": 838
+                    }
+                ]
+            },
+            "type": "segment"
+        },
+        "toponame": "default-topo",
+        "version": "Topo V1.0.1_20111009"
+    }
+}

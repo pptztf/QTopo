@@ -1,0 +1,166 @@
+[
+  {
+    "resource_type_id": "-1",
+    "descr": "==请选择=="
+  },
+  {
+    "resource_type_id": "1",
+    "descr": "城域骨干网核心层-出口路由器"
+  },
+  {
+    "resource_type_id": "2",
+    "descr": "城域骨干网汇聚层-汇聚路由器"
+  },
+  {
+    "resource_type_id": "3",
+    "descr": "城域骨干网业务接入控制层-BRAS"
+  },
+  {
+    "resource_type_id": "4",
+    "descr": "城域骨干网业务接入控制层-SR"
+  },
+  {
+    "resource_type_id": "5",
+    "descr": "城域骨干网业务接入控制层-MSE"
+  },
+  {
+    "resource_type_id": "6",
+    "descr": "宽带接入网汇聚层-汇聚交换机"
+  },
+  {
+    "resource_type_id": "7",
+    "descr": "宽带接入网接入层-楼道交换机"
+  },
+  {
+    "resource_type_id": "8",
+    "descr": "宽带接入网接入层-园区交换机"
+  },
+  {
+    "resource_type_id": "9",
+    "descr": "宽带接入网接入层-专线接入交换机"
+  },
+  {
+    "resource_type_id": "10",
+    "descr": "宽带接入网接入层-IP DSLAM"
+  },
+  {
+    "resource_type_id": "11",
+    "descr": "宽带接入网接入层-ATM DSLAM"
+  },
+  {
+    "resource_type_id": "12",
+    "descr": "宽带接入网接入层-综合接入交换机"
+  },
+  {
+    "resource_type_id": "13",
+    "descr": "主机"
+  },
+  {
+    "resource_type_id": "14",
+    "descr": "宽带接入网接入层-用户CE"
+  },
+  {
+    "resource_type_id": "19",
+    "descr": "IPRAN-汇聚层设备"
+  },
+  {
+    "resource_type_id": "20",
+    "descr": "IPRAN-接入层设备"
+  },
+  {
+    "resource_type_id": "23",
+    "descr": "宽带接入网接入层-AP接入交换机"
+  },
+  {
+    "resource_type_id": "30",
+    "descr": "宽带接入网汇聚层-OLT设备"
+  },
+  {
+    "resource_type_id": "31",
+    "descr": "WLAN控制器-AC设备"
+  },
+  {
+    "resource_type_id": "32",
+    "descr": "宽带接入网接入层-瘦AP设备"
+  },
+  {
+    "resource_type_id": "33",
+    "descr": "宽带接入网接入层-ONU"
+  },
+  {
+    "resource_type_id": "40",
+    "descr": "C网-CE"
+  },
+  {
+    "resource_type_id": "41",
+    "descr": "宽带接入网接入层ONU-FTTH"
+  },
+  {
+    "resource_type_id": "42",
+    "descr": "宽带接入网接入层ONU-FTTB"
+  },
+  {
+    "resource_type_id": "43",
+    "descr": "宽带接入网接入层ONU-C类(DSL)"
+  },
+  {
+    "resource_type_id": "50",
+    "descr": "宽带接入网接入层-AP接入汇聚交换机"
+  },
+  {
+    "resource_type_id": "60",
+    "descr": "C网VPDN"
+  },
+  {
+    "resource_type_id": "61",
+    "descr": "无缘分光器"
+  },
+  {
+    "resource_type_id": "62",
+    "descr": "IDC网络-核心层"
+  },
+  {
+    "resource_type_id": "63",
+    "descr": "IDC网络-汇聚层"
+  },
+  {
+    "resource_type_id": "64",
+    "descr": "IDC网络-接入层"
+  },
+  {
+    "resource_type_id": "65",
+    "descr": "IDC网络-主机"
+  },
+  {
+    "resource_type_id": "66",
+    "descr": "IDC网络-防火墙"
+  },
+  {
+    "resource_type_id": "67",
+    "descr": "C网-PDSN"
+  },
+  {
+    "resource_type_id": "68",
+    "descr": "C网-HACCG"
+  },
+  {
+    "resource_type_id": "69",
+    "descr": "IPRAN-城域ER设备"
+  },
+  {
+    "resource_type_id": "70",
+    "descr": "IPRAN-汇聚ER设备"
+  },
+  {
+    "resource_type_id": "71",
+    "descr": "IPRAN-BSC CE"
+  },
+  {
+    "resource_type_id": "72",
+    "descr": "IPRAN-EPC CE"
+  },
+  {
+    "resource_type_id": "80",
+    "descr": "C网-防火墙"
+  }
+]

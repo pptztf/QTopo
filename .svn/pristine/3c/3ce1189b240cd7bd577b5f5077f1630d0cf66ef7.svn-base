@@ -1,0 +1,939 @@
+<?xml version="1.0" encoding="GBK" ?>
+<menus>
+	<cmenus>
+		<!-- ============================== -->
+		<!--              双击事件                            -->
+		<!-- ============================== -->
+		<menu id="" name="双击云图(家客地市云图)" multiple="false" icon="" aweight="11" eweight="111" dblclick="true" type="url" action="$[href]" filter="notNull($[href])" />
+		<menu id="" name="双击ONU(家客)" multiple="false" icon="" aweight="1"
+			eweight="112" type="event" dblclick="true"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=$[jiaKModelId], params=mo_id:$[mo_id]#city_id:$[city_id])"
+			filter="notNull($[jiaKModelId])" />
+
+		<menu id="" name="双击云图(非集客)" multiple="false" icon="" aweight="11"
+			eweight="100" dblclick="true" type="event"
+			action="EventType(TopoEvent_GO_DOWN) EventProperty(id=$[id], type=$[CANVAS:topoType], topoName=$[obj.topo.toponame])"
+			filter="isNull($[cust_id])" />
+
+		<menu id="" name="双击分组" multiple="false" icon="" aweight="11"
+			eweight="10000" dblclick="true" type="event"
+			action="EventType(TopoEvent_GROUP_EXPANDED_TOGGLE)" filter="" />
+		<menu id="" name="双击链路" multiple="false" icon="" aweight="11"
+			eweight="1000" dblclick="true" type="event"
+			action="EventType(TopoEvent_LINK_EXPANDED_TOGGLE)" filter="notNull($[link.count]) and $[link.count]>0" />
+		<menu id="" name="双击URL" multiple="false" icon="" aweight="11"
+			eweight="10000000" dblclick="true" type="event"
+			action="EventType(TopoEvent_OPEN_URL)  EventProperty(url=$[obj.url])"
+			filter="notNull($[obj.url])" />
+		<menu id="" name="双击TOPO内部链接" multiple="false" icon="" aweight="11"
+			eweight="100000000" dblclick="true" type="event"
+			action="EventType(TopoEvent_OPEN_TOPO)  EventProperty(id=$[obj.topo.id], type=$[obj.topo.type], topoName=$[obj.topo.toponame], openType=$[obj.topo.opentype], urlPrefix=/cms/webtopo/topo/topo.action)"
+			filter="notNull($[obj.topo.id])" />
+		<menu id="" name="双击缩略图" multiple="false" icon="" aweight="11"
+			eweight="1000000000" dblclick="true" type="event"
+			action="EventType(TopoEvent_OPEN_TOPO)  EventProperty(id=$[obj.topo.id], type=$[obj.topo.type], topoName=$[obj.topo.toponame], openType=$[obj.topo.opentype], urlPrefix=/cms/webtopo/topo/topo.action)"
+			filter="notNull($[obj.topo.id])" />
+		<menu id="" name="双击形状(概况)" multiple="false" icon="" aweight="11"
+			eweight="100000" dblclick="true" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=cityLocation&amp;moId=$[city_id]"
+			filter="notNull($[city_id])"/>
+		<menu id="" name="双击形状(管线)" multiple="false" icon="" aweight="11"
+			eweight="100000" dblclick="true" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=circuit&amp;moId={'model':'2','circName':'$[circuit_code]','device':'1'}"
+			filter="notNull($[circuit_code])"/>
+		<menu id="" name="双击视图(非集客)" multiple="false" icon="" aweight="11"
+			eweight="100000000000" dblclick="true" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=$[view.modelId], params=pid:$[CANVAS:topoId]#$[view_params], topoName=$[obj.topo.toponame])"
+			filter="notNull($[view.modelId]) and isNull($[cust_id])"/>
+
+		<menu id="" name="双击静态视图" multiple="false" icon="" aweight="11"
+			eweight="100100001010" depth="1" ztype="static_view" dblclick="true"
+			type="event"
+			action="EventType(TopoEvent_GO_DOWN) EventProperty(id=$[static_view_id], topoName=$[obj.topo.toponame], type=view)"
+			filter="" />
+		<!-- ============================== -->
+		<!--             资源菜单                              -->
+		<!-- ============================== -->
+		<!-- 20160107新增 -->
+		<menu id="" name="查看VOLTE业务设备分布（苏北总图）" multiple="false" icon="" aweight="1"
+			eweight="10000" type="url"
+			action="/cms/largescreen/scene/topo/Desktop/subei.svg"
+			filter="$[name]==苏北IP承载网 or $[id]==1/85e6ef22-c141-41f7-8955-e1db50de9c21 or $[id]==1/d2d8fa8a-aba1-4fc3-8e6c-817f240990db or $[id]==1/fb6f2c1a-8312-4460-804b-008803f02c13 or $[id]==1/d6043233-f3ad-4fc6-b764-ea405af5f584" />
+		<menu id="" name="查看VOLTE业务设备分布（苏南总图）" multiple="false" icon="" aweight="1"
+			eweight="10000" type="url"
+			action="/cms/largescreen/scene/topo/Desktop/sunan.svg"
+			filter="$[name]==苏南IP承载网 or $[id]==1/08beed35-3b23-4fa0-9bfe-48550bb18abd or $[id]==1/d455a7d9-23a7-42f8-97f9-e064c55074b5 or $[id]==1/c56e1511-23bf-4b90-8d7d-7b5a893acb79 or $[id]==1/3ae674ab-419a-4b25-a5a7-ed57ff15b507" />
+
+		<menu id="" name="查看工程信息" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/warn/menu/neidGetAction!showLocateneByMoid.action?moid=$[mo_id]"
+			filter="notNull($[mo_id])" />
+
+		<menu id="" name="查看资源信息" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/resource/moinfo/ResourceMoInfo!queryMoInfo.action?qryMoId=$[mo_id]"
+			filter="notNull($[mo_id])" />
+		<!-- 连线增加查看资源信息 -->
+		<menu id="" name="查看资源信息" multiple="false" icon="" aweight="1"
+			eweight="1000000001000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_ATTRIBUTE)"
+			filter="notNull($[_FE_mo_type_id]) and notNull($[_TE_mo_type_id])" />
+
+		<!-- 设备查看告警 -->
+		<menu id="" name="查看告警信息" multiple="false" icon="" aweight="1"
+			eweight="10" type="event" action="EventType(TopoEvent_VIEW_ALARM) EventProperty(type=mo, id=)"
+			filter="notNull($[mo_id])" />
+		<!-- 集客查看告警  -->
+		<!--<menu id="" name="查看告警信息" multiple="false" icon="" aweight="1"
+			eweight="100100000110" type="event" action="EventType(TopoEvent_VIEW_ALARM) EventProperty(type=cust, id=$[cust_id])"
+			filter="notNull($[cust_id])" />-->
+		<!-- 集客专线告警  -->
+		<!--<menu id="" name="查看告警信息" multiple="false" icon="" aweight="1"
+			eweight="100100000110" type="event" action="EventType(TopoEvent_VIEW_ALARM) EventProperty(type=product, id=$[prod_no])"
+			filter="notNull($[prod_no])" />-->
+		<!-- 查看传输电路告警 -->
+		<menu id="" name="查看告警信息" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event" action="EventType(TopoEvent_VIEW_ALARM) EventProperty(type=circuit, id=$[circuit_code])"
+			filter="notNull($[circuit_code]) and $[_FE_channel_route]!=true and $[is_tran_route]!=true" />
+
+		<menu id="" name="查看性能指标" multiple="false" icon="" aweight="11"
+			eweight="10" type="url"
+			action="/cms/performance/report/permsg!initForm.action?moId=$[mo_id]&amp;moTypeId=$[mo_type_id]"
+			filter="notNull($[mo_id])" />
+
+		<menu id="" name="查看性能数据" multiple="false" icon="" aweight="1"
+			eweight="1000" type="url"
+			action="/perfmonitornew/flow/flowAction!showPerfList.action?mo_id1=$[mo_id1]$port_num1=$[mo_port_name1_#i]$mo_id2=$[mo_id2]$port_num2=$[mo_port_name2_#i]$type=$[CANVAS:pathPid]"
+			filter="$[expanded]==true and $[source]==datanet and $[link.count]>1" />
+
+		<menu id="" name="查看性能数据" multiple="false" icon="" aweight="1"
+			eweight="1000" type="url"
+			action="/perfmonitornew/flow/flowAction!showPerfList.action?mo_id1=$[mo_id1]$port_num1=$[mo_port_name1_1]$mo_id2=$[mo_id2]$port_num2=$[mo_port_name2_1]$type=$[CANVAS:pathPid]"
+			filter="$[source]==datanet and $[link.count]==1" />
+
+		<menu id="" name="查看端口性能" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/perfmonitornew/flow/flowAction!portList.action?mo_id=$[mo_id]&amp;moTypeId=$[mo_type_id]$type=$[CANVAS:pathPid]"
+			filter="notNull($[mo_id])" />
+
+		<!--<menu id="" name="查看性能趋势图" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/performance/report/permsg!initImgForm.action?moId=$[mo_id]&amp;moTypeId=$[mo_type_id]"
+			filter="notNull($[mo_id])" />-->
+		<menu id="" name="查看性能趋势图" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_VIEW_CHART) EventProperty(moId=$[mo_id], moTypeId=$[mo_type_id])"
+			filter="notNull($[mo_id])" />
+	    <!--<menu id="" name="拓扑查询" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/webtopo/topo/topolocate.action?specId=3&amp;moId=$[mo_id]"
+			filter="notNull($[mo_id])" />-->
+		<menu id="" name="综资拓扑" multiple="false" icon="" aweight="11" 
+			eweight="10000" type="url" action="$[hrefMenu]" filter="notNull($[hrefMenu])" />
+		<!--查看端到端环网-BRAS-->
+		<menu id="" name="查看端到端环网" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="http://10.40.93.85:58080/tnms/pages/topo/homecustnms/endtoendoltbras.html?brasid=$[ex_res_id]"
+			filter="notNull($[ex_res_id]) and notNull($[mo_type_id]) and $[mo_type_id]!=85" />
+	    <!--查看端到端环网-OLT-->
+		<menu id="" name="查看端到端环网" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="http://10.40.93.85:58080/tnms/pages/topo/homecustnms/endtoendoltbras.html?oltid=$[ex_res_id]"
+			filter="notNull($[ex_res_id]) and notNull($[mo_type_id]) and $[mo_type_id]!=48" />
+		<menu id="" name="电路端到端环网" multiple="false" icon="" aweight="1"
+			eweight="1000" type="url" action="http://10.40.93.85:58080/tnms/pages/topo/homecustnms/circuitringme.html?circuitid=$[cuid]&amp;type=ALL"
+			filter="notNull($[cuid])" />
+		<menu id="" name="电路路由拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="url" action="http://10.40.93.85:58080/tnms/pages/topo/circuitroute/circuitroute.html?circuitid=$[cuid]"
+			filter="notNull($[cuid])" />
+
+
+
+		<!-- ============================== -->
+		<!--               交换网                              -->
+		<!-- ============================== -->
+
+		<!-- ************* 拓扑视图  ************* -->
+
+		<!-- BSC(15)查看下挂BTS(16)-->
+		<menu id="" name="查看下挂BTS" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=id:$[id]#mo_id:$[mo_id]#downMoTypeId:16#name:$[name]下挂BTS)"
+			filter="$[mo_type_id]==15" />
+
+		<!-- RNC(27)查看下挂NodeB(28) -->
+		<menu id="" name="查看下挂NodeB" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=id:$[id]#mo_id:$[mo_id]#downMoTypeId:28#name:$[name]下挂NodeB)"
+			filter="$[mo_type_id]==27" />
+
+		<!-- BTS(16)查看下挂 CELL(101) -->
+		<menu id="" name="查看下挂CELL" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=mo_id:$[mo_id]#downMoTypeId:101#name:$[name]下挂CELL)"
+			filter="$[mo_type_id]==16" />
+
+		<!-- NodeB(28)查看下挂 UTRANCELL(102) -->
+		<menu id="" name="查看下挂UTRANCELL" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=mo_id:$[mo_id]#downMoTypeId:102#name:$[name]下挂UTRANCELL)"
+			filter="$[mo_type_id]==28" />
+
+		<!-- ENodeB(320)查看下挂 EUtranCell(321) -->
+		<menu id="" name="查看下挂EUTRANCELL" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=mo_id:$[mo_id]#downMoTypeId:321#name:$[name]下挂EUTRANCELL)"
+			filter="$[mo_type_id]==320" />
+
+		<!--  CELL(101) / UTRANCELL(102)查看下挂  分布系统(214) -->
+		<menu id="" name="查看下挂分布系统" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=mo_id:$[mo_id]#downMoTypeId:214#name:$[name]下挂分布系统)"
+			filter="$[mo_type_id]==101 or $[mo_type_id]==102" />
+		<!-- 分布系统(214) 查看下挂  直放站(209) -->
+		<menu id="" name="查看下挂直放站" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=mo_id:$[mo_id]#downMoTypeId:209#name:$[name]下挂直放站)"
+			filter="$[mo_type_id]==214" />
+		<!--  CELL(101) / UTRANCELL(102)查看下挂  直放站(209) -->
+		<menu id="" name="查看下挂直放站" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=mo_id:$[mo_id]#downMoTypeId:209#name:$[name]下挂直放站)"
+			filter="$[mo_type_id]==101 or $[mo_type_id]==102" />
+
+		<!-- floor:3#floor1:mo_type_id=7#floor2:type=segment OR ztype=ztype.topo#floor3:mo_type_id exist [2,5]  -->
+		<!--  BTS(16)的局部拓扑(MGW(7),MSS(5),GMSC(2)) 不要 别人的 BSC (15), RNC (27)-->
+		<menu id="" name="查看局部拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=wirelessTopoViewModel, params=toposql:rootpid=1/switch AND mo_type_id not exist [15,27]#mo_id:$[mo_id]#mo_type_id:$[mo_type_id]#floor:2#floor1:mo_type_id=7#floor2:type=segment OR ztype=ztype.topo OR mo_type_id exist [2,5]#layout:#name:BTS[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==16" />
+		<!--  NodeB(28)的局部拓扑(MGW(7),MSS(5),GMSC(2)) 不要 别人的 BSC (15), RNC (27) -->
+		<menu id="" name="查看局部拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=wirelessTopoViewModel, params=toposql:rootpid=1/switch AND mo_type_id not exist [15,27]#mo_id:$[mo_id]#mo_type_id:$[mo_type_id]#floor:2#floor1:mo_type_id=7#floor2:type=segment OR ztype=ztype.topo OR mo_type_id exist [2,5]#layout:#name:NodeB[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==28" />
+
+		<!--  CELL(101)的局部拓扑(MGW(7),MSS(5),GMSC(2)) 不要 别人的 BSC (15), RNC (27)-->
+		<menu id="" name="查看局部拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=wirelessTopoViewModel, params=toposql:rootpid=1/switch AND mo_type_id not exist [15,27]#mo_id:$[mo_id]#mo_type_id:$[mo_type_id]#floor:2#floor1:mo_type_id=7#floor2:type=segment OR ztype=ztype.topo OR mo_type_id exist [2,5]#layout:#name:CELL[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==101" />
+		<!--  UTRANCELL(102)的局部拓扑(MGW(7),MSS(5),GMSC(2))  不要 别人的 BSC (15), RNC (27) -->
+		<menu id="" name="查看局部拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=wirelessTopoViewModel, params=toposql:rootpid=1/switch AND mo_type_id not exist [15,27]#mo_id:$[mo_id]#mo_type_id:$[mo_type_id]#floor:2#floor1:mo_type_id=7#floor2:type=segment OR ztype=ztype.topo OR mo_type_id exist [2,5]#layout:#name:UTRANCELL[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==102" />
+		<menu id="" name="查看局部拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=wirelessTopoViewModel, params=toposql:rootpid=1/lte#mo_id:$[mo_id]#mo_type_id:$[mo_type_id]#floor:4#floor1:ztype=ztype.topo#floor2:ztype=ztype.topo#floor3:ztype=ztype.topo#floor4:ztype=ztype.topo OR mo_type_id exist [317,319]#layout:#name:eNodeB($[name])局部拓扑)"
+			filter="$[mo_type_id]==320" />
+
+		<menu id="" name="查看局部拓扑" multiple="false" icon="" aweight="1"
+
+			eweight="10" type="event"
+
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=wirelessTopoViewModel, params=toposql:rootpid=1/lte#mo_id:$[mo_id]#mo_type_id:$[mo_type_id]#floor:9#floor1:ztype=ztype.topo#floor2:ztype=ztype.topo#floor3:ztype=ztype.topo#floor4:ztype=ztype.topo OR mo_type_id exist [317,319]#floor5:ztype=ztype.topo OR mo_type_id=318#floor6:ztype=ztype.topo#floor7:ztype=ztype.topo#floor8:ztype=ztype.topo#floor9:ztype=ztype.topo#layout:#name:EUTRANCELL($[name])局部拓扑)"
+
+			filter="$[mo_type_id]==321" />
+		<!-- ************* 跨专业钻取到承载网 ************* -->
+
+		<!-- GMSC(2)/MSS(5)/MGW(7) 右键菜单,点击 "关联到CE"   CE(94)  -->
+		<menu id="" name="关联到CE" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryOverIPCZViewModel, params=rootpid:1/data/ipcz#a_ids:$[id]#name:关联到CE#z_mo_type_ids:94)"
+			filter="$[mo_type_id]==2 or $[mo_type_id]==5 or $[mo_type_id]==7" />
+
+
+		<!-- ************* 跨专业钻取到传输网 *************  -->
+		<!-- MGW(7) - BSC(15) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==7 and $[_TE_mo_type_id]==15) or ($[_FE_mo_type_id]==15 and $[_TE_mo_type_id]==7)" />
+		<!-- BSC(15) - BTS(16) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==15 and $[_TE_mo_type_id]==16) or ($[_FE_mo_type_id]==16 and $[_TE_mo_type_id]==15)" />
+		<!-- MGW(7) - RNC(27) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==7 and $[_TE_mo_type_id]==27) or ($[_FE_mo_type_id]==27 and $[_TE_mo_type_id]==7)" />
+		<!-- RNC(27) - NodeB(28) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==27 and $[_TE_mo_type_id]==28) or ($[_FE_mo_type_id]==28 and $[_TE_mo_type_id]==27)" />
+		<!-- MGW(7) - CE(94) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==7 and $[_TE_mo_type_id]==94) or ($[_FE_mo_type_id]==94 and $[_TE_mo_type_id]==7)" />
+		<!-- RNC(27) - CE(94) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==27 and $[_TE_mo_type_id]==94) or ($[_FE_mo_type_id]==94 and $[_TE_mo_type_id]==27)" />
+		<!-- BSC(15) - CE(94) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==15 and $[_TE_mo_type_id]==94) or ($[_FE_mo_type_id]==94 and $[_TE_mo_type_id]==15)" />
+		<!-- SGW(319) - eNodeB(320) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==319 and $[_TE_mo_type_id]==320) or ($[_FE_mo_type_id]==320 and $[_TE_mo_type_id]==319)" />
+		<!-- MME(317) - eNodeB(320) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==317 and $[_TE_mo_type_id]==320) or ($[_FE_mo_type_id]==320 and $[_TE_mo_type_id]==317)" />
+
+		<!-- ************* GIS ************* -->
+
+		<!-- 查看故障影响范围(MSS(5)/MGW(7)/BSC(15)/RNC(27))  查看下挂基站GIS分布 -->
+		<menu id="" name="查看故障影响范围" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=TOBTS&amp;moId=$[mo_id]"
+			filter="$[mo_type_id]==5 or $[mo_type_id]==15 or $[mo_type_id]==27 or $[mo_type_id]==7" />
+		<!-- GIS定位  ( BTS(16)/NODEB(28) ) -->
+		<menu id="" name="查看GIS定位" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=BTS&amp;moId=$[mo_id]"
+			filter="$[mo_type_id]==16 or $[mo_type_id]==28 or $[mo_type_id]==321 or $[mo_type_id]==320" />
+		<!-- BSC(15)->BTS(16)  RNC(27)->NodeB(28) 之间的链路  -->
+		<menu id="" name="光缆路由" dblclick="both" depth="2" multiple="false" icon="" aweight="1"
+			eweight="1000" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=circuit&amp;moId={'model':'3','moId':'$[_FE_mo_id],$[_TE_mo_id]','moType':'1','device':'1'}"
+			filter="($[_FE_mo_type_id]==15 and $[_TE_mo_type_id]==16) or ($[_FE_mo_type_id]==16 and $[_TE_mo_type_id]==15) or ($[_FE_mo_type_id]==27 and $[_TE_mo_type_id]==28) or ($[_FE_mo_type_id]==28 and $[_TE_mo_type_id]==27)" />
+
+
+		<!-- ============================== -->
+		<!--              IMS               -->
+		<!-- ============================== -->
+
+		<!-- ************* 跨专业钻取到承载网 ************* -->
+
+		<!-- PCSF(135)/SBC(126) 右键菜单,点击 "查看CE"   CE(94)  -->
+		<menu id="" name="关联到CE" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryOverIPCZViewModel, params=rootpid:1/data/ipcz#a_ids:$[id]#name:关联到CE#z_mo_type_ids:94)"
+			filter="$[mo_type_id]==135 or $[mo_type_id]==126" />
+
+		<!-- PCSF(135)->SBC(126)  查看网元类型有  AR(90),CE(94) -->
+		<!--
+		<menu id="" name="关联到IP承载网" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryOverIPCZViewModel, params=rootpid:1/data/ipcz#a_ids:$[_FE_id],$[_TE_id]#name:IMS钻取到IP承载网拓扑#z_mo_type_ids:90,94#saveEnable:true)"
+			filter="($[_FE_mo_type_id]==135 and $[_TE_mo_type_id]==126) or ($[_FE_mo_type_id]==126 and $[_TE_mo_type_id]==135)" />
+		 -->
+
+		<!-- 缺数据,直接挂到IP承载网段下面 -->
+		<menu id="" name="关联到IP承载网" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_GO_DOWN) EventProperty(id=1/data/ipcz, type=$[CANVAS:topoType], topoName=$[obj.topo.toponame])"
+			filter="$[_FE_mo_type_id]==135 or $[_TE_mo_type_id]==135" />
+
+		<menu id="" name="关联到IP承载网" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_DOWN) EventProperty(id=1/data/ipcz/$[city_id], type=$[CANVAS:topoType], topoName=$[obj.topo.toponame])"
+			filter="$[mo_type_id]==94" />
+
+		<menu id="" name="端到端拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event" dblclick="true"
+			action="EventType(TopoEvent_GO_DOWN) EventProperty(id=$[id]/topo, type=$[CANVAS:topoType], topoName=$[obj.topo.toponame])"
+			filter="$[topo_detail]==1" />
+
+		<!-- ============================== -->
+		<!--           两网元间拓扑               -->
+		<!-- ============================== -->
+		<!-- MSS(5)->MGW(7)  查看网元类型有  CE(94),AR(90),CR(52)/BR(91) -->
+		<menu id="" name="查看两网元间拓扑(起点)" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_SAVE_TEMP_PROPERTY) EventProperty(betweenTopoStartMoTypeId=$[mo_type_id], betweenTopoStartId=$[id])"
+			filter="(isNull($[CANVAS:betweenTopoStartMoTypeId])) and ($[mo_type_id]==5 or $[mo_type_id]==7)" />
+		<menu id="" name="关联到IP承载网(终点)" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryOverIPCZViewModel, params=rootpid:1/data/ipcz#a_ids:$[CANVAS:betweenTopoStartId],$[id]#name:软交换钻取到IP承载网拓扑#z_mo_type_ids:94,90,52,91#saveEnable:true) EventType1(TopoEvent_CLEAR_PROPERTY) EventProperty1(betweenTopoStartMoTypeId=, betweenTopoStartId=)"
+			filter="($[CANVAS:betweenTopoStartMoTypeId]==7 and $[mo_type_id]==5) or ($[CANVAS:betweenTopoStartMoTypeId]==5 and $[mo_type_id]==7)" />
+
+		<!-- GMSC(2)->MGW(7)  查看网元类型有CE(94),AR(90),CR(52)/BR(91) -->
+		<menu id="" name="查看两网元间拓扑(起点)" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_SAVE_TEMP_PROPERTY) EventProperty(betweenTopoStartMoTypeId=$[mo_type_id], betweenTopoStartId=$[id])"
+			filter="(isNull($[CANVAS:betweenTopoStartMoTypeId])) and ($[mo_type_id]==2 or $[mo_type_id]==7)" />
+		<menu id="" name="关联到IP承载网(终点)" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryOverIPCZViewModel, params=rootpid:1/data/ipcz#a_ids:$[CANVAS:betweenTopoStartId],$[id]#name:软交换钻取到IP承载网拓扑#z_mo_type_ids:94,90,52,91#saveEnable:true) EventType1(TopoEvent_CLEAR_PROPERTY) EventProperty1(betweenTopoStartMoTypeId=, betweenTopoStartId=)"
+			filter="($[CANVAS:betweenTopoStartMoTypeId]==7 and $[mo_type_id]==2) or ($[CANVAS:betweenTopoStartMoTypeId]==2 and $[mo_type_id]==7)" />
+
+		<!-- PCSF(135)->SBC(126)  查看两网元间拓扑  AR(90),CE(94) -->
+		<menu id="" name="查看两网元间拓扑(起点)" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_SAVE_TEMP_PROPERTY) EventProperty(betweenTopoStartMoTypeId=$[mo_type_id], betweenTopoStartId=$[id])"
+			filter="(isNull($[CANVAS:betweenTopoStartMoTypeId])) and ($[mo_type_id]==135 or $[mo_type_id]==126)" />
+		<menu id="" name="关联到IP承载网(终点)" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryOverIPCZViewModel, params=rootpid:1/data/ipcz#a_ids:$[CANVAS:betweenTopoStartId],$[id]#name:IMS钻取到IP承载网拓扑#z_mo_type_ids:90,94#saveEnable:true) EventType1(TopoEvent_CLEAR_PROPERTY) EventProperty1(betweenTopoStartMoTypeId=, betweenTopoStartId=)"
+			filter="($[CANVAS:betweenTopoStartMoTypeId]==135 and $[mo_type_id]==126) or ($[CANVAS:betweenTopoStartMoTypeId]==126 and $[mo_type_id]==135)" />
+
+		<!-- 清除起点 -->
+		<menu id="" name="查看两网元间拓扑(清除起点)" multiple="false" icon="" aweight="1"
+			eweight="111111111111" type="event"
+			action="EventType(TopoEvent_CLEAR_PROPERTY) EventProperty(betweenTopoStartMoTypeId=, betweenTopoStartId=, betweenTopoType=)"
+			filter="notNull($[CANVAS:betweenTopoStartMoTypeId])" />
+
+
+		<!-- ============================== -->
+		<!--             信令网                                    -->
+		<!-- HSTP(104) / LSTP(11) / HLR(4) -->
+		<!-- ============================== -->
+		<!-- HSTP(104)-HSTP(104) / LSTP(11)-LSTP(11) / HLR(4)-HLR(4) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==104 and $[_TE_mo_type_id]==104) or ($[_FE_mo_type_id]==11 and $[_TE_mo_type_id]==11) or ($[_FE_mo_type_id]==4 and $[_TE_mo_type_id]==4)" />
+		<!-- HSTP(104) - LSTP(11) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==104 and $[_TE_mo_type_id]==11) or ($[_FE_mo_type_id]==11 and $[_TE_mo_type_id]==104)" />
+		<!-- LSTP(11) - HLR(4) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==4 and $[_TE_mo_type_id]==11) or ($[_FE_mo_type_id]==11 and $[_TE_mo_type_id]==4)" />
+
+
+		<!-- ============================== -->
+		<!--            IP承载网                                -->
+		<!-- ============================== -->
+
+		<!-- ************* 跨专业钻取到传输网 ************* -->
+		<!-- CR(52),BR(91),AR(90),CE(94)之间连线,关联到传输网络拓扑 -->
+		<!-- CR(52) - BR(91) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==52 and $[_TE_mo_type_id]==91) or ($[_FE_mo_type_id]==91 and $[_TE_mo_type_id]==52)" />
+		<!-- CR(52) - AR(90) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==52 and $[_TE_mo_type_id]==90) or ($[_FE_mo_type_id]==90 and $[_TE_mo_type_id]==52)" />
+		<!-- BR(91) - AR(90) -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==91 and $[_TE_mo_type_id]==90) or ($[_FE_mo_type_id]==90 and $[_TE_mo_type_id]==91)" />
+		<!-- AR(90) - CE(94)  -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==90 and $[_TE_mo_type_id]==94) or ($[_FE_mo_type_id]==94 and $[_TE_mo_type_id]==90)" />
+		<!-- BR(91) - CE(94)  -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==91 and $[_TE_mo_type_id]==94) or ($[_FE_mo_type_id]==94 and $[_TE_mo_type_id]==91)" />
+		<!-- CE(94) - CE(94) / AR(90) - AR(90) / BR(91) - BR(91) / CR(52) - CR(52) -->
+		<!--<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==94 and $[_TE_mo_type_id]==94) or ($[_FE_mo_type_id]==90 and $[_TE_mo_type_id]==90) or ($[_FE_mo_type_id]==91 and $[_TE_mo_type_id]==91) or ($[_FE_mo_type_id]==52 and $[_TE_mo_type_id]==52)" />
+		-->
+		<!-- CE(94) - AR(90) - BR(91) - CR(52) -->
+		<menu id="" name="CE关联到软交换" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=relateCEAndSwitchViewModel, params=rootpid:1/data/ipcz#id:$[id]#floor:3#floor1:mo_type_id exist [94,90]#floor2:mo_type_id exist [52,90]#floor3:mo_type_id exist [91]#saveEnable:true)"
+			filter="$[mo_type_id]==94" />
+		<!-- CE(94) - AR(90) - BR(91) - CR(52) -->
+		<menu id="" name="AR关联到软交换" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=relateARAndCESwitchViewModel, params=rootpid:1/data/ipcz#id:$[id]#floor:2#floor1:mo_type_id exist [94,52]#floor2:mo_type_id exist [91]#saveEnable:true)"
+			filter="$[mo_type_id]==90" />
+
+		<!-- ============================== -->
+		<!--            CMNET               -->
+		<!-- ============================== -->
+		<!-- MA(98) BRAS(48) "查看故障影响范围" -->
+		<menu id="" name="查看故障影响范围" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=noaccess&amp;moId=$[mo_id]"
+			filter="$[mo_type_id]==98 or $[mo_type_id]==48" />
+
+		<!-- ============================== -->
+		<!--              WLAN              -->
+		<!-- ============================== -->
+		<!-- GIS定位  一级热点(80)/二级热点(201)) -->
+		<menu id="" name="查看GIS定位" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=HOT&amp;moId=$[mo_id]"
+			filter="$[mo_type_id]==80 or $[mo_type_id]==201" />
+		<!-- GIS定位  AP(84) 查看热点  -->
+		<menu id="" name="查看GIS定位" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=UPHOT&amp;moId=$[mo_id]"
+			filter="$[mo_type_id]==84" />
+		<!-- 查看影响范围( 胖AC(54)/瘦AC(202)) 热点的分布 -->
+		<menu id="" name="查看影响范围" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=TOHOT&amp;moId=$[mo_id]"
+			filter="$[mo_type_id]==54 or $[mo_type_id]==202" />
+
+		<!-- 胖AC(54)/瘦AC(202) 查看下挂 AP(84) -->
+		<menu id="" name="查看局部拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=id:$[id]#downMoTypeId:84#name:$[name]下挂AP)"
+			filter="$[mo_type_id]==54 or $[mo_type_id]==202" />
+
+		<!-- 胖AC(54)/瘦AC(202) 查看下挂 二级热点(201) -->
+		<menu id="" name="查看AC与热点关联拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=id:$[id]#downMoTypeId:201#name:$[name]下挂热点)"
+			filter="$[mo_type_id]==54 or $[mo_type_id]==202" />
+
+		<!-- 一级热点(80) 查看下挂二级热点(201) -->
+		<menu id="" name="查看局部拓扑" dblclick="both" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=id:$[id]#downMoTypeId:201#name:$[name]下挂二级热点)"
+			filter="$[mo_type_id]==80" />
+
+		<!-- 一级热点(80)  查看下挂 AP(84) -->
+		<!--
+		<menu id="" name="查看局部拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=id:$[id]#downMoTypeId:84#name:$[name]下挂AP)"
+			filter="$[mo_type_id]==80" />
+		 -->
+		<!-- 二级热点(201) 查看下挂 AP(84) -->
+		<menu id="" name="查看局部拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryDownByUpElementTopoViewModel, params=mo_id:$[mo_id]#downMoTypeId:84#name:$[name]下挂AP)"
+			filter="$[mo_type_id]==201 and notNull($[mo_id])" />
+
+		<!-- AP(84) 查看所属二级热点(201)  -->
+		<menu id="" name="查看所属热点拓扑" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryUpByDownElementTopoViewModel, params=mo_id:$[mo_id]#upMoTypeId:201#name:$[name]所属热点拓扑)"
+			filter="$[mo_type_id]==84 and notNull($[mo_id])" />
+
+		<!-- 胖AC(54)/瘦AC(202)与下挂AP(84)之间链路上面,查看传输OLT(85),ONU(86)的拓扑 -->
+		<menu id="" name="AC-AP的传输拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=wlanACAndAPViewModel, params=ac_mo_id:$[_FE_mo_id]#ap_mo_id:$[_TE_mo_id]#pid:$[CANVAS:topoId]#name:AC[$[_FE_name]]-AP[$[_TE_name]]传输拓扑)"
+			filter="($[_FE_mo_type_id]==54 and $[_TE_mo_type_id]==84) or ($[_FE_mo_type_id]==202 and $[_TE_mo_type_id]==84)" />
+
+		<!-- ONU(86) -->
+		<menu id="" name="查看故障影响范围" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=UPHOT&amp;moId=$[ap_mo_ids]"
+			filter="$[mo_type_id]==86 and notNull($[ap_mo_ids])" />
+
+		<!-- ============================== -->
+		<!--                GPRS            -->
+		<!-- ============================== -->
+		<!-- SGSN(10)->BSC(15) 跨专业钻取到传输电路拓扑 -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==10 and $[_TE_mo_type_id]==15) or ($[_FE_mo_type_id]==15 and $[_TE_mo_type_id]==10)" />
+		<!-- SGSN(10)->RNC(27) 跨专业钻取到传输电路拓扑  -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==10 and $[_TE_mo_type_id]==27) or ($[_FE_mo_type_id]==27 and $[_TE_mo_type_id]==10)" />
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==10027 and $[_TE_mo_type_id]==90) or ($[_FE_mo_type_id]==90 and $[_TE_mo_type_id]==10027)" />
+		<!-- HLR(4)->GGSN(9) 跨专业钻取到传输电路拓扑  -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_CIRCUIT) EventProperty(moId1=$[_FE_mo_id], moId2=$[_TE_mo_id], moName1=$[_FE_name], moName2=$[_TE_name])"
+			filter="($[_FE_mo_type_id]==4 and $[_TE_mo_type_id]==9) or ($[_FE_mo_type_id]==9 and $[_TE_mo_type_id]==4)" />
+
+
+		<!-- 江苏版本,陕西版本 -->
+		<!-- GGSN(9)局部拓扑[查看SGSN(10),BSC(15),RNC(27),DNS(79),CG(57),FW(37),GPRS_FW(78)] -->
+		<!--
+		<menu id="" name="查看局部拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryZElementsAroundAElementViewModel, params=id:$[id]#floor:2#floor1:mo_type_id exist [10,37,57,79,78] AND type like node#floor2:mo_type_id exist [15,27] AND type like node#name:GGSN[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==9" />
+		 -->
+		<!-- SGSN(10)局部拓扑[查看 GGSN(9),BSC(15),RNC(27),DNS(79)] -->
+		<!--
+		<menu id="" name="查看局部拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryZElementsAroundAElementViewModel, params=id:$[id]#floor:1#floor1:mo_type_id exist [9,15,27,79] AND type like node#name:SGSN[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==10" />
+		 -->
+
+		<!-- =================================================== -->
+		<!-- 广东GGSN/SGSN 存在SWRT(77)连接,因此局部拓扑跟江苏不同 -->
+		<!-- =================================================== -->
+		<!-- GGSN(9)局部拓扑[查看SWRT(77), | SGSN(10),DNS(79),CG(57),FW(37),GPRS_FW(78), |  BSC(15),RNC(27)] -->
+		<menu id="" name="查看局部拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryZElementsAroundAElementViewModel, params=id:$[id]#floor:3#floor1:mo_type_id exist [77] AND type like node#floor2:mo_type_id exist [10,37,57,79,78] AND type like node#floor3:mo_type_id exist [15,27] AND type like node#name:GGSN[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==9" />
+		<!-- SGSN(10)局部拓扑[查看BSC(15),RNC(27),SWRT(77), |  GGSN(9),DNS(79),CG(57),FW(37),GPRS_FW(78)] -->
+		<menu id="" name="查看局部拓扑" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryZElementsAroundAElementViewModel, params=id:$[id]#floor:2#floor1:mo_type_id exist [77,15,27] AND type like node#floor2:mo_type_id exist [9,79,57,37,78] AND type like node#name:SGSN[$[name]]局部拓扑)"
+			filter="$[mo_type_id]==10" />
+
+		<!-- ============================== -->
+		<!--               传输网                              -->
+		<!-- ============================== -->
+
+		<!-- 传输网网元类型有:   SDH(39),WDM(42),OLT(85),ONU(86),ASON(87),MSTP(88),PTN(89),静态ME(205)   传输未知(-1) -->
+		<!-- 说明:
+		 传输电路通道视图中(第一层),通道两端设备上面有  channel_route=true 的标志
+		 传输电路通道路由视图中(第二层),通道之间链路上有 is_tran_route=true 的标志
+		-->
+
+		<!-- 关联到传输逻辑拓扑 是视图,调用默认的topoName即可 -->
+		<menu id="" name="关联到传输逻辑拓扑" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_LOADTOPO_CIRCUIT) EventProperty(circId=$[circuit_id], circCode=$[circuit_code], topoName=default-topo)"
+			filter="notNull($[circuit_code]) and $[_FE_channel_route]!=true and $[is_tran_route]!=true" />
+
+		<menu id="" name="查看光路信息" multiple="false" icon="" aweight="1"
+			eweight="1000" type="event"
+			action="EventType(TopoEvent_CMS_SHOW_OPTIC) EventProperty(circuitId=$[circuit_id], circuitCode=$[circuit_code], moId1=$[mo_id_a], moId2=$[mo_id_z], moA=$[mo_a], moZ=$[mo_z])"
+			filter="notNull($[circuit_code]) and $[is_tran_route]==true and notNull($[mo_id_a]) and notNull($[mo_id_z])" />
+
+		<!-- 有传输电路名称,但不是传输通道 和传输路由之间的链路 (直接根据电路名称定位到管线)   -->
+		<menu id="" name="光缆路由" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="1000" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=circuit&amp;moId={'model':'2','circName':'$[circuit_code]','device':'1'}"
+			filter="notNull($[circuit_code]) and $[_FE_channel_route]!=true and $[is_tran_route]!=true" />
+
+		<!-- 有传输电路名称,是传输通道两端路由之间的链路 (根据电路名称和通道序号定位到管线)   -->
+		<menu id="" name="光缆路由" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="1000" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=circuit&amp;moId={'model':'4','circName':'$[circuit_code]','s1':'$[_FE_s1]','device':'1'}"
+			filter="notNull($[circuit_code]) and $[_FE_channel_route]==true and notNull($[_FE_s1])" />
+
+		<!-- 有传输电路名称,是传输路由之间的链路 (根据电路名称和两端传输路由设备定位到管线)   -->
+		<menu id="" name="光缆路由" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="1000" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=circuit&amp;moId={'model':'3','circName':'$[circuit_code]','moId':'$[mo_id_a],$[mo_id_z]','moType':'2','device':'1'}"
+			filter="notNull($[circuit_code]) and $[is_tran_route]==true and notNull($[mo_id_a]) and notNull($[mo_id_z])" />
+
+		<!-- 无传输电路名称  (根据两端传输设备定位到管线) -->
+		<menu id="" name="光缆路由" dblclick="both" depth="2" multiple="false" icon="" aweight="11"
+			eweight="1000" type="url"
+			action="/cms/general/monitor/GeneralMonitorMo.action?type=circuit&amp;moId={'model':'3','moId':'$[_FE_mo_id],$[_TE_mo_id]','moType':'2','device':'1'}"
+			filter="(isNull($[circuit_code])) and ($[_FE_mo_type_id]==39 or $[_FE_mo_type_id]==42 or $[_FE_mo_type_id]==85 or $[_FE_mo_type_id]==86 or $[_FE_mo_type_id]==87 or $[_FE_mo_type_id]==88 or $[_FE_mo_type_id]==89 or $[_FE_mo_type_id]==205) and ($[_TE_mo_type_id]==39 or $[_TE_mo_type_id]==42 or $[_TE_mo_type_id]==85 or $[_TE_mo_type_id]==86 or $[_TE_mo_type_id]==87 or $[_TE_mo_type_id]==88 or $[_TE_mo_type_id]==89 or $[_TE_mo_type_id]==205)" />
+
+		<!-- 关联到传输子网 (topoName要是传输MC的 topoName=tran-topo)-->
+		<menu id="" name="关联到传输子网" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_CMS_LOCATE_TRAN_TOPO) EventProperty(rootpid=1/transport/subnet, mo_id=$[mo_id], topoName=tran-topo)"
+			filter="(notNull($[mo_id])) and ($[mo_type_id]==39 or $[mo_type_id]==42 or $[mo_type_id]==85 or $[mo_type_id]==86 or $[mo_type_id]==87 or $[mo_type_id]==88 or $[mo_type_id]==89 or $[mo_type_id]==205)" />
+
+		<!-- 查看管道路由详情 -->
+		<menu id="" name="查看通道路由详情" dblclick="both" depth="2" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_CMS_GO_CHANNEL_VIEW) EventProperty(modelId=tranCircuitChannelRouterTopoViewModel, params=circuit_id:$[circuit_id]#circuit_code:$[circuit_code]#s1:$[s1]#name:$[circuit_code]通道路由$[s1])"
+			filter="$[channel_route]==true" />
+
+
+		<!-- ============================== -->
+		<!--            集团客户                                 -->
+		<!-- ============================== -->
+		<menu id="" name="搜索有告警的传输电路" multiple="false" icon="" aweight="1"
+			eweight="1" type="event"
+			action="EventType(TopoEvent_CMS_SEARCH_ALARMED_CIRCUIT)"
+			filter="RegExp(/jtkh/)test($[CANVAS:topoName])pxEgeR" />
+
+		<menu id="" name="查看集客运维支撑" multiple="false" icon="" aweight="1"
+			eweight="1" type="url"
+			action="/cms/groupcustom/monitor/monitorMonitor.action?custId=$[CANVAS:cust_id]"
+			filter="notNull($[CANVAS:cust_id])"/>
+
+		<!-- 江苏版本 -->
+		<!--
+		<menu id="" name="双击集客" multiple="false" icon="" aweight="11"
+			eweight="100000000100" dblclick="true" type="url"
+			action="/cms/groupcustom/monitor/monitorMonitor.action?custId=$[cust_id]"
+			filter="notNull($[cust_id])"/>
+		<menu id="" name="查看集客拓扑" multiple="false" icon="" aweight="11"
+			eweight="100000000100" type="event"
+			action="EventType(TopoEvent_GO_DOWN) EventProperty(id=$[id], type=$[CANVAS:topoType], topoName=$[obj.topo.toponame])"
+			filter="notNull($[cust_id])" />
+		 -->
+
+		<!-- 广东 , 陕西版本 -->
+		<menu id="" name="双击集客" multiple="false" icon="" aweight="11"
+			eweight="100000000100" dblclick="true" type="event"
+			action="EventType(TopoEvent_GO_DOWN) EventProperty(id=$[id], type=$[CANVAS:topoType], topoName=$[obj.topo.toponame])"
+			filter="notNull($[cust_id])"/>
+		<menu id="" name="查看集客运维支撑" multiple="false" icon="" aweight="11"
+			eweight="100000000100" type="url"
+			action="/cms/groupcustom/monitor/monitorMonitor.action?custId=$[cust_id]"
+			filter="notNull($[cust_id])" />
+
+		<!-- ============================== -->
+		<!--            链路菜单                                 -->
+		<!-- ============================== -->
+		<menu id="" name="展  开" multiple="false" icon="" aweight="11"
+			eweight="1000" type="event" action="EventType(TopoEvent_LINK_EXPANDED_TOGGLE)"
+			filter="notNull($[link.count]) and $[link.count]>1 and $[expanded]==false" />
+		<menu id="" name="收  起" multiple="false" icon="" aweight="11"
+			eweight="1000" type="event" action="EventType(TopoEvent_LINK_EXPANDED_TOGGLE)"
+			filter="$[link.count]>1 and $[expanded]==true" />
+
+		<!-- ============================== -->
+		<!--          缩略图间链路                            -->
+		<!-- ============================== -->
+		<menu id="" name="定位上联网元" multiple="false" icon="" aweight="1"
+			eweight="1000000000000" type="event"
+			action="EventType(TopoEvent_LOCATE_LAYER_ELEMENT) EventProperty(layerId=$[link.from.layer], elementId=$[from])"
+			filter="" />
+		<menu id="" name="定位下联网元" multiple="false" icon="" aweight="1"
+			eweight="1000000000000" type="event"
+			action="EventType(TopoEvent_LOCATE_LAYER_ELEMENT) EventProperty(layerId=$[link.to.layer], elementId=$[to])"
+			filter="" />
+
+		<!-- ============================== -->
+		<!--            普通模式                                 -->
+		<!-- ============================== -->
+		<menu id="" name="同属性高亮" multiple="false" icon="" aweight="11"
+			eweight="100000110" type="event"
+			action="EventType(TopoEvent_HIGHTLIGHT_SAME_CONNECT) EventProperty(key=type, value=segment)"
+			filter="" />
+		<menu id="" name="高亮关联网元" multiple="false" icon="" aweight="11"
+			eweight="100000110" type="event"
+			action="EventType(TopoEvent_HIGHTLIGHT_CONNECT)"
+			filter="" />
+		<menu id="" name="取消高亮" multiple="true" icon="" aweight="11"
+			eweight="111111111111" type="event"
+			action="EventType(TopoEvent_HIGHTLIGHT_CANCEL)"
+			filter="$[CANVAS:hightlightState]==true" />
+
+		<!-- ============================== -->
+		<!--           链路编辑模式                          -->
+		<!-- ============================== -->
+	<!--	<menu id="" name="设为链路起点" multiple="true" icon="" aweight="100"
+			eweight="100100000110" type="event" action="EventType(TopoEvent_SET_AS_LINK_START)"
+			filter="" />
+		<menu id="" name="设为链路终点" multiple="true" icon="" aweight="100"
+			eweight="100100000110" type="event" action="EventType(TopoEvent_SET_AS_LINK_END)"
+			filter="" />
+			-->
+		<menu id="" name="设为链路起点" multiple="true" icon="" aweight="100"
+			eweight="100100010110" type="event" action="EventType(TopoEvent_SET_AS_LINK_START)"
+			filter="" />
+		<menu id="" name="设为链路终点" multiple="true" icon="" aweight="100"
+			eweight="100100010110" type="event" action="EventType(TopoEvent_SET_AS_LINK_END)"
+			filter="" />
+
+		<!-- ============================== -->
+		<!--            编辑模式                                 -->
+		<!-- ============================== -->
+		<menu id="" name="全  选" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_SELECT_ALL)"
+			filter="$[CANVAS:selectEnabled]==true" />
+		<menu id="" name="反  选" multiple="true" icon="" aweight="10"
+			eweight="110111111111111" type="event" action="EventType(TopoEvent_SELECT_UNSELECTED)"
+			filter="$[CANVAS:selectEnabled]==true and $[CANVAS:selectedNum]>0" />
+
+		<!-- 显示隐藏 -->
+		<menu id="" name="显示隐藏" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_VIEW_ELEMENT_ALL)"
+			filter="$[CANVAS:viewAllEnabled]==false" />
+		<menu id="" name="显示可见" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_VIEW_ELEMENT_VISIABLE)"
+			filter="$[CANVAS:viewAllEnabled]==true" />
+		<menu id="" name="设为可见" multiple="true" icon="" aweight="10"
+			eweight="111111111110" type="event"
+			action="EventType(TopoEvent_ELEMENT_VISIABLE_TRUE)" filter="$[visible]==0" />
+		<menu id="" name="设为隐藏" multiple="true" icon="" aweight="10"
+			eweight="111111111110" type="event"
+			action="EventType(TopoEvent_ELEMENT_VISIABLE_FALSE)" filter="$[visible]==1" />
+
+		<!-- 锁定/解锁 -->
+		<menu id="" name="锁定云图" multiple="false" icon="" aweight="10"
+			eweight="100" type="event" action="EventType(TopoEvent_LOCK_LAYER)"
+			filter="$[isLocked]!=true" />
+		<menu id="" name="解锁云图" multiple="false" icon="" aweight="10"
+			eweight="100" type="event" action="EventType(TopoEvent_UNLOCK_LAYER)"
+			filter="$[isLocked]==true" />
+
+		<menu id="" name="剪切对象" multiple="true" icon="" aweight="10"
+			eweight="101111110110" type="event" action="EventType(TopoEvent_CUT)"
+			filter="$[CANVAS:topoType]!=view" />
+		<menu id="" name="粘贴对象" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_PASTE)"
+			filter="$[CANVAS:has_cut]==true and $[CANVAS:topoType]!=view" />
+		<menu id="" name="取消剪切" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CANCAL_CUT)"
+			filter="$[CANVAS:has_cut]==true and $[CANVAS:topoType]!=view" />
+		<menu id="" name="复制对象" multiple="true" icon="" aweight="10"
+			eweight="101111110110" type="event" action="EventType(TopoEvent_COPY)"
+			filter="" />
+		<menu id="" name="粘贴复制" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_PASTE_COPY)"
+			filter="$[CANVAS:has_copy]==true" />
+		<menu id="" name="取消复制" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CANCAL_COPY)"
+			filter="$[CANVAS:has_copy]==true" />
+
+		<menu id="" name="自定义布局" multiple="true" icon="" aweight="10"
+			eweight="101111110110" type="event" action="EventType(TopoEvent_SHOW_SIMPLE_LAYOUT)"
+			filter="" />
+
+		<menu id="" name="编辑节点" multiple="false" icon="" aweight="10"
+			eweight="10" type="event" action="EventType(TopoEvent_MODIFY_NODE)"
+			filter="" />
+
+		<menu id="" name="创建云图" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CREATE_SEGMENT)"
+			filter="$[CANVAS:topoType]!=view" />
+		<menu id="" name="编辑云图" multiple="false" icon="" aweight="10"
+			eweight="100" type="event" action="EventType(TopoEvent_MODIFY_SEGMENT)"
+			filter="" />
+		<!-- 查看云图告警 -->
+		<menu id="" name="查看告警信息" multiple="false" icon="" aweight="1"
+			eweight="100" type="event" action="EventType(TopoEvent_VIEW_ALARM) EventProperty(type=segment, id=$[id], name=$[name])"
+			filter="" />
+		<menu id="" name="创建云图镜像" multiple="false" icon="" aweight="10"
+			eweight="100" type="event" action="EventType(TopoEvent_CREATE_SEGMENT_MIRROR)"
+			filter="$[CANVAS:topoType]!=view" />
+		<menu id="" name="编辑云图镜像" multiple="false" icon="" aweight="10"
+			eweight="100000000" type="event" action="EventType(TopoEvent_MODIFY_SEGMENT_MIRROR)"
+			filter="isNull($[obj.show.type]) or $[obj.show.type]==icon" />
+		<menu id="" name="编辑缩略图" multiple="false" icon="" aweight="10"
+			eweight="1000000000" type="event" action="EventType(TopoEvent_MODIFY_HLINKLAYER)"
+			filter="" />
+
+		<menu id="" name="编辑形状" multiple="false" icon="" aweight="10"
+			eweight="100000" type="event" action="EventType(TopoEvent_MODIFY_SHAPE)"
+			filter="$[shape.fill.type]!=fullimage" />
+		<menu id="" name="复制形状" multiple="false" icon="" aweight="10"
+			eweight="100000" type="event" action="EventType(TopoEvent_COPY_SHAPE)"
+			filter="$[shape.fill.type]!=fullimage" />
+		<menu id="" name="编辑图片" multiple="false" icon="" aweight="10"
+			eweight="100000" type="event" action="EventType(TopoEvent_MODIFY_SHAPE_PIC)"
+			filter="$[shape.fill.type]==fullimage" />
+		<menu id="" name="复制图片" multiple="false" icon="" aweight="10"
+			eweight="100000" type="event" action="EventType(TopoEvent_COPY_SHAPE_PIC)"
+			filter="$[shape.fill.type]==fullimage" />
+
+		<menu id="" name="创建分组" multiple="true" icon="" aweight="10"
+			eweight="101111110110" type="event" action="EventType(TopoEvent_CREATE_GROUP)"
+			filter="" />
+		<menu id="" name="编辑分组" multiple="false" icon="" aweight="10"
+			eweight="10000" type="event" action="EventType(TopoEvent_MODIFY_GROUP)"
+			filter="" />
+		<menu id="" name="解散分组" multiple="false" icon="" aweight="10"
+			eweight="10000" type="event" action="EventType(TopoEvent_DELETE_GROUP)"
+			filter="" />
+		<menu id="" name="从组中删除元素" multiple="true" icon="" aweight="10"
+			eweight="101111110110" type="event" action="EventType(TopoEvent_REMOVE_FROM_GROUP)"
+			filter="$[groupOwner]==true" />
+		<menu id="" name="创建文本" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CREATE_TEXT)"
+			filter="" />
+		<menu id="" name="编辑文本" multiple="false" icon="" aweight="10"
+			eweight="1000000" type="event" action="EventType(TopoEvent_MODIFY_TEXT)"
+			filter="" />
+		<menu id="" name="编辑链路" multiple="false" icon="" aweight="10"
+			eweight="1000" type="event" action="EventType(TopoEvent_MODIFY_LINK)"
+			filter="" />
+		<menu id="" name="编辑线对象" multiple="false" icon="" aweight="10"
+			eweight="10000000000" type="event" action="EventType(TopoEvent_MODIFY_LINE)"
+			filter="" />
+		<!-- 编辑拓扑视图对象 -->
+		<menu id="" name="编辑对象" multiple="false" icon="" aweight="10"
+			eweight="100000000000" type="event" action="EventType(TopoEvent_MODIFY_TPVIEW)"
+			filter="" />
+
+		<menu id="" name="删除对象" multiple="true" icon="" aweight="110"
+			eweight="111111111101110" type="event" action="EventType(TopoEvent_DELETE_ELEMENTS)"
+			filter="" />
+		<menu id="" name="删除对象间链路" multiple="true" icon="" aweight="100"
+			eweight="101111110110" type="event" action="EventType(TopoEvent_DELETE_CONNECT_LINKS)"
+			filter="" />
+
+		<menu id="" name="创建视图" multiple="true" icon="" aweight="10"
+			eweight="111111111110" type="event" action="EventType(TopoEvent_CREATE_VIEW)"
+			filter="" />
+		<menu id="" name="删除视图" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_DELETE_VIEW)"
+			filter="$[CANVAS:topoType]==view" />
+
+		<menu id="" name="导入设备" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CMS_IMPORT_DEVICES)"
+			filter="$[CANVAS:topoType]!=view" />
+		<menu id="" name="导入设备" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CMS_IMPORT_DEVICES_INVIEW)"
+			filter="$[CANVAS:topoType]==view" />
+
+		<menu id="" name="自动生成链路" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CMS_AUTOCREATE_LINKS)"
+			filter="" />
+		<menu id="" name="生成链路" multiple="true" icon="" aweight="100"
+			eweight="10" type="event" action="EventType(TopoEvent_CMS_FIND_LINKS)"
+			filter="" />
+		<menu id="" name="应急切换" multiple="false" icon="" aweight="1"
+			eweight="10" type="url"
+			action="/cms/scene/emergency/emergency.action?neId=$[mo_id]"
+			filter="$[mo_type_id]==5 or $[mo_type_id]==7" />
+		<!-- 机房布局 -->
+		<!--
+		<menu id="" name="创建网格" multiple="false" icon="" aweight="10"
+			eweight="1" type="event" action="EventType(TopoEvent_CREATE_TPGRID)"
+			filter="$[CANVAS:topoType]!=view" />
+		<menu id="" name="编辑网格" multiple="false" icon="" aweight="10"
+			eweight="100000000000000" type="event" action="EventType(TopoEvent_MODIFY_TPGRID)"
+			filter="" />
+		 -->
+
+		<!-- ============================== -->
+		<!--            调试菜单                                 -->
+		<!-- ============================== -->
+		<menu id="" name="[配置业务属性]" multiple="false" icon="" aweight="10"
+			eweight="11111111111110" type="event" action="EventType(TopoEvent_CONFIG_PROPERTY)"
+			filter="" />
+		<menu id="" name="[DEBUG]" multiple="false" icon="" aweight="11"
+			eweight="111111111111111" type="event" action="EventType(TopoEvent_DEBUG)"
+			filter="$[CANVAS:topoType]!=view" />
+		<menu id="" name="[VIEW_DEBUG]" multiple="false" icon="" aweight="11"
+			eweight="111111111111111" type="event" action="EventType(TopoEvent_DEBUG)"
+			filter="$[CANVAS:topoType]==view" />
+
+		<menu id="" name="[查看拓扑数据]" multiple="false" icon="" aweight="10"
+			eweight="1" type="url"
+			action="/cms/webtopo/topo/topo!loadTopoData.action?topoName=$[CANVAS:topoName]&amp;id=$[CANVAS:topoId]"
+			filter="" />
+		<menu id="" name="[弹出当前层]" multiple="false" icon="" aweight="10"
+			eweight="1" type="url"
+			action="/cms/webtopo/topo/topo.action?id=$[CANVAS:topoId]&amp;topoName=$[CANVAS:topoName]"
+			filter="" />
+		<!--
+		<menu id="" name="[局部拓扑1]" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryZElementsAroundAElementViewModel, params=id:$[id]#floor:1#name:[$[name]]局部拓扑)"
+			filter="notNull($[mo_type_id])" />
+		<menu id="" name="[局部拓扑2]" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryZElementsAroundAElementViewModel, params=id:$[id]#floor:2#name:[$[name]]局部拓扑)"
+			filter="notNull($[mo_type_id])" />
+		<menu id="" name="[局部拓扑3]" multiple="false" icon="" aweight="1"
+			eweight="10" type="event"
+			action="EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(modelId=queryZElementsAroundAElementViewModel, params=id:$[id]#floor:3#name:[$[name]]局部拓扑)"
+			filter="notNull($[mo_type_id])" />
+		  -->
+
+
+		  <menu filter="notNull($[circuit_code]) and $[_FE_channel_route]!=true and $[is_tran_route]!=true" action="EventType(TopoEvent_CMS_LOADTOPO_CIRCUIT) EventProperty(circId=$[circuit_id], circCode=$[circuit_code], topoName=default-topo-jiake)" type="event" eweight="1000" aweight="1" icon="" multiple="false" name="电路详情" id=""/>
+
+	</cmenus>
+</menus>

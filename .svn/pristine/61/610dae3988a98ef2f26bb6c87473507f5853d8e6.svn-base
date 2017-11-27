@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="../lib/font-awesome.min.css" rel="stylesheet" />
+    <link href="../topo/core.css" rel="stylesheet">
+    <link href="./demo.css" rel="stylesheet">
+    <script src="../topo/core.js"></script>
+</head>
+
+<body>
+    <div class="topo">
+    </div>
+    <script>
+        QTopo.util.$ready(function () {
+            var dom = document.getElementsByClassName('topo')[0],
+                stage = QTopo(dom,{
+                    background:"#06243e"
+                }),
+                addRightMenu = QTopo.initRightMenu({
+                    dom: dom,
+                    stage: stage,
+                    afterFilter: function (e) {//钩子，可选
+                        console.info("afterFilter", e);
+                    },
+                    beforeFilter: function (e) {
+                        console.info("beforeFilter", e);
+                    },
+                    beforeClick: function (e) {
+                        console.info("beforeClick", e);
+                    },
+                    afterClick: function (e) {
+                        console.info("afterClick", e);
+                    }
+                }),
+                addToolBar = QTopo.initToolbar({ dom });
+
+
+
+            var show = false;
+
+            addToolBar([{
+                name: "导出图片",
+                icon: "<i class='icon-camera-retro'></i>",
+                click: function () {
+                    stage.getPicture();
+                }
+            }]);
+            addRightMenu([
+                {
+                    name: "第一层",
+                    click: function (e) {
+                        console.info(e);
+                    },
+                    filter: function () {
+                        return true;
+                    }
+                },
+                {
+                    name: "显示隐藏",
+                    click: function () {
+                        show = true;
+                    }
+                },
+                {
+                    name: "隐藏的",
+                    click: function () {
+                        show = false;
+                    },
+                    filter: function () {
+                        return show;
+                    }
+                },
+                {
+                    name: "子菜单",
+                    item: [
+                        {
+                            name: "第二层",
+                            item: [
+                                {
+                                    name: "第三层",
+                                    item: [
+                                        {
+                                            name: "test"
+                                        },
+                                        {
+                                            name: "test2",
+                                            click: function (e) {
+                                                console.info(e);
+                                            }
+                                        },
+                                        {
+                                            name: "test3",
+                                            click: function (e) {
+                                                console.info(e.target || stage);
+                                            },
+                                            filter: function (target) {
+                                                return QTopo.util.isElement(target);
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: "子菜单",
+                    item: [
+                        {
+                            name: "无显示子，父也不显示",
+                            filter: function (e) {
+                                return false;
+                            }
+                        }
+                    ]
+                }
+            ]);
+
+        });
+    </script>
+</body>
+
+</html>

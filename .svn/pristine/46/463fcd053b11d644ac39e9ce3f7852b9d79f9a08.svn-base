@@ -1,0 +1,32 @@
+.qtopo-toolbar_panel{
+    display: inline-flex;
+    list-style: none;
+    position: absolute;
+    right:0;
+    top:0;
+    background-clip: padding-box;
+    flex-flow:row nowrap;
+    margin: 0;
+    padding: 0;
+    z-index:900;
+}
+.qtopo-toolbar_item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:30px;
+    height:30px;
+    background-color:#012f5d ;
+    color:white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.qtopo-toolbar_item:hover{
+    color: #23527c;
+    cursor:pointer;
+}
+.qtopo-toolbar_item:active{
+    color:white;
+    background-color:#286090;
+    box-shadow: 0 0 10px #337ab7;
+}

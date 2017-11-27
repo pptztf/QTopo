@@ -1,0 +1,313 @@
+{
+    "WebTopo": {
+        "NetView": {
+            "Groups": "",
+            "id": "1/anhui/0",
+            "Links": {
+                "Link": [
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/anqing/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/anqing/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/tongling/0",
+                        "id": "1/szx/01/tongling/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/szx/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/bengbu/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/bengbu/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/maanshan/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/maanshan/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/xuancheng/0",
+                        "id": "1/szx/01/xuancheng/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/szx/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/hefei/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/hefei/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/haozhou/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/haozhou/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/liuan/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/liuan/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/fuyang/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/fuyang/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/huaibei/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/huaibei/0",
+                        "type": "link"
+                    },
+                    {
+                        "to": "1/szx/0",
+                        "id": "1/huangshan/01/szx/01/0",
+                        "visible": 1,
+                        "pid": "1/anhui/0",
+                        "from": "1/huangshan/0",
+                        "type": "link"
+                    }
+                ]
+            },
+            "Objects": "",
+            "XY": {
+                "centerY": 0,
+                "centerX": 0,
+                "iMinY": 136,
+                "maxY": 633,
+                "iMinX": 469,
+                "maxX": 1148,
+                "minX": 469,
+                "minY": 136
+            },
+            "Segments": {
+                "Segment": [
+                    {
+                        "id": "1/chizhou/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "池州网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 527,
+                        "x": 755
+                    },
+                    {
+                        "id": "1/chaohu/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "巢湖网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 630,
+                        "x": 676
+                    },
+                    {
+                        "id": "1/huangshan/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "黄山网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 463,
+                        "x": 469
+                    },
+                    {
+                        "id": "1/huainan/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "淮南网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 633,
+                        "x": 791
+                    },
+                    {
+                        "id": "1/fuyang/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "阜阳网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 345,
+                        "x": 1141
+                    },
+                    {
+                        "id": "1/xuancheng/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "宣城网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 454,
+                        "x": 1148
+                    },
+                    {
+                        "id": "1/hefei/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "合肥网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 153,
+                        "x": 686
+                    },
+                    {
+                        "id": "1/wuhu/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "芜湖网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 632,
+                        "x": 998
+                    },
+                    {
+                        "id": "1/huaibei/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "淮北网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 241,
+                        "x": 1094
+                    },
+                    {
+                        "id": "1/chuzhou/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "滁州网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 525,
+                        "x": 882
+                    },
+                    {
+                        "id": "1/anqing/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "安庆网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 351,
+                        "x": 477
+                    },
+                    {
+                        "id": "1/liuan/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "六安网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 569,
+                        "x": 1146
+                    },
+                    {
+                        "id": "1/maanshan/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "马鞍山网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 561,
+                        "x": 505
+                    },
+                    {
+                        "id": "1/szx/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "省中心网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 389,
+                        "x": 816
+                    },
+                    {
+                        "id": "1/suzhou/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "宿州网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 631,
+                        "x": 899
+                    },
+                    {
+                        "id": "1/tongling/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "铜陵网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 168,
+                        "x": 971
+                    },
+                    {
+                        "id": "1/bengbu/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "蚌埠网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 222,
+                        "x": 536
+                    },
+                    {
+                        "id": "1/haozhou/0",
+                        "icon": "yun5.png",
+                        "visible": 1,
+                        "name": "毫州网络拓扑",
+                        "pid": "1/anhui/0",
+                        "type": "segment",
+                        "y": 136,
+                        "x": 826
+                    }
+                ]
+            },
+            "p": [
+                {
+                    "content": "综合监控拓扑@_@安徽省网",
+                    "cls": "string",
+                    "k": "path"
+                },
+                {
+                    "content": "1/0@_@1/anhui/0",
+                    "cls": "string",
+                    "k": "pathPid"
+                }
+            ],
+            "name": "安徽省网",
+            "pid": "1/anhui/0",
+            "Nodes": "",
+            "type": "segment"
+        },
+        "toponame": "default-topo",
+        "version": "Topo V1.0.1_20111009"
+    }
+}

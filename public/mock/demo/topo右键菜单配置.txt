@@ -1,0 +1,94 @@
+
+menu标签中:
+id      :         此菜单为权限关键字,在WEB那边存在,发给flex的xml格式中不存在.
+name    :       菜单显示名称
+dblclick:    是否使用双击事件触发
+false: 仅右键菜单触发 (默认)
+true : 仅双击事件触发
+both : 双击和右键都会触发
+
+multiple:  是否支持批量对象的菜单  true/false
+icon    :          菜单前面的图标名称,暂不支持.
+aweight   :        Action出现的权重位置
+------------------------------
+选择模式                1
+编辑模式               10
+链路编辑模式           100
+
+eweight   :        Element出现的权重位置
+------------------------------
+Canvas                    1
+Node                      10
+Segment               100
+Link                  1000
+Group                 10000
+ztype.shape           100000
+ztype.text              1000000
+ztype.url         10000000
+ztype.topo              100000000
+ztype.layer            1000000000
+ztype.line              10000000000
+ztype.view     100000000000
+link.layer    1000000000000        缩略图间的链路
+ztype.obj 10000000000000
+ztype.grid         100000000000000
+
+type    :         拓扑图执行的操作类型
+                 url (外部事件URL型)标识此菜单是open出来的一个链接,此时action中内容是个url
+                 event (内部事件)要求关键字必须是flex拓扑图内部已经支持的关键字.
+                 
+                 目前内置事件包括
+                 TopoEvent_DEBUG
+                 TopoEvent_GO_UP
+                 TopoEvent_GO_BACK
+                 TopoEvent_GO_DOWN
+                 TopoEvent_GO_MODEL_VIEW
+                 TopoEvent_CUT
+                 TopoEvent_CANCAL_CUT
+                 TopoEvent_PASTE
+                 TopoEvent_SAVE_TOPO
+                 TopoEvent_CONFIG_PROPERTY
+                 
+                 
+action  : 与type对应的内容. 若是url,则支持宏表达式.如  cms/webtopo/topo/topo.action?deviceId=$[uid] 注意是相对 IP:PORT/工程名 的路径
+type为event时: EventType(TopoEvent_GO_DOWN) EventProperty(id=$[id], type=$[CANVAS:topoType])
+
+对于根据视图模板查看拓扑中,要求 params中参数格式为  key:value#key:value
+EventType(TopoEvent_GO_MODEL_VIEW) EventProperty(id=GGSN, params=id:$[mo_id]#type:$[mo_type])
+
+filter  :    判断是否显示此菜单,执行宏表达式,如:$[name]==123 or $[name]==321
+                默认获取的是选中对象的属性,若要获取画布的属性,则  $[CANVAS:属性名称] 如(canvas关键字不区分大小写): $[CANVAS:has_cut]=true
+                 支持的逻辑链:  or 或者 and (or和and不能同时出现,前后要带空格: ' or ' 或者 ' and ')
+                 支持的单个逻辑运算包括: notNull(), isNull(), ==, !=, >, >=, <, <=
+                 支持正则表达式匹配: RegExp(正则表达式)test(待验证字符)pxEgeR
+                 
+                 举例: notNull($[link.count]) and $[link.count]>0 and $[expanded]==false
+                 RegExp(/^1/jtkh//)test($[CANVAS:topoId])pxEgeR
+
+depth        :        双击事件的深度,若单个网元上存在多个双击事件,选用深度最大的菜单.
+
+ztype        :        static_view  静态视图菜单(双击菜单使用) 代表此菜单取自对象自身的静态视图,此状态下提供 $[static_view_id] 的参数
+
+【管线GIS】
+绘制管线基础数据
+model            moId
+-----------    -----------------   
+1、光缆ID      opticId、circName
+2、电路编号  circName
+3、两端设备  moId、moName (设备间使用逗号分割),moType, circName(非必填)
+4. 通道路由   circName,s1
+
+model: 1/2/3/4  见上
+opticId: 光缆ID
+circName: 电路名称
+moId: 设备ID,两个的话中间','分隔
+moName: 设备名称
+moType: 与moName对应,1.业务设备; 2.传输设备;
+device: 是否绘制光缆2端设备, 1:绘制,其他:不绘制
+s1:     电路对应的第几段通道
+
+
+thx by linmei.dong
+185 1252 3042(670283)
+
+

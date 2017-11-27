@@ -1,0 +1,355 @@
+[
+  {
+    "name": "取消高亮",
+    "aweight": "11",
+    "eweight": "111111111111",
+    "type": "event",
+    "action": "EventType(TopoEvent_HIGHTLIGHT_CANCEL)",
+    "filter": "(${CANVAS:high_light}==true) or (${CANVAS:high_light_manage}==true)"
+  },
+  {
+    "name": "黏贴",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_PASTE)",
+    "filter": "notNull(${CANVAS:cut_elements})"
+  },
+  {
+    "name": "刷新",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_REFRESH)"
+  },
+  {
+    "name": "返回",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_GO_BACK)",
+    "filter": "${CANVAS:go_back}==true"
+  },
+  {
+    "name": "定位",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_GET_LOCATION)"
+  },
+  {
+    "name": "高亮管理",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_HILGHT_MANAGE)",
+    "filter": "(${CANVAS:high_light}==false) and (${CANVAS:high_light_manage}==false)"
+  },
+  {
+    "name": "删除",
+    "aweight": "11",
+    "eweight": "111110",
+    "type": "event",
+    "action": "EventType(TopoEvent_DELETE_ELEMENTS)"
+  },
+  {
+    "name": "编辑",
+    "aweight": "10",
+    "eweight": "100",
+    "type": "event",
+    "action": "EventType(TopoEvent_EDIT_SEGMENT)"
+  },
+  {
+    "name": "编辑",
+    "aweight": "10",
+    "eweight": "10",
+    "type": "event",
+    "item": [
+      {
+        "name": "设备类型",
+        "type": "event",
+        "action": "EventType(TopoEvent_EDIT_DEVICE_TYPE)"
+      },
+      {
+        "name": "设备属性",
+        "type": "event",
+        "action": "EventType(TopoEvent_EDIT_DEVICE_ATTR)"
+      }
+    ]
+  },
+  {
+    "name": "添加",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "item": [
+      {
+        "name": "网段",
+        "type": "event",
+        "action": "EventType(TopoEvent_ADD_SEGMENT)"
+      },
+      {
+        "name": "设备",
+        "type": "event",
+        "action": "EventType(TopoEvent_ADD_DEVICE)"
+      }
+    ]
+  },
+  {
+    "name": "操作网元",
+    "aweight": "11",
+    "eweight": "110",
+    "type": "event",
+    "item": [
+      {
+        "name": "复制",
+        "type": "event",
+        "action": "EventType(TopoEvent_COPY)"
+      },
+      {
+        "name": "剪切",
+        "type": "event",
+        "action": "EventType(TopoEvent_CUT)",
+        "filter": "isNull(${CANVAS:cut_elements})"
+      },
+      {
+        "name": "管理",
+        "type": "event",
+        "action": "EventType(TopoEvent_MANAGE)",
+        "filter": "${state}==0"
+      },
+      {
+        "name": "取消管理",
+        "type": "event",
+        "action": "EventType(TopoEvent_CANCEL_MANAGE)",
+        "filter": "${state}==1"
+      },
+      {
+        "name": "相关高亮",
+        "type": "event",
+        "action": "EventType(TopoEvent_HIGHTLIGHT_CONNECT)",
+        "filter": "(${CANVAS:high_light}==false) and (${CANVAS:high_light_manage}==false)"
+      }
+    ]
+  },
+  {
+    "name": "添加链接",
+    "aweight": "10",
+    "eweight": "10110",
+    "type": "event",
+    "item": [
+      {
+        "name": "设为起点",
+        "type": "event",
+        "action": "EventType(TopoEvent_SET_AS_LINK_START)"
+      },
+      {
+        "name": "设为终点",
+        "type": "event",
+        "action": "EventType(TopoEvent_SET_AS_LINK_END)"
+      }
+    ]
+  },
+  {
+    "name": "进入下一层",
+    "aweight": "11",
+    "eweight": "100",
+    "dblclick": "true",
+    "type": "event",
+    "action": "EventType(TopoEvent_GO_DOWN) EventProperty(id=${id})"
+  },
+  {
+    "name": "双击设备-性能采集展示",
+    "aweight": "11",
+    "eweight": "10",
+    "dblclick": "true",
+    "type": "url",
+    "action": "/ldims_new/webtopo/webtopo_dbPM.jsp?device_id=${ip}"
+  },
+  {
+    "name": "双击链路--展现链路流量",
+    "aweight": "11",
+    "eweight": "1000",
+    "dblclick": "true",
+    "type": "url",
+    "action": "/ldims_new/Visualman/now_main.jsp?isShield=false&linkid=${id}&from=${$path[0][title]}&to=${$path[1][title]}&from_ip=${$path[0][ip]}&to_ip=${$path[1][ip]}&from_id=${$path[0][id]}&to_id=${$path[1][id]}"
+  },
+  {
+    "name": "外挂菜单",
+    "aweight": "11",
+    "eweight": "10",
+    "item": [
+      {
+        "name": "属性",
+        "type": "url",
+        "action": "/ldims_new/Resource/DeviceShow.jsp?device_id=${ip}"
+      },
+      {
+        "name": "设备告警",
+        "type": "url",
+        "action": "/ldims_new/liposs/webtopo/event/deviceEvent.action?objId=${id}"
+      },
+      {
+        "name": "实用工具",
+        "item": [
+          {
+            "name": "ping",
+            "type": "url",
+            "action": "/ldims_new/webtopo/webtop_ping.jsp?device_id=${ip}&action=ping"
+          },
+          {
+            "name": "系统ping",
+            "type": "url",
+            "action": "/ldims_new/liposs/webtopo/resource/topoManage!goToSystemPingPage.action?deviceId=${ip}"
+          },
+          {
+            "name": "telnet",
+            "type": "url",
+            "action": "/ldims_new/webtopo/webtop_ping.jsp?device_id=${ip}&action=telnet"
+          },
+          {
+            "name": "设备snmp检测",
+            "type": "url",
+            "action": "/ldims_new/liposs/webtopo/resource/topoManage!toSnmpTest.action?deviceId=${ip}"
+          }
+        ]
+      },
+      {
+        "name": "设备性能",
+        "item": [
+          {
+            "name": "CPU利用率",
+            "type": "url",
+            "action": "/ldims_new/webtopo/webtopo_PMRightClick.jsp?class1=1&device_id=${ip}"
+          },
+          {
+            "name": "内存利用率",
+            "type": "url",
+            "action": "/ldims_new/webtopo/webtopo_PMRightClick.jsp?class1=2&device_id=${ip}"
+          },
+          {
+            "name": "设备温度",
+            "type": "url",
+            "action": "/ldims_new/webtopo/webtopo_PMRightClick.jsp?class1=4&device_id=${ip}"
+          }
+        ]
+      },
+      {
+        "name": "设备信息",
+        "item": [
+          {
+            "name": "系统信息",
+            "type": "url",
+            "action": "/ldims_new/iposs/realtime/snmp/sysinfo.action?device_id=${ip}"
+          },
+          {
+            "name": "设备性能",
+            "type": "url",
+            "action": "/ldims_new/webtopo/webtop_xinnen.jsp?device_id=${ip}"
+          },
+          {
+            "name": "v4端口信息",
+            "type": "url",
+            "action": "/ldims_new/iposs/realtime/snmp/devport.action?device_id=${ip}&ipType=0"
+          },
+          {
+            "name": "v4设备流量",
+            "type": "url",
+            "action": "/ldims_new/iposs/realtime/flux/realflux.action?device_id=${ip}&ipType=0"
+          },
+          {
+            "name": "v6端口信息",
+            "type": "url",
+            "action": "/ldims_new/iposs/realtime/snmp/devport.action?device_id=${ip}&ipType=1"
+          },
+          {
+            "name": "v6设备流量",
+            "type": "url",
+            "action": "/ldims_new/iposs/realtime/flux/realflux.action?device_id=${ip}&ipType=1"
+          }
+        ]
+      },
+      {
+        "name": "设备配置",
+        "item": [
+          {
+            "name": "性能配置",
+            "type": "url",
+            "action": "/ldims_new/iposs/config/pmee/configPmee.action?device_id=${ip}"
+          },
+          {
+            "name": "ipcheck配置",
+            "type": "url",
+            "action": "/ldims_new/liposs/ipcheck/ipCheckConfig!singleDevConfig.action?deviceId=${ip}"
+          },
+          {
+            "name": "v4流量配置",
+            "type": "url",
+            "action": "/ldims_new/iposs/config/flux/configFlux.action?device_id=${ip}&ipType=0"
+          },
+          {
+            "name": "v6流量配置",
+            "type": "url",
+            "action": "/ldims_new/iposs/config/flux/configFlux.action?device_id=${ip}&ipType=1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "平移",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-external-link'></i>",
+    "action": "EventType(TopoEvent_SET_MODE_SHOW)"
+  },
+  {
+    "name": "框选",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-check'></i>",
+    "action": "EventType(TopoEvent_SET_MODE_SELECT)"
+  },
+  {
+    "name": "编辑",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-edit'></i>",
+    "action": "EventType(TopoEvent_SET_MODE_EDIT)"
+  },
+  {
+    "name": "居中缩放",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-screenshot'></i>",
+    "action": "EventType(TopoEvent_SET_CENTER_ZOOM)"
+  },
+  {
+    "name": "正常比例",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-fullscreen'></i>",
+    "action": "EventType(TopoEvent_SET_CENTER)"
+  },
+  {
+    "name": "导出图片",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-camera-retro'></i>",
+    "action": "EventType(TopoEvent_GET_PICTURE)"
+  },
+  {
+    "name": "保存",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-save'></i>",
+    "action": "EventType(TopoEvent_SAVE)"
+  },
+  {
+    "name": "搜索",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-search'></i>",
+    "action": "EventType(TopoEvent_OPEN_SEARCH)"
+  }
+]

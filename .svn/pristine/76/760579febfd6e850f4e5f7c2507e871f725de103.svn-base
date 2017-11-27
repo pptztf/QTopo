@@ -1,0 +1,414 @@
+[
+  {
+    "device_model": "-1",
+    "device_name": "==请选择=="
+  },
+  {
+    "device_model": "5307",
+    "device_name": "3352"
+  },
+  {
+    "device_model": "292",
+    "device_name": "A5328"
+  },
+  {
+    "device_model": "204",
+    "device_name": "A8010"
+  },
+  {
+    "device_model": "211",
+    "device_name": "A8850"
+  },
+  {
+    "device_model": "260",
+    "device_name": "AR2830"
+  },
+  {
+    "device_model": "5324",
+    "device_name": "ATN910I"
+  },
+  {
+    "device_model": "5325",
+    "device_name": "ATN950B"
+  },
+  {
+    "device_model": "218",
+    "device_name": "BAS-BIAD"
+  },
+  {
+    "device_model": "5322",
+    "device_name": "CX600-X3"
+  },
+  {
+    "device_model": "5327",
+    "device_name": "CX600-X8"
+  },
+  {
+    "device_model": "229",
+    "device_name": "ESR8825"
+  },
+  {
+    "device_model": "232",
+    "device_name": "ESR8825-2"
+  },
+  {
+    "device_model": "258",
+    "device_name": "Eudemon200"
+  },
+  {
+    "device_model": "217",
+    "device_name": "ISN8850"
+  },
+  {
+    "device_model": "203",
+    "device_name": "MA5100"
+  },
+  {
+    "device_model": "280",
+    "device_name": "MA5103"
+  },
+  {
+    "device_model": "212",
+    "device_name": "MA5105"
+  },
+  {
+    "device_model": "201",
+    "device_name": "MA5200"
+  },
+  {
+    "device_model": "202",
+    "device_name": "MA5200F"
+  },
+  {
+    "device_model": "222",
+    "device_name": "MA5200G"
+  },
+  {
+    "device_model": "209",
+    "device_name": "MA5300"
+  },
+  {
+    "device_model": "210",
+    "device_name": "MA5300 BAS"
+  },
+  {
+    "device_model": "242",
+    "device_name": "MA5303"
+  },
+  {
+    "device_model": "246",
+    "device_name": "MA5600T"
+  },
+  {
+    "device_model": "5336",
+    "device_name": "MA5600T"
+  },
+  {
+    "device_model": "262",
+    "device_name": "MA5603"
+  },
+  {
+    "device_model": "281",
+    "device_name": "MA5603"
+  },
+  {
+    "device_model": "241",
+    "device_name": "MA5605"
+  },
+  {
+    "device_model": "278",
+    "device_name": "MA5606T"
+  },
+  {
+    "device_model": "5335",
+    "device_name": "MA5608T"
+  },
+  {
+    "device_model": "284",
+    "device_name": "MA5615"
+  },
+  {
+    "device_model": "295",
+    "device_name": "MA5616"
+  },
+  {
+    "device_model": "294",
+    "device_name": "MA5620"
+  },
+  {
+    "device_model": "269",
+    "device_name": "MA5680T"
+  },
+  {
+    "device_model": "5318",
+    "device_name": "MA5683T"
+  },
+  {
+    "device_model": "5344",
+    "device_name": "MA5800-X17"
+  },
+  {
+    "device_model": "5346",
+    "device_name": "MA5800-X2"
+  },
+  {
+    "device_model": "5345",
+    "device_name": "MA5800-X7"
+  },
+  {
+    "device_model": "266",
+    "device_name": "ME60"
+  },
+  {
+    "device_model": "249",
+    "device_name": "NE20"
+  },
+  {
+    "device_model": "293",
+    "device_name": "NE20E"
+  },
+  {
+    "device_model": "216",
+    "device_name": "NE40"
+  },
+  {
+    "device_model": "228",
+    "device_name": "NE40-4"
+  },
+  {
+    "device_model": "254",
+    "device_name": "NE40E"
+  },
+  {
+    "device_model": "5340",
+    "device_name": "NE40E-X16"
+  },
+  {
+    "device_model": "250",
+    "device_name": "NE5000E"
+  },
+  {
+    "device_model": "215",
+    "device_name": "NE80"
+  },
+  {
+    "device_model": "244",
+    "device_name": "NE80E"
+  },
+  {
+    "device_model": "223",
+    "device_name": "R2631"
+  },
+  {
+    "device_model": "5342",
+    "device_name": "S12708"
+  },
+  {
+    "device_model": "214",
+    "device_name": "S2008"
+  },
+  {
+    "device_model": "268",
+    "device_name": "S2008TP-EA"
+  },
+  {
+    "device_model": "213",
+    "device_name": "S2016"
+  },
+  {
+    "device_model": "287",
+    "device_name": "S2016-EI"
+  },
+  {
+    "device_model": "288",
+    "device_name": "S2016TP-EA"
+  },
+  {
+    "device_model": "5341",
+    "device_name": "S2318"
+  },
+  {
+    "device_model": "283",
+    "device_name": "S2326TP-EI"
+  },
+  {
+    "device_model": "206",
+    "device_name": "S2403"
+  },
+  {
+    "device_model": "207",
+    "device_name": "S2403F"
+  },
+  {
+    "device_model": "208",
+    "device_name": "S2403H"
+  },
+  {
+    "device_model": "234",
+    "device_name": "S2403H-EI"
+  },
+  {
+    "device_model": "286",
+    "device_name": "S2403H-HI"
+  },
+  {
+    "device_model": "289",
+    "device_name": "S2403TP-EA"
+  },
+  {
+    "device_model": "205",
+    "device_name": "S3008"
+  },
+  {
+    "device_model": "221",
+    "device_name": "S3026"
+  },
+  {
+    "device_model": "235",
+    "device_name": "S3026"
+  },
+  {
+    "device_model": "239",
+    "device_name": "S3026C"
+  },
+  {
+    "device_model": "237",
+    "device_name": "S3026E"
+  },
+  {
+    "device_model": "240",
+    "device_name": "S3026E FM"
+  },
+  {
+    "device_model": "238",
+    "device_name": "S3026E FS"
+  },
+  {
+    "device_model": "236",
+    "device_name": "S3050"
+  },
+  {
+    "device_model": "5308",
+    "device_name": "S3328TP-EI"
+  },
+  {
+    "device_model": "219",
+    "device_name": "S3526"
+  },
+  {
+    "device_model": "224",
+    "device_name": "S3526C"
+  },
+  {
+    "device_model": "226",
+    "device_name": "S3528G"
+  },
+  {
+    "device_model": "247",
+    "device_name": "S3528P"
+  },
+  {
+    "device_model": "285",
+    "device_name": "S3528P-EA"
+  },
+  {
+    "device_model": "220",
+    "device_name": "S3552F"
+  },
+  {
+    "device_model": "248",
+    "device_name": "S3552F-HI"
+  },
+  {
+    "device_model": "225",
+    "device_name": "S3552G"
+  },
+  {
+    "device_model": "251",
+    "device_name": "S3900"
+  },
+  {
+    "device_model": "257",
+    "device_name": "S3928P-EI"
+  },
+  {
+    "device_model": "245",
+    "device_name": "S3952P"
+  },
+  {
+    "device_model": "5315",
+    "device_name": "S5328C"
+  },
+  {
+    "device_model": "5314",
+    "device_name": "S5352C"
+  },
+  {
+    "device_model": "267",
+    "device_name": "S5516"
+  },
+  {
+    "device_model": "5347",
+    "device_name": "S5800"
+  },
+  {
+    "device_model": "252",
+    "device_name": "S6503"
+  },
+  {
+    "device_model": "227",
+    "device_name": "S6506"
+  },
+  {
+    "device_model": "230",
+    "device_name": "S6506r"
+  },
+  {
+    "device_model": "275",
+    "device_name": "S7806"
+  },
+  {
+    "device_model": "231",
+    "device_name": "S8016"
+  },
+  {
+    "device_model": "253",
+    "device_name": "S8505"
+  },
+  {
+    "device_model": "256",
+    "device_name": "S8508"
+  },
+  {
+    "device_model": "259",
+    "device_name": "S8512"
+  },
+  {
+    "device_model": "290",
+    "device_name": "S9303"
+  },
+  {
+    "device_model": "291",
+    "device_name": "S9306"
+  },
+  {
+    "device_model": "5348",
+    "device_name": "S9312"
+  },
+  {
+    "device_model": "243",
+    "device_name": "UA5000"
+  },
+  {
+    "device_model": "255",
+    "device_name": "UA5000G"
+  },
+  {
+    "device_model": "5320",
+    "device_name": "s5300"
+  },
+  {
+    "device_model": "5319",
+    "device_name": "srg3200"
+  }
+]

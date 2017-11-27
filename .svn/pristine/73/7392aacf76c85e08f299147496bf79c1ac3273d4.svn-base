@@ -1,0 +1,128 @@
+[
+  {
+    "name": "[DEBUG]",
+    "aweight": "111",
+    "eweight": "11111111111",
+    "type": "event",
+    "action": "EventType(TopoEvent_DEBUG)"
+  },
+  {
+    "name": "取消高亮",
+    "aweight": "11",
+    "eweight": "111111111111",
+    "type": "event",
+    "action": "EventType(TopoEvent_HIGHTLIGHT_CANCEL)",
+    "filter": "(${CANVAS:high_light}==true) or (${CANVAS:high_light_manage}==true)"
+  },
+  {
+    "name": "刷新",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_REFRESH)"
+  },
+  {
+    "name": "返回",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_GO_BACK)",
+    "filter": "${CANVAS:go_back}==true"
+  },
+  {
+    "name": "删除",
+    "aweight": "11",
+    "eweight": "111110",
+    "type": "event",
+    "action": "EventType(TopoEvent_DELETE_ELEMENTS)"
+  },
+  {
+    "name": "创建分组",
+    "aweight": "11",
+    "eweight": "111",
+    "type": "event",
+    "action": "EventType(TopoEvent_ADD_GROUP)",
+    "filter":"${$group}==null"
+  },
+  {
+    "name": "分组切换",
+    "aweight": "11",
+    "eweight": "10000",
+    "type": "event",
+    "dblclick": "true",
+    "action": "EventType(TopoEvent_GROUP_EXPANDED_TOGGLE)"
+  },
+  {
+    "name": "移出分组",
+    "aweight": "11",
+    "eweight": "110",
+    "type": "event",
+    "action": "EventType(TopoEvent_OUT_GROUP)",
+    "filter":"${$group}!=null"
+  },
+  {
+    "name": "操作网元",
+    "aweight": "11",
+    "eweight": "110",
+    "type": "event",
+    "item": [
+      {
+        "name": "相关高亮",
+        "type": "event",
+        "action": "EventType(TopoEvent_HIGHTLIGHT_CONNECT)",
+        "filter": "(${CANVAS:high_light}==false) and (${CANVAS:high_light_manage}==false)"
+      }
+    ]
+  },
+  {
+    "name": "进入下一层",
+    "aweight": "11",
+    "eweight": "100",
+    "dblclick": "true",
+    "type": "event",
+    "action": "EventType(TopoEvent_GO_DOWN) EventProperty(id=${id})",
+    "filter": "${elementType}==segment"
+  },
+  {
+    "name": "平移",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-external-link'></i>",
+    "action": "EventType(TopoEvent_SET_MODE_SHOW)"
+  },
+  {
+    "name": "框选",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-check'></i>",
+    "action": "EventType(TopoEvent_SET_MODE_SELECT)"
+  },
+  {
+    "name": "编辑",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-edit'></i>",
+    "action": "EventType(TopoEvent_SET_MODE_EDIT)"
+  },
+  {
+    "name": "居中缩放",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-screenshot'></i>",
+    "action": "EventType(TopoEvent_SET_CENTER_ZOOM)"
+  },
+  {
+    "name": "正常比例",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-fullscreen'></i>",
+    "action": "EventType(TopoEvent_SET_CENTER)"
+  },
+  {
+    "name": "导出图片",
+    "dblclick": "toolbar",
+    "type": "event",
+    "icon": "<i class='icon-camera-retro'></i>",
+    "action": "EventType(TopoEvent_GET_PICTURE)"
+  }
+]

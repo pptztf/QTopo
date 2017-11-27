@@ -1,0 +1,414 @@
+[
+  {
+    "device_model": "-1",
+    "descr": "==请选择=="
+  },
+  {
+    "device_model": "5307",
+    "descr": "3352v1"
+  },
+  {
+    "device_model": "292",
+    "descr": "A5328v1"
+  },
+  {
+    "device_model": "204",
+    "descr": "A8010v1"
+  },
+  {
+    "device_model": "211",
+    "descr": "A8850"
+  },
+  {
+    "device_model": "260",
+    "descr": "AR2830v1"
+  },
+  {
+    "device_model": "5324",
+    "descr": "ATN910Iv2"
+  },
+  {
+    "device_model": "5325",
+    "descr": "ATN950Bv2"
+  },
+  {
+    "device_model": "218",
+    "descr": "BAS-BIAD"
+  },
+  {
+    "device_model": "5322",
+    "descr": "CX600-X3v2"
+  },
+  {
+    "device_model": "5327",
+    "descr": "CX600-X8v2"
+  },
+  {
+    "device_model": "229",
+    "descr": "ESR8825"
+  },
+  {
+    "device_model": "232",
+    "descr": "ESR8825-2"
+  },
+  {
+    "device_model": "258",
+    "descr": "Eudemon200v1"
+  },
+  {
+    "device_model": "217",
+    "descr": "ISN8850"
+  },
+  {
+    "device_model": "203",
+    "descr": "MA5100v1"
+  },
+  {
+    "device_model": "280",
+    "descr": "MA5103v1"
+  },
+  {
+    "device_model": "212",
+    "descr": "MA5105v1"
+  },
+  {
+    "device_model": "202",
+    "descr": "MA5200Fv2.10"
+  },
+  {
+    "device_model": "222",
+    "descr": "MA5200Gv1"
+  },
+  {
+    "device_model": "201",
+    "descr": "MA5200v2.10"
+  },
+  {
+    "device_model": "210",
+    "descr": "MA5300 BASv2.10"
+  },
+  {
+    "device_model": "209",
+    "descr": "MA5300v1"
+  },
+  {
+    "device_model": "242",
+    "descr": "MA5303v1"
+  },
+  {
+    "device_model": "246",
+    "descr": "MA5600Tv1"
+  },
+  {
+    "device_model": "5336",
+    "descr": "MA5600Tv2"
+  },
+  {
+    "device_model": "262",
+    "descr": "MA5603v1"
+  },
+  {
+    "device_model": "281",
+    "descr": "MA5603v1"
+  },
+  {
+    "device_model": "241",
+    "descr": "MA5605v1"
+  },
+  {
+    "device_model": "278",
+    "descr": "MA5606Tv1"
+  },
+  {
+    "device_model": "5335",
+    "descr": "MA5608Tv2"
+  },
+  {
+    "device_model": "284",
+    "descr": "MA5615v1"
+  },
+  {
+    "device_model": "295",
+    "descr": "MA5616v1"
+  },
+  {
+    "device_model": "294",
+    "descr": "MA5620v1"
+  },
+  {
+    "device_model": "269",
+    "descr": "MA5680Tv2"
+  },
+  {
+    "device_model": "5318",
+    "descr": "MA5683Tv2"
+  },
+  {
+    "device_model": "5344",
+    "descr": "MA5800-X17v2"
+  },
+  {
+    "device_model": "5346",
+    "descr": "MA5800-X2v2"
+  },
+  {
+    "device_model": "5345",
+    "descr": "MA5800-X7v2"
+  },
+  {
+    "device_model": "266",
+    "descr": "ME60v2"
+  },
+  {
+    "device_model": "293",
+    "descr": "NE20Ev1"
+  },
+  {
+    "device_model": "249",
+    "descr": "NE20v1"
+  },
+  {
+    "device_model": "216",
+    "descr": "NE40"
+  },
+  {
+    "device_model": "228",
+    "descr": "NE40-4"
+  },
+  {
+    "device_model": "5340",
+    "descr": "NE40E-X16v2"
+  },
+  {
+    "device_model": "254",
+    "descr": "NE40Ev2"
+  },
+  {
+    "device_model": "250",
+    "descr": "NE5000Ev1"
+  },
+  {
+    "device_model": "215",
+    "descr": "NE80"
+  },
+  {
+    "device_model": "244",
+    "descr": "NE80Ev1"
+  },
+  {
+    "device_model": "223",
+    "descr": "R2631"
+  },
+  {
+    "device_model": "5342",
+    "descr": "S12708v2"
+  },
+  {
+    "device_model": "268",
+    "descr": "S2008TP-EAv1"
+  },
+  {
+    "device_model": "214",
+    "descr": "S2008v1"
+  },
+  {
+    "device_model": "287",
+    "descr": "S2016-EIv1"
+  },
+  {
+    "device_model": "288",
+    "descr": "S2016TP-EAv1"
+  },
+  {
+    "device_model": "213",
+    "descr": "S2016v1"
+  },
+  {
+    "device_model": "5341",
+    "descr": "S2318v2"
+  },
+  {
+    "device_model": "283",
+    "descr": "S2326TP-EIv1"
+  },
+  {
+    "device_model": "206",
+    "descr": "S2403"
+  },
+  {
+    "device_model": "207",
+    "descr": "S2403Fv1"
+  },
+  {
+    "device_model": "234",
+    "descr": "S2403H-EIv1"
+  },
+  {
+    "device_model": "286",
+    "descr": "S2403H-HIv1"
+  },
+  {
+    "device_model": "208",
+    "descr": "S2403Hv1"
+  },
+  {
+    "device_model": "289",
+    "descr": "S2403TP-EAv1"
+  },
+  {
+    "device_model": "205",
+    "descr": "S3008"
+  },
+  {
+    "device_model": "239",
+    "descr": "S3026Cv3.10"
+  },
+  {
+    "device_model": "240",
+    "descr": "S3026E FMv3.10"
+  },
+  {
+    "device_model": "238",
+    "descr": "S3026E FSv3.10"
+  },
+  {
+    "device_model": "237",
+    "descr": "S3026Ev3.10"
+  },
+  {
+    "device_model": "221",
+    "descr": "S3026v1"
+  },
+  {
+    "device_model": "235",
+    "descr": "S3026v2"
+  },
+  {
+    "device_model": "236",
+    "descr": "S3050"
+  },
+  {
+    "device_model": "5308",
+    "descr": "S3328TP-EIv1"
+  },
+  {
+    "device_model": "219",
+    "descr": "S3526"
+  },
+  {
+    "device_model": "224",
+    "descr": "S3526C"
+  },
+  {
+    "device_model": "226",
+    "descr": "S3528G"
+  },
+  {
+    "device_model": "285",
+    "descr": "S3528P-EAv1"
+  },
+  {
+    "device_model": "247",
+    "descr": "S3528Pv1"
+  },
+  {
+    "device_model": "220",
+    "descr": "S3552F"
+  },
+  {
+    "device_model": "248",
+    "descr": "S3552F-HIv1"
+  },
+  {
+    "device_model": "225",
+    "descr": "S3552G"
+  },
+  {
+    "device_model": "251",
+    "descr": "S3900v1"
+  },
+  {
+    "device_model": "257",
+    "descr": "S3928P-EIv1"
+  },
+  {
+    "device_model": "245",
+    "descr": "S3952Pv1"
+  },
+  {
+    "device_model": "5315",
+    "descr": "S5328Cv1"
+  },
+  {
+    "device_model": "5314",
+    "descr": "S5352Cv1"
+  },
+  {
+    "device_model": "267",
+    "descr": "S5516v1"
+  },
+  {
+    "device_model": "5347",
+    "descr": "S5800v2"
+  },
+  {
+    "device_model": "252",
+    "descr": "S6503v1"
+  },
+  {
+    "device_model": "227",
+    "descr": "S6506"
+  },
+  {
+    "device_model": "230",
+    "descr": "S6506r"
+  },
+  {
+    "device_model": "275",
+    "descr": "S7806V1"
+  },
+  {
+    "device_model": "231",
+    "descr": "S8016"
+  },
+  {
+    "device_model": "253",
+    "descr": "S8505v1"
+  },
+  {
+    "device_model": "256",
+    "descr": "S8508v1"
+  },
+  {
+    "device_model": "259",
+    "descr": "S8512v1"
+  },
+  {
+    "device_model": "290",
+    "descr": "S9303v1"
+  },
+  {
+    "device_model": "291",
+    "descr": "S9306v1"
+  },
+  {
+    "device_model": "5348",
+    "descr": "S9312v2"
+  },
+  {
+    "device_model": "255",
+    "descr": "UA5000Gv1"
+  },
+  {
+    "device_model": "243",
+    "descr": "UA5000v1"
+  },
+  {
+    "device_model": "5320",
+    "descr": "s5300v1"
+  },
+  {
+    "device_model": "5319",
+    "descr": "srg3200v1"
+  }
+]

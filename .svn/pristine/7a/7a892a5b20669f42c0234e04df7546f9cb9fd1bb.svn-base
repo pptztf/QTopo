@@ -1,0 +1,451 @@
+/*----背景黑板遮挡----*/
+.qtopo-blackboard {
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+    font-size: 14px;
+    visibility: hidden;
+    transition: visibility 0.3s linear;
+}
+
+.qtopo-alert{
+    z-index: 1003;
+}
+
+.qtopo-confirm{
+    z-index: 1002;
+}
+
+.qtopo-progress{
+    z-index:1001;
+}
+
+/*----提示框样式-------*/
+.qtopo-tips {
+    display: inline-block;
+    visibility: hidden;
+    color: white;
+    background: rgba(6, 36, 62, 0.9);
+    position: absolute;
+    font-size: 14px;
+    padding: 10px 10px;
+    border:none;
+    box-shadow: 0 0 15px #337ab7;
+}
+.qtopo-tips:hover{
+    visibility: hidden;
+}
+/*-------常用-----------*/
+.qtopo-btn {
+    background-color: #3d6cd6;
+    color: white;
+    margin: 0 5px;
+    font-weight: 300;
+    border: none;
+    border-radius: 0;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+}
+
+.qtopo-btn:hover {
+    background-color: rgba(10, 44, 70, 1);
+}
+
+/*------弹出窗口------*/
+.qtopo-popup_body {
+    color: white;
+    background-color: rgba(6, 36, 62, 0.8);
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    min-width: 300px;
+    min-height: 150px;
+    margin: 0;
+    position: relative;
+    transform: translate(0, -200%);
+    transition: transform 0.3s ease-out;
+}
+
+.qtopo-popup_title {
+    border-bottom: 1px solid #337ab7;
+    position: relative;
+    padding: 15px;
+    min-height: 50px;
+}
+
+.qtopo-popup_content {
+    position: relative;
+    padding: 15px;
+    min-height: 50px;
+}
+
+.qtopo-popup_foot {
+    border-top: 1px solid #337ab7;
+    padding: 15px;
+    text-align: right;
+    min-height: 50px;
+}
+
+.qtopo-component--active .qtopo-popup_body {
+    transform: translate(0, 0);
+}
+
+/*------进度条--------*/
+
+.qtopo-progress_body{
+    position: relative;
+    width: 600px;
+    height: 5px;
+    border-radius: 15px;
+    color: white;
+    background-color: rgba(6, 36, 62, 0.8);
+}
+
+.qtopo-progress_info, .qtopo-progress_state {
+    position: absolute;
+    display: inline-block;
+    line-height: 1.1em;
+    font-size: 20px;
+    top: -1.1em;
+}
+
+.qtopo-progress_info {
+    left: 0;
+}
+
+.qtopo-progress_state {
+    right: 0;
+}
+
+.qtopo-progress_bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    transition: width .5s ease;
+    background-color: rgb(0, 255, 255);
+    animation: progress-bar-stripes 2s linear infinite;
+    background-image: linear-gradient(45deg, rgba(6, 36, 62, .3) 25%, transparent 25%, transparent 50%, rgba(6, 36, 62, .3) 50%, rgba(6, 36, 62, .3) 75%, transparent 75%, transparent);
+    background-size: 40px 40px;
+}
+.qtopo-progress_bar--warning{
+    background-color:red;
+}
+
+@keyframes progress-bar-stripes {
+    0% {
+        background-position: 40px 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+/*----logoLoading------*/
+.qtopo-logo-loading {
+    visibility: hidden;
+    height: 220px;
+    width: 220px;
+    position: absolute;
+    transform: scale(0.7);
+    right: 0;
+    bottom: 0;
+}
+
+.qtopo-logo-loading_img {
+    width: 70px;
+    position: absolute;
+    top: 65px;
+    left: 65px;
+    animation: rotate 2s ease infinite;
+}
+
+.qtopo-logo-loading_svg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.qtopo-logo-loading_inner, .qtopo-logo-loading_inner-tiny {
+    fill: transparent;
+    stroke-width: 8px;
+    stroke: #F9D64A;
+}
+
+.qtopo-logo-loading_inner {
+    -webkit-animation: 2s circle-inner linear infinite;
+    animation: 2s circle-inner linear infinite;
+}
+
+.qtopo-logo-loading_inner-tiny {
+    stroke-dasharray: 15 330;
+    -webkit-animation: 2s circle-inner-tiny linear infinite;
+    animation: 2s circle-inner-tiny linear infinite;
+}
+
+.qtopo-logo-loading_inner-border {
+    fill: transparent;
+    stroke-width: 8px;
+    stroke: rgba(189, 186, 62, 0.25);
+    animation: 3s circle-inner-border linear infinite;
+}
+
+.qtopo-logo-loading_outer, .qtopo-logo-loading_outer-tiny {
+    fill: transparent;
+    stroke-width: 8px;
+    stroke: rgba(161, 164, 176, 0.5);
+}
+
+.qtopo-logo-loading_outer {
+    stroke-dasharray: 80 170;
+    animation: 1.5s circle-outer ease-out infinite;
+}
+
+.qtopo-logo-loading_outer-tiny {
+    stroke-dasharray: 30 220;
+    animation: 1.5s circle-outer-tiny ease-in-out infinite;
+}
+
+@keyframes circle-inner-border {
+    0% {
+        stroke-dasharray: 255 10;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 50 400;
+        stroke-dashoffset: -400;
+    }
+    100% {
+        stroke-dasharray: 255 10;
+        stroke-dashoffset: -800;
+    }
+}
+
+@keyframes circle-inner-tiny {
+    0% {
+        stroke-dashoffset: 15;
+    }
+    100% {
+        stroke-dashoffset: 355;
+    }
+}
+
+@keyframes circle-inner {
+    0% {
+        stroke-dasharray: 100 300;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 50 300;
+        stroke-dashoffset: -150;
+    }
+    100% {
+        stroke-dasharray: 100 300;
+        stroke-dashoffset: -400;
+    }
+}
+
+@keyframes circle-outer-tiny {
+    0% {
+        stroke-dashoffset: 100;
+    }
+    100% {
+        stroke-dashoffset: 350;
+    }
+}
+
+@keyframes circle-outer {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -250;
+    }
+}
+
+/*-----owLoading------------*/
+.qtopo-ow-loading {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 2px solid #337ab7;
+    transform: scale(0.5);
+}
+
+.qtopo-ow-loading, .qtopo-ow-loading:before,.qtopo-ow-loading:after {
+    width: 220px;
+    height: 220px;
+}
+
+.qtopo-ow-loading:before {
+    content: '';
+    display: block;
+    border: 7px solid #00FFFF;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    clip: rect(0px, 50px, 50px, 0px);
+    z-index: 10;
+    animation: rotate infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+.qtopo-ow-loading:after {
+    content: '';
+    display: block;
+    border: 7px solid #00FFFF;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    clip: rect(0px, 50px, 50px, 0px);
+    z-index: 10;
+    animation: rotate-reserve infinite;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+.qtopo-ow-loading_hexagon {
+    height:36px;
+    width: 50px;
+    display: inline-block;
+    position: absolute;
+    background: #337ab7;
+    animation: qtopo-ow-loading_hexagon 3s ease-in-out infinite;
+}
+
+.qtopo-ow-loading_hexagon:before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 18px solid #337ab7;
+}
+
+.qtopo-ow-loading_hexagon:after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 18px solid #337ab7;
+}
+
+.qtopo-ow-loading_position-1, .qtopo-ow-loading_position-2 {
+    top: 17%;
+}
+
+.qtopo-ow-loading_position-1,.qtopo-ow-loading_position-6{
+    right: 51%;
+}
+
+.qtopo-ow-loading_position-2,.qtopo-ow-loading_position-7{
+    left: 51%;
+}
+
+.qtopo-ow-loading_position-3, .qtopo-ow-loading_position-4, .qtopo-ow-loading_position-5 {
+    top: 42%;
+}
+
+.qtopo-ow-loading_position-6, .qtopo-ow-loading_position-7 {
+    bottom: 17%;
+}
+
+.qtopo-ow-loading_position-1 {
+    animation-delay: 0.2s;
+}
+
+.qtopo-ow-loading_position-2 {
+    animation-delay: 0.4s;
+}
+
+.qtopo-ow-loading_position-3 {
+    left: 14%;
+    animation-delay: 0.6s;
+}
+
+.qtopo-ow-loading_position-4 {
+    left: 38.5%;
+    animation-delay: 0.8s;
+}
+
+.qtopo-ow-loading_position-5 {
+    right: 14%;
+    animation-delay: 1s;
+}
+
+.qtopo-ow-loading_position-6 {
+    animation-delay: 1.2s;
+}
+
+.qtopo-ow-loading_position-7 {
+    left: 51%;
+    animation-delay: 1.4s;
+}
+
+@keyframes qtopo-ow-loading_hexagon {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    15%, 50% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    65% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-reserve {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+.qtopo-component--active{
+    visibility: visible;
+}

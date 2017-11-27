@@ -1,0 +1,162 @@
+[
+  {
+    "descr": "==请选择==",
+    "vendor_id": "-1"
+  },
+  {
+    "descr": "华为",
+    "vendor_id": "1"
+  },
+  {
+    "descr": "思科",
+    "vendor_id": "2"
+  },
+  {
+    "descr": "港湾",
+    "vendor_id": "3"
+  },
+  {
+    "descr": "大唐",
+    "vendor_id": "4"
+  },
+  {
+    "descr": "Alcatel",
+    "vendor_id": "5"
+  },
+  {
+    "descr": "ZTE",
+    "vendor_id": "6"
+  },
+  {
+    "descr": "Nokia",
+    "vendor_id": "7"
+  },
+  {
+    "descr": "爱立信",
+    "vendor_id": "8"
+  },
+  {
+    "descr": "联创科技",
+    "vendor_id": "9"
+  },
+  {
+    "descr": "Sun",
+    "vendor_id": "10"
+  },
+  {
+    "descr": "朗讯",
+    "vendor_id": "11"
+  },
+  {
+    "descr": "RedBack",
+    "vendor_id": "12"
+  },
+  {
+    "descr": "3com",
+    "vendor_id": "13"
+  },
+  {
+    "descr": "Foundry",
+    "vendor_id": "14"
+  },
+  {
+    "descr": "ACE",
+    "vendor_id": "15"
+  },
+  {
+    "descr": "巨龙",
+    "vendor_id": "16"
+  },
+  {
+    "descr": "Juniper",
+    "vendor_id": "17"
+  },
+  {
+    "descr": "NetScreen",
+    "vendor_id": "18"
+  },
+  {
+    "descr": "博达",
+    "vendor_id": "19"
+  },
+  {
+    "descr": "Extreme",
+    "vendor_id": "20"
+  },
+  {
+    "descr": "UTStarcom",
+    "vendor_id": "21"
+  },
+  {
+    "descr": "普天",
+    "vendor_id": "22"
+  },
+  {
+    "descr": "实达",
+    "vendor_id": "23"
+  },
+  {
+    "descr": "Rustle",
+    "vendor_id": "24"
+  },
+  {
+    "descr": "瑞通",
+    "vendor_id": "25"
+  },
+  {
+    "descr": "Intel",
+    "vendor_id": "26"
+  },
+  {
+    "descr": "德胜",
+    "vendor_id": "27"
+  },
+  {
+    "descr": "F5 Networks",
+    "vendor_id": "28"
+  },
+  {
+    "descr": "北电网络",
+    "vendor_id": "29"
+  },
+  {
+    "descr": "西门子",
+    "vendor_id": "30"
+  },
+  {
+    "descr": "HP",
+    "vendor_id": "31"
+  },
+  {
+    "descr": "IBM",
+    "vendor_id": "32"
+  },
+  {
+    "descr": "Microsoft",
+    "vendor_id": "33"
+  },
+  {
+    "descr": "烽火",
+    "vendor_id": "34"
+  },
+  {
+    "descr": "基和",
+    "vendor_id": "36"
+  },
+  {
+    "descr": "H3C",
+    "vendor_id": "37"
+  },
+  {
+    "descr": "格林耐特",
+    "vendor_id": "48"
+  },
+  {
+    "descr": "武汉长光",
+    "vendor_id": "49"
+  },
+  {
+    "descr": "山石",
+    "vendor_id": "50"
+  }
+]

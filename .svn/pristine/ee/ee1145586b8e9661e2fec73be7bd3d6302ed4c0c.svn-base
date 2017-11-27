@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="../topo/core.css" rel="stylesheet">
+    <link href="./demo.css" rel="stylesheet">
+    <script src="../topo/core.js"></script>
+    <style>
+        .box {
+            position: absolute;
+            background: #0f0fff;
+            width: 200px;
+            height: 200px;
+            transition: all 2s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="box">
+            click to call alter!
+        </div>
+        <div class="box" style="left:300px;">
+            click to call comfirm!
+        </div>
+    </div>
+    <script>
+        QTopo.util.$ready(function () {
+            var dom = document.getElementsByClassName("topo")[0],
+                loading_logo = QTopo.initLoading({
+                    dom: dom,//插入的dom
+                    type: 0,//类型0为带Logo的,1为overwatch风格
+                    logo: "../images/iposs/logo.png"//type为0需要设置logo来源
+                }),
+                loading_ow = QTopo.initLoading({
+                    dom: dom,
+                    type: 1
+                }),
+                progress = QTopo.initProgress({
+                    dom: dom //插入的dom
+                }),
+                alert = QTopo.initAlert({ dom: dom }),
+                confirm = QTopo.initConfirm({ dom: dom }),
+                boxs = document.getElementsByClassName("box");
+
+            progress.open({
+                state: 50,//状态0-100
+                info: "test",//文字信息
+                warning: true//启用警告风格
+            });
+            setTimeout(progress.close, 2000);
+
+            loading_logo.position('center').open();
+            loading_ow.position('left').open();
+
+            QTopo.util.$on(boxs[0], "click", function (e) {
+                alert.open({
+                    title: "<span style='color:red;font-size:35px;'>test alert!</span>",//窗口名称
+                    content: "<span style='color:black;font-size:20px;'>for test</span>!"//窗口内容
+                });
+            })
+
+            QTopo.util.$on(boxs[1], "click", function (e) {
+                confirm.open({
+                    title: "<span style='color:red;font-size:35px;'>test confirm!</span>",//窗口名称
+                    content: "<span style='color:white;font-size:20px;'>move box?</span>"//窗口内容
+                })
+                    .ok(function () {//点击确认后执行
+                        moveBox(boxs[1]);
+                    })
+                    .cancel(function () {//点击取消后执行
+                        moveBox(boxs[1]);
+                    });
+            })
+
+            function moveBox(box) {
+                if (box.style.left == '600px') {
+                    box.style.left = '300px';
+                } else {
+                    box.style.left = '600px';
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>

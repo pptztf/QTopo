@@ -1,0 +1,82 @@
+[
+  {
+    "descr": "==请选择==",
+    "device_model": "-1"
+  },
+  {
+    "descr": "BIGHAMMER6802v1",
+    "device_model": "517"
+  },
+  {
+    "descr": "BIGHAMMER6805v1",
+    "device_model": "518"
+  },
+  {
+    "descr": "BIGHAMMER6808",
+    "device_model": "504"
+  },
+  {
+    "descr": "ESR80v1",
+    "device_model": "511"
+  },
+  {
+    "descr": "FH5210-48-DC",
+    "device_model": "506"
+  },
+  {
+    "descr": "Flex5210v1",
+    "device_model": "516"
+  },
+  {
+    "descr": "FlexHammer16i",
+    "device_model": "509"
+  },
+  {
+    "descr": "GWHammer10000v1.2",
+    "device_model": "502"
+  },
+  {
+    "descr": "GWHammer10000v2.0",
+    "device_model": "503"
+  },
+  {
+    "descr": "GWHammer10000v3.0",
+    "device_model": "513"
+  },
+  {
+    "descr": "GWHammer2024Ev1",
+    "device_model": "512"
+  },
+  {
+    "descr": "GWHammer3100v1",
+    "device_model": "508"
+  },
+  {
+    "descr": "GWHammer3300v1",
+    "device_model": "501"
+  },
+  {
+    "descr": "P160",
+    "device_model": "507"
+  },
+  {
+    "descr": "P320",
+    "device_model": "505"
+  },
+  {
+    "descr": "UH2024Ev1",
+    "device_model": "514"
+  },
+  {
+    "descr": "UH3550Ev1",
+    "device_model": "515"
+  },
+  {
+    "descr": "uHammer24Ev1",
+    "device_model": "519"
+  },
+  {
+    "descr": "uHammer2Ev1",
+    "device_model": "510"
+  }
+]

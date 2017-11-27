@@ -1,0 +1,43 @@
+{
+  "WebTopo": {
+    "NetView": {
+      "Nodes": {
+        "Device": [
+          {
+            "icon": "router2.png",
+            "id": "1/dev/25120",
+            "ip": "25120",
+            "isCPE": "0",
+            "py": "1",
+            "realicon": "laptop.png",
+            "state": "1",
+            "title": "遵义-红花岗-822局-CR-1.MAN.NE5000E(G2010301)",
+            "type": "250",
+            "x": "512",
+            "y": "149"
+          },
+          {
+            "icon": "router2.png",
+            "id": "1/dev/25121",
+            "ip": "25121",
+            "isCPE": "0",
+            "py": "1",
+            "realicon": "laptop.png",
+            "state": "1",
+            "title": "遵义-汇川-862局-CR-1.MAN.NE5000E(G2010301)",
+            "type": "250",
+            "x": "398",
+            "y": "154"
+          }
+        ],
+        "Link": [],
+        "XY": {
+          "iMinX": "0",
+          "iMinY": "0"
+        }
+      },
+      "id": "1",
+      "pid": "1/zunyi/0"
+    }
+  }
+}

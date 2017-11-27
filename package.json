@@ -1,0 +1,50 @@
+{
+  "name": "qiyc",
+  "version": "1.0.0",
+  "description": "my topo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hai3460377/QTopo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hai3460377/QTopo/issues"
+  },
+  "homepage": "https://github.com/hai3460377/QTopo#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.5",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-buffer": "0.0.2",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.5.2",
+    "gulp-uglify": "^2.0.1",
+    "jquery": "^3.1.1",
+    "raw-loader": "^0.5.1",
+    "run-sequence": "^1.2.2",
+    "style-loader": "^0.13.2",
+    "url-loader": "^0.5.8",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^3.7.1"
+  },
+  "dependencies": {
+    "babel-core": "^7.0.0-beta.3",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^7.0.0-beta.3",
+    "babel-preset-env": "^2.0.0-beta.2",
+    "babel-runtime": "^6.26.0",
+    "file-loader": "^1.1.5",
+    "postcss-loader": "^2.0.8"
+  }
+}
