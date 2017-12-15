@@ -9,7 +9,7 @@ export const initEvents = (iposs) => {
             iposs.alert("未知错误,请联系管理员!");
         };
     let linkCache = {};
-    
+
     //注册事件
     iposs.events = {
         TopoEvent_DEBUG,
@@ -33,6 +33,7 @@ export const initEvents = (iposs) => {
         TopoEvent_COPY,
         TopoEvent_CUT,
         TopoEvent_PASTE,
+        TopoEvent_COPYPASTE,
         TopoEvent_SET_AS_LINK_START,
         TopoEvent_SET_AS_LINK_END,
         TopoEvent_SET_MODE_SHOW,
@@ -43,8 +44,10 @@ export const initEvents = (iposs) => {
         TopoEvent_GET_PICTURE,
         TopoEvent_SAVE,
         TopoEvent_OPEN_SEARCH,
+        TopoEvent_SEARCH_GO_TO,
         TopoEvent_GROUP_EXPANDED_TOGGLE,
         TopoEvent_LINK_EXPANDED_TOGGLE,
+        TopoEvent_EDIT_DEVICE_TYPE_ATTR,
         TopoEvent_OUT_GROUP
     };
 
@@ -106,6 +109,12 @@ export const initEvents = (iposs) => {
 
     function TopoEvent_EDIT_DEVICE_ATTR(position, element, properties) {
         windows("editDeviceAttr", {
+            target: element
+        })
+    }
+    //修改设备类型和属性
+    function  TopoEvent_EDIT_DEVICE_TYPE_ATTR(position, element, properties){
+        windows("editDeviceTypeAndAttr", {
             target: element
         })
     }
@@ -202,7 +211,7 @@ export const initEvents = (iposs) => {
 
     function TopoEvent_MANAGE(position, element, properties) {
         factory.manage(element.data("id")).then(e => {
-            element.data('state', 1);
+            element.data('visible', 1);
             let image = manageIcon(element.image(), 1);
             element.image(image);
             if (scene.data("high_light_manage")) {
@@ -217,7 +226,7 @@ export const initEvents = (iposs) => {
 
     function TopoEvent_CANCEL_MANAGE(position, element, properties) {
         factory.cancelManage(element.data("id")).then(e => {
-            element.data('state', 0);
+            element.data('visible', 0);
             let image = manageIcon(element.image(), 0);
             element.image(image);
             if (scene.data("high_light_manage")) {
@@ -232,12 +241,9 @@ export const initEvents = (iposs) => {
 
     function TopoEvent_COPY(position, element, properties) {
         let selected = scene.$selected;
-        let ids = [...selected].filter(el => _.isNode(el)).map(el => el.data("id"));
-        factory.copy(ids).then(json => {
-            json = json.Nodes;
-            iposs.addNode(json.Device);
-            iposs.addLink(json.Link);
-        });
+        let elements = [...selected].filter(el => _.isNode(el));
+        elements.forEach(el => el.$style.visible = true);
+        scene.data("copy_elements", elements);
     }
 
     function TopoEvent_CUT(position, element, properties) {
@@ -247,6 +253,22 @@ export const initEvents = (iposs) => {
         scene.data("cut_elements", elements);
     }
 
+    function TopoEvent_COPYPASTE(position, element, properties) {
+        let elements = scene.data("copy_elements");
+        if (_.notNull(elements)) {
+            factory.copy(elements.map(el => el.data("id")), position).then(() => {
+                scene.data("copy_elements", null);
+                elements.forEach(el => {
+                    el.$style.visible = true;
+                    el.$inLinks && el.$inLinks.clear();
+                    el.$outLinks && el.$outLinks.clear();
+                    console.log(position);
+                    iposs.addNode(Object.assign({}, el.$data, {x:position[0], y: position[1]}));
+                });
+            });
+        }
+    }
+
     function TopoEvent_PASTE(position, element, properties) {
         let elements = scene.data("cut_elements");
         if (_.notNull(elements)) {
@@ -254,7 +276,7 @@ export const initEvents = (iposs) => {
                 elements.forEach(el => el.$style.visible = true);
                 scene.data("cut_elements", null);
             } else {
-                factory.cut_paste(elements.map(el => el.data("id")),position).then(() => {
+                factory.cut_paste(elements.map(el => el.data("id")), position).then(() => {
                     scene.data("cut_elements", null);
                     elements.forEach(el => {
                         el.$style.visible = true;
@@ -331,14 +353,26 @@ export const initEvents = (iposs) => {
     }
 
     function TopoEvent_SAVE(position, element, properties) {
-        //factory.savePosition().then(factory.save).then(data => iposs.alert(data));
-        factory.save().then(()=>{iposs.alert('保存拓扑成功')});
+        factory.savePosition().then(factory.save).then(data => {
+            if(data==0){
+                iposs.alert('保存拓扑成功');
+            }
+            iposs.events.TopoEvent_REFRESH()
+        });
     }
 
     function TopoEvent_OPEN_SEARCH(position, element, properties) {
         iposs.search();
     }
-
+    function TopoEvent_SEARCH_GO_TO(position, element, properties) {
+        const pid = properties.id;
+        if (_.notNull(pid)) {
+            return factory.savePosition().then(() => {
+                path.go();
+                return factory.searchGoTo(pid).then(data => iposs.paintLayer(data)).catch(e => errorPath(e));
+            });
+        }
+    }
     function TopoEvent_GROUP_EXPANDED_TOGGLE(position, element, properties) {
         if (_.isGroup(element) && _.isFunction(element.toggle)) {
             element.toggle();
@@ -383,6 +417,7 @@ export const initEvents = (iposs) => {
         iposs.progress(100, "未知错误,请联系管理员!", true);
         iposs.alert("未知错误,请联系管理员!");
     }
+
     function addLink() {
         iposs.confirm(`创建从
             <span style="color:yellow;">${linkCache.from.$style.textValue}</span>
@@ -400,9 +435,10 @@ export const initEvents = (iposs) => {
 };
 //---------
 
-function manageIcon(img, state) {
-    if (img.indexOf("router2") > -1 || img.indexOf("network_cloud2") > -1) {
-        return state == 1 ? img.replace("_glory.png", ".png") : img.replace(".png", "_glory.png");
+function manageIcon(img, visible){
+    console.log(img, 'img');
+    if (img.indexOf("bj_sr") > -1 || img.indexOf('luyou1')>-1 || img.indexOf('jiaohuan1')>-1) {
+        return visible == 1 ? img.replace("_glory.png", ".png") : img.replace(".png", "_glory.png");
     } else {
         return img;
     }

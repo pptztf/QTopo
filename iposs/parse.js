@@ -1,11 +1,11 @@
 const [_, DEFAULT_SIZE] = [QTopo.util, 36],
-    nameLimit = 5;
+    nameLimit = 10;
 export let initParse = function (iposs) {
     const {
         scene,
         imagePath,
         alarmColor
-    } = iposs;
+        } = iposs;
     const parseNode = _check((json, offset = scene.data("offset")) => {
         const [x, y, width, height] = [Number(json.x), Number(json.y), DEFAULT_SIZE, DEFAULT_SIZE];
         const node = {
@@ -38,9 +38,7 @@ export let initParse = function (iposs) {
                     speed: 2
                 }
             },
-            style: {
-
-            },
+            style: {},
             state: {
                 showStartArrow: true
             },
@@ -77,10 +75,10 @@ export let initParse = function (iposs) {
         let x = json.Nodes.XY.iMinX || 0,
             y = json.Nodes.XY.iMinY || 0;
         const data = {
-            id: json.id,
-            pid: json.pid,
-            offset: [Number(x), Number(y)]
-        },
+                id: json.id,
+                pid: json.pid,
+                offset: [Number(x), Number(y)]
+            },
             nodeData = parseNode(json.Nodes.Device, data.offset),
             linkData = parseLink(json.Nodes.Link);
         return {
@@ -120,12 +118,16 @@ function _filterValue(filter, json) {
     });
     return obj;
 }
-
+//在这里切割了字符串
 function _filterName(str) {
     if (_.isString(str)) {
-        if (str.length > nameLimit) {
-            str = str.substring(0, nameLimit)+"...";
-        }
+        var lastStr = str.match(/\(.+/g) || '';
+
+        var middleStr = str.match(/[A-Z0-9\.\-]+/g)[2] || '';
+
+        var preStr = str.substring(0, str.indexOf(middleStr));
+
+        str = preStr + "\n" + (lastStr == '' ? str : middleStr) + "\n" + lastStr;
     }
     return str;
 }

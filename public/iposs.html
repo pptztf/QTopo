@@ -9,6 +9,7 @@
     <link href="./topo/core.css" rel="stylesheet">
     <link href="./topo/iposs.css" rel="stylesheet">
     <script src="./topo/core.js"></script>
+    <!--为什么在这里引用topo , 里面的函数是全局的, 这样, 所有的后引入的文件都可以使用-->
     <script src="./topo/iposs.js"></script>
     <style>
         body {
@@ -34,8 +35,9 @@
     <script>
         var image_path = "images/iposs/",
             mock_path = "mock/iposs/";
-
         $(function () {
+            //从哪里拿的数据,做了什么, 在哪里渲染, 初始化数据在哪里?
+            //这里只是请求了menu , 在哪里请求了node的数据
             $.getJSON("../iposs/menu.json").done(function (data) {
                 topo.init({
                     dom: document.getElementById("topo"),

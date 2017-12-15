@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>iposs_topo</title>
     <link href="./lib/font-awesome.min.css" rel="stylesheet" />
     <script src="./lib/jquery.min.js"></script>
@@ -50,26 +51,26 @@
                         moved: "",//
                         go_down: basePath + "go_down.json?topoName=default-topo",//
                         go_back: basePath + "go_back.json?topoName=default-topo",//
-                        go_to: "",//
+                        go_to: basePath + "go_down.json?topoName=default-topo",//
                         refresh: basePath + "refresh.json?topoName=default-topo",//
                         add_group:mock_path+"return1.json",
-                        add_device: "",//
+                        add_device: mock_path + "return1.json",//
                         add_segment: mock_path + "add_segment.json",//
                         add_link: mock_path + "add_link.txt",//
-                        remove: "",//
+                        remove: mock_path + "return1.json",
                         edit_node: "",//
                         search: mock_path + "search.json",//
-                        manage: "",//
+                        manage: mock_path + "return1.json",
                         cut_paste: mock_path + "return1.json",//
-                        copy: mock_path + "copyDevice.json",//
-                        get_path: "",//
-                        get_deviceIp:"",//
-                        get_userGather:"",//
-                        get_vendorList: "",//
-                        get_deviceMode: "",//
-                        get_resList: "",//
-                        get_deviceMode_withoutOs: "",//
-                        get_linkCount: ""
+                        copy: mock_path + "return1.json",//
+                        get_path: mock_path + "get_path.txt",//
+                        get_deviceIp: mock_path + "get_deviceIp.txt",//
+                        get_userGather: mock_path + "get_userGather.json",//
+                        get_vendorList: mock_path + "get_vendorList.json",//
+                        get_deviceMode: mock_path + "get_deviceMode.json",//
+                        get_resList: mock_path + "get_resList.json",//
+                        get_deviceMode_withoutOs: mock_path + "get_deviceModeWithoutOs.json",//
+                        get_linkCount: mock_path + "get_linkCount.json"
                     }
                 });
             });

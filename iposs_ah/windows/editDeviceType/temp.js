@@ -16,6 +16,7 @@ function initEvent(win, {factory}) {
     var modelList = win.find("select[name=device_model]");
     win.on("window.open", function () {
         let target = win.data("todo").target;
+        console.log(win,'windata');
         vendor.empty();
         modelList.empty();
         factory.deviceIp(target.data("ip")).then(ip=> {

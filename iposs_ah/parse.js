@@ -12,7 +12,7 @@ export let initParse = function (iposs) {
             api: {
                 position: [x + offset[0], y + offset[1]],
                 id: json.id,
-                image: imagePath + json.icon
+                image: imagePath + (json.visible==1?json.icon:(json.icon.substring(0,json.icon.indexOf('.png'))+'_glory.png'))
             },
             style: {
                 textValue: json.name,
@@ -106,7 +106,6 @@ export let initParse = function (iposs) {
         return alarm;
     };
     const parseLayer = json => {
-        console.info(json);
         if (json && json.WebTopo && json.WebTopo.NetView) {
             json = json.WebTopo.NetView;
         } else {

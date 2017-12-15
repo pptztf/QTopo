@@ -10,6 +10,7 @@ export const initEvents = (iposs) => {
     Object.assign(iposs, initPaint(iposs));
     //首绘
     factory.index().then(data => iposs.paintLayer(data));
+
     iposs.events = {
 
         TopoEvent_DEBUG(position, element, properties) {
@@ -36,6 +37,7 @@ export const initEvents = (iposs) => {
         },
 
         TopoEvent_GO_TO(position, element, properties) {
+            console.log(properties,'xx');
             const pid = properties.id;
             if (_.notNull(pid)) {
                 return factory.savePosition().then(() => {

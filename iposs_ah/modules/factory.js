@@ -10,8 +10,8 @@ export const initFactory = iposs => {
         save, savePosition, search, vendorList, userGather,
         deviceIp, deviceMode, deviceMode_withoutOs,
         resourceList, linkCount, addGroup, addDevice,
-        addSegment, addLink, remove, editNode, manage,
-        cancelManage, copy, cut_paste, out_group, in_group
+        addSegment, addLink, remove, editNode,modifyElements, manage,
+        cancelManage, copy, cut_paste, out_group, in_group, searchGoTo
     };
 
     $.ajaxSetup({
@@ -111,15 +111,16 @@ export const initFactory = iposs => {
         return httpCtl({
             url: url.save,
             _text: true
-        });
+        }, e => e==0);
     }
 
     function savePosition() {
-        let movedObjs = `1;${scene.data("pid")};`;
+        let movedObjs = `default-topo;${scene.data("pid")};`;
         if (scene.data("moved").size > 0) {
             let moved = "";
             scene.data("moved")
-                .forEach(node => moved += (node.data("id") + "," + node.position().map(e => Math.floor(e)).join(",") + "@"));
+                .forEach(node => moved +=
+                    (node.data("id") + "," + node.position().map((e, i)=>Math.floor(e - scene.data("offset")[i])).join(",") + "@"));
             movedObjs += moved.substr(0, moved.length - 1);
             return httpCtl({
                 url: url.moved,
@@ -136,15 +137,39 @@ export const initFactory = iposs => {
         return httpCtl({
             url: url.search,
             data: {
-                seachValue: value,
-                seachType: type
+                searchValue: value,
+                searchType: type
             }
         });
     }
 
-    function vendorList(select) {
+    function searchGoTo(id) {
+        iposs.progress(10, "跳入目标层");
+        return httpCtl({
+            url: url.search_go_to,
+            data: {
+                id
+            }
+        }).then(data => {
+            iposs.progress(50, "正在绘制!");
+            return data;
+        })
+    }
+
+    function vendorList(select, defaultselect = -1) {
         return httpCtl(url.get_vendorList)
-            .then(data => data.forEach(option => select.append(`<option value=${option.vendor_id}>${option.descr}</option>`)));
+            .then(data => {
+                data.forEach(option => {
+                        if (option.vendorId == defaultselect) {
+                            select.append(`<option value=${option.vendorId} selected>${option.descr}</option>`);
+                            select.trigger('change');
+                        } else {
+                            select.append(`<option value=${option.vendorId}>${option.descr}</option>`);
+                        }
+
+                    }
+                );
+            });
     }
 
     function userGather(select) {
@@ -162,13 +187,21 @@ export const initFactory = iposs => {
         });
     }
 
-    function deviceMode(select, id) {
+    function deviceMode(select, id, defaultselect = -1) {
         return httpCtl({
             url: url.get_deviceMode,
             data: {
-                vendor_id: id
+                vendorId: id
             }
-        }).then(data => data.forEach(option => select.append(`<option value=${option.device_model}>${option.descr}</option>`)))
+        }).then(data => {
+            data.forEach(option => {
+                if (option.serial == defaultselect) {
+                    select.append(`<option value=${option.serial} selected>${option.descr}</option>`)
+                } else {
+                    select.append(`<option value=${option.serial}>${option.descr}</option>`)
+                }
+            });
+        })
     }
 
     function deviceMode_withoutOs(select, id) {
@@ -182,7 +215,7 @@ export const initFactory = iposs => {
 
     function resourceList(select) {
         httpCtl(url.get_resList)
-            .then(data => data.forEach(option => select.append(`<option value=${option.resource_type_id}>${option.descr}</option>`)));
+            .then(data => data.forEach(option => select.append(`<option value=${option.resourceTypeId}>${option.descr}</option>`)));
     }
 
     function linkCount(id) {
@@ -221,8 +254,8 @@ export const initFactory = iposs => {
             data: {
                 pid: scene.data("pid"),
                 //linkId: fromId + "" + toId + "1/0",
-                visible:'1',
-                zindex:'1',
+                visible: '1',
+                zindex: '1',
                 fromId: fromId,
                 toId: toId
             },
@@ -243,15 +276,21 @@ export const initFactory = iposs => {
         return httpCtl({
             url: url.edit_node,
             data
-        }, e => e == 0);
+        }, e => e == 1);
     }
-
+    function modifyElements(data) {
+        return httpCtl({
+            url: url.modifyelements,
+            data
+        }, e => e == 1);
+    }
     function manage(id) {
         return httpCtl({
             url: url.manage,
             data: {
-                type: 2,
-                ids: id
+                //type: 2,
+                objids: id,
+                isVisible: 1
             }
         }, e => e == 1)
     }
@@ -260,30 +299,34 @@ export const initFactory = iposs => {
         return httpCtl({
             url: url.manage,
             data: {
-                type: 0,
-                ids: id
+                //type: 2,
+                objids: id,
+                isVisible: 0
             }
         }, e => e == 1);
     }
 
-    function copy(ids) {
+    function copy(ids, position) {
         return httpCtl({
             url: url.copy,
             data: {
-                objIdArray: ids.join(",")
+                objids: ids.join(","),
+                pid: scene.data("pid"),
+                x: position[0],
+                y: position[1]
             }
-        }, e => _.notNull(e) && e.Nodes);
+        }, e => e == 1);
     }
 
-    function cut_paste(ids,position) {
+    function cut_paste(ids, position) {
         return httpCtl({
             url: url.cut_paste,
             data: {
                 objids: ids.join(","),
                 pid: scene.data("pid"),
-                vid:'1',
-                x:position[0],
-                y:position[1]
+                vid: '1',
+                x: position[0],
+                y: position[1]
             }
         }, e => e == 1);
     }
@@ -317,6 +360,7 @@ export const initFactory = iposs => {
                             if (judge(data)) {
                                 iposs.alert("操作成功!");
                                 resolve(data);
+                                iposs.events.TopoEvent_REFRESH();
                             } else {
                                 iposs.alert("操作失败!");
                                 reject(data);
@@ -339,3 +383,4 @@ export const initFactory = iposs => {
         reject();
     }
 };
+

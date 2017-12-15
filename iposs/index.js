@@ -6,9 +6,9 @@ import { initSearch } from "./modules/search";
 import { initWindows } from "./windows";
 
 const _ = QTopo.util;
+//又暴露了一个方法
 window.topo = {
     init: function (iposs) {
-        console.info(iposs);
         initTopo(iposs);
         initFactory(iposs);
         initWindows(iposs);

@@ -20,7 +20,7 @@
     "aweight": "11",
     "eweight": "1",
     "type": "event",
-    "action": "EventType(TopoEvent_REFRESH)"
+    "action": "EventType(TopoEvent_REFRESH) EventProperty(url=getSameTopo.action)"
   },
   {
     "name": "返回",
@@ -46,11 +46,25 @@
     "filter": "(${CANVAS:high_light}==false) and (${CANVAS:high_light_manage}==false)"
   },
   {
+    "name": "属性",
+    "aweight": "11",
+    "eweight": "10",
+    "type": "url",
+    "action": "/ldims/Resource/DeviceShow.jsp?device_id=${ip}"
+  },
+  {
     "name": "删除",
     "aweight": "11",
     "eweight": "111110",
     "type": "event",
     "action": "EventType(TopoEvent_DELETE_ELEMENTS)"
+  },
+  {
+    "name": "设备告警",
+    "aweight": "11",
+    "eweight": "10",
+    "type": "url",
+    "action": "/ldims/liposs/webtopo/event/deviceEvent.action?objId=${id}"
   },
   {
     "name": "编辑",
@@ -83,11 +97,6 @@
     "eweight": "1",
     "type": "event",
     "item": [
-      {
-        "name": "网段",
-        "type": "event",
-        "action": "EventType(TopoEvent_ADD_SEGMENT)"
-      },
       {
         "name": "设备",
         "type": "event",
@@ -135,7 +144,7 @@
   {
     "name": "添加链接",
     "aweight": "10",
-    "eweight": "10110",
+    "eweight": "10",
     "type": "event",
     "item": [
       {
@@ -156,143 +165,109 @@
     "eweight": "100",
     "dblclick": "true",
     "type": "event",
-    "action": "EventType(TopoEvent_GO_DOWN) EventProperty(id=${id})"
+    "action": "EventType(TopoEvent_GO_DOWN) EventProperty(id=${id})",
+    "filter": "${elementType}==segment"
   },
   {
-    "name": "双击设备-性能采集展示",
-    "aweight": "11",
-    "eweight": "10",
-    "dblclick": "true",
-    "type": "url",
-    "action": "/ldims_new/webtopo/webtopo_dbPM.jsp?device_id=${ip}"
-  },
-  {
-    "name": "双击链路--展现链路流量",
-    "aweight": "11",
-    "eweight": "1000",
-    "dblclick": "true",
-    "type": "url",
-    "action": "/ldims_new/Visualman/now_main.jsp?isShield=false&linkid=${id}&from=${$path[0][title]}&to=${$path[1][title]}&from_ip=${$path[0][ip]}&to_ip=${$path[1][ip]}&from_id=${$path[0][id]}&to_id=${$path[1][id]}"
-  },
-  {
-    "name": "外挂菜单",
+    "name": "实用工具",
     "aweight": "11",
     "eweight": "10",
     "item": [
       {
-        "name": "属性",
+        "name": "系统ping",
         "type": "url",
-        "action": "/ldims_new/Resource/DeviceShow.jsp?device_id=${ip}"
+        "action": "/ldims/liposs/webtopo/resource/topoManage!goToSystemPingPage.action?deviceId=${ip}"
       },
       {
-        "name": "设备告警",
+        "name": "设备snmp检测",
         "type": "url",
-        "action": "/ldims_new/liposs/webtopo/event/deviceEvent.action?objId=${id}"
+        "action": "/ldims/liposs/webtopo/resource/topoManage!toSnmpTest.action?deviceId=${ip}"
       },
       {
-        "name": "实用工具",
-        "item": [
-          {
-            "name": "ping",
-            "type": "url",
-            "action": "/ldims_new/webtopo/webtop_ping.jsp?device_id=${ip}&action=ping"
-          },
-          {
-            "name": "系统ping",
-            "type": "url",
-            "action": "/ldims_new/liposs/webtopo/resource/topoManage!goToSystemPingPage.action?deviceId=${ip}"
-          },
-          {
-            "name": "telnet",
-            "type": "url",
-            "action": "/ldims_new/webtopo/webtop_ping.jsp?device_id=${ip}&action=telnet"
-          },
-          {
-            "name": "设备snmp检测",
-            "type": "url",
-            "action": "/ldims_new/liposs/webtopo/resource/topoManage!toSnmpTest.action?deviceId=${ip}"
-          }
-        ]
+        "name": "ping",
+        "type": "url",
+        "action": "/ldims/webtopo/webtop_ping.jsp?device_id=${ip}&action=ping"
+      },
+      {
+        "name": "telnet",
+        "type": "url",
+        "action": "/ldims/webtopo/webtop_ping.jsp?device_id=${ip}&action=telnet"
+      }
+    ]
+  },
+  {
+    "name": "设备性能",
+    "aweight": "11",
+    "eweight": "10",
+    "item": [
+      {
+        "name": "CPU利用率",
+        "type": "url",
+        "action": "/ldims/webtopo/webtopo_PMRightClick.jsp?class1=1&device_id=${ip}"
+      },
+      {
+        "name": "内存利用率",
+        "type": "url",
+        "action": "/ldims/webtopo/webtopo_PMRightClick.jsp?class1=2&device_id=${ip}"
+      },
+      {
+        "name": "设备温度",
+        "type": "url",
+        "action": "/ldims/webtopo/webtopo_PMRightClick.jsp?class1=4&device_id=${ip}"
+      }
+    ]
+  },
+  {
+    "name": "设备信息",
+    "aweight": "11",
+    "eweight": "10",
+    "item": [
+      {
+        "name": "电子机历本",
+        "type": "url",
+        "action": "/ldims/liposs/service/develealmanac/devEleAlmanacAction.action?device_id=${ip}"
+      },
+      {
+        "name": "系统信息",
+        "type": "url",
+        "action": "/ldims/iposs/realtime/snmp/sysinfo.action?device_id=${ip}"
+      },
+      {
+        "name": "v4端口信息",
+        "type": "url",
+        "action": "/ldims/iposs/realtime/snmp/devport.action?device_id=${ip}&ipType=0"
+      },
+      {
+        "name": "v4设备流量",
+        "type": "url",
+        "action": "/ldims/iposs/realtime/flux/realflux.action?device_id=${ip}&ipType=0"
       },
       {
         "name": "设备性能",
-        "item": [
-          {
-            "name": "CPU利用率",
-            "type": "url",
-            "action": "/ldims_new/webtopo/webtopo_PMRightClick.jsp?class1=1&device_id=${ip}"
-          },
-          {
-            "name": "内存利用率",
-            "type": "url",
-            "action": "/ldims_new/webtopo/webtopo_PMRightClick.jsp?class1=2&device_id=${ip}"
-          },
-          {
-            "name": "设备温度",
-            "type": "url",
-            "action": "/ldims_new/webtopo/webtopo_PMRightClick.jsp?class1=4&device_id=${ip}"
-          }
-        ]
+        "type": "url",
+        "action": "/ldims/webtopo/webtop_xinnen.jsp?device_id=${ip}"
+      }
+    ]
+  },
+  {
+    "name": "设备配置",
+    "aweight": "11",
+    "eweight": "10",
+    "item": [
+      {
+        "name": "性能配置",
+        "type": "url",
+        "action": "/ldims/iposs/config/pmee/configPmee.action?device_id=${ip}"
       },
       {
-        "name": "设备信息",
-        "item": [
-          {
-            "name": "系统信息",
-            "type": "url",
-            "action": "/ldims_new/iposs/realtime/snmp/sysinfo.action?device_id=${ip}"
-          },
-          {
-            "name": "设备性能",
-            "type": "url",
-            "action": "/ldims_new/webtopo/webtop_xinnen.jsp?device_id=${ip}"
-          },
-          {
-            "name": "v4端口信息",
-            "type": "url",
-            "action": "/ldims_new/iposs/realtime/snmp/devport.action?device_id=${ip}&ipType=0"
-          },
-          {
-            "name": "v4设备流量",
-            "type": "url",
-            "action": "/ldims_new/iposs/realtime/flux/realflux.action?device_id=${ip}&ipType=0"
-          },
-          {
-            "name": "v6端口信息",
-            "type": "url",
-            "action": "/ldims_new/iposs/realtime/snmp/devport.action?device_id=${ip}&ipType=1"
-          },
-          {
-            "name": "v6设备流量",
-            "type": "url",
-            "action": "/ldims_new/iposs/realtime/flux/realflux.action?device_id=${ip}&ipType=1"
-          }
-        ]
+        "name": "v4流量配置",
+        "type": "url",
+        "action": "/ldims/iposs/config/flux/configFlux.action?device_id=${ip}&ipType=0"
       },
       {
-        "name": "设备配置",
-        "item": [
-          {
-            "name": "性能配置",
-            "type": "url",
-            "action": "/ldims_new/iposs/config/pmee/configPmee.action?device_id=${ip}"
-          },
-          {
-            "name": "ipcheck配置",
-            "type": "url",
-            "action": "/ldims_new/liposs/ipcheck/ipCheckConfig!singleDevConfig.action?deviceId=${ip}"
-          },
-          {
-            "name": "v4流量配置",
-            "type": "url",
-            "action": "/ldims_new/iposs/config/flux/configFlux.action?device_id=${ip}&ipType=0"
-          },
-          {
-            "name": "v6流量配置",
-            "type": "url",
-            "action": "/ldims_new/iposs/config/flux/configFlux.action?device_id=${ip}&ipType=1"
-          }
-        ]
+        "name": "ipcheck配置",
+        "type": "url",
+        "action": "/ldims/liposs/wlan/ipcheck/ipCheckConfig!singleDevConfig.action?device_id=${ip}"
       }
     ]
   },
@@ -302,7 +277,7 @@
     "type": "event",
     "icon": "<i class='icon-external-link'></i>",
     "action": "EventType(TopoEvent_SET_MODE_SHOW)",
-    "filter":"${CANVAS:mode}==show"
+    "filter": "${CANVAS:mode}==show"
   },
   {
     "name": "框选",
@@ -310,8 +285,7 @@
     "type": "event",
     "icon": "<i class='icon-check'></i>",
     "action": "EventType(TopoEvent_SET_MODE_SELECT)",
-    "filter":"${CANVAS:mode}==select",
-    "active": "true"
+    "filter": "${CANVAS:mode}==select"
   },
   {
     "name": "编辑",
@@ -319,7 +293,8 @@
     "type": "event",
     "icon": "<i class='icon-edit'></i>",
     "action": "EventType(TopoEvent_SET_MODE_EDIT)",
-    "filter":"${CANVAS:mode}==edit"
+    "filter": "${CANVAS:mode}==edit",
+    "active": "true"
   },
   {
     "name": "居中缩放",

@@ -39,7 +39,7 @@ export let initSearch = function (iposs) {
             if (_.notNull(value) && value != -1 || value != -2) {
                 factory.search(value, type)
                     .then(arr=> {
-                        resultSelect.empty().append(arr.map(op=>`<option value="${op.pid}">${op.descr}</option>`).join(''));
+                        resultSelect.empty().append(arr.map(op=>`<option value="${op.id}">${op.descr}</option>`).join(''));
                         resultPanel.css("visibility", "visible");
                     });
             }
@@ -100,7 +100,7 @@ export let initSearch = function (iposs) {
                 const prop ={
                     id:id
                 };
-                iposs.events.TopoEvent_GO_TO(null, null, prop).then(()=>{
+                iposs.events.TopoEvent_SEARCH_GO_TO(null, null, prop).then(()=>{
                     scene.map(el=>{
                         if(el.data('id')==id){
                             scene.moveToNode(el);

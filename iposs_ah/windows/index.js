@@ -4,6 +4,7 @@ import initAddSegment from "./addSegment/temp";
 import initAddGroup from "./addGroup/temp";
 import initEditDeviceAttr from "./editDeviceAttr/temp";
 import initEditDeviceType from"./editDeviceType/temp";
+import initEditDeviceTypeAndAttr from"./editDeviceTypeAndAttr/temp";
 import initEditSegment from"./editSegment/temp";
 import initTopNav from'./topoNav/temp';
 const _ = QTopo.util;
@@ -16,6 +17,7 @@ export let initWindows = iposs=> {
         editDeviceAttr = initEditDeviceAttr(iposs),
         editDeviceType = initEditDeviceType(iposs),
         editSegment = initEditSegment(iposs),
+        editDeviceTypeAndAttr=initEditDeviceTypeAndAttr(iposs),
         topoNav=initTopNav(iposs),
         windows = {
             addGroup,
@@ -24,6 +26,7 @@ export let initWindows = iposs=> {
             addSegment,
             editDeviceAttr,
             editDeviceType,
+            editDeviceTypeAndAttr,
             editSegment,
             topoNav
         };

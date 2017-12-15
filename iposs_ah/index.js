@@ -26,9 +26,9 @@ window.topo = {
         //组装右键菜单
         const addEvents = QTopo._initMenu(iposs.dom, iposs.stage, iposs.scene, iposs.menus);
         addEvents(iposs.events);
-
+        console.info(iposs);
         //首绘
-        iposs.factory.index().then(data => iposs.paintLayer(data));
+        iposs.factory.index().then(data => {iposs.paintLayer(data);});
     }
 };
 
@@ -44,12 +44,11 @@ function initTopo(iposs) {
     iposs.scene = scene;
     initComponent(iposs);
     scene.on("mousedrag", function (e) {
-        if (e.target && _.isNode(e.target)) {
+        if (e.target && (_.isNode(e.target) || e.target.$data.type=='group')) {
             moved.add(e.target);
         }
     });
     scene.on("mouseup", function (e) {
-        console.info(e);
         const target = e.target;
         if (e.button == 0 && _.isNode(target) && !target.$group) {
             const group = scene.searchPoint([e.x, e.y], "group");

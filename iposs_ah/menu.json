@@ -15,12 +15,20 @@
     "filter": "(${CANVAS:high_light}==true) or (${CANVAS:high_light_manage}==true)"
   },
   {
-    "name": "黏贴",
+    "name": "黏贴-剪切",
     "aweight": "11",
     "eweight": "1",
     "type": "event",
     "action": "EventType(TopoEvent_PASTE)",
     "filter": "notNull(${CANVAS:cut_elements})"
+  },
+  {
+    "name": "黏贴-复制",
+    "aweight": "11",
+    "eweight": "1",
+    "type": "event",
+    "action": "EventType(TopoEvent_COPYPASTE)",
+    "filter": "notNull(${CANVAS:copy_elements})"
   },
   {
     "name": "刷新",
@@ -70,10 +78,16 @@
   },
   {
     "name": "操作网元",
-    "aweight": "11",
-    "eweight": "110",
+    "aweight": "10",
+    "eweight": "10",
     "type": "event",
     "item": [
+      {
+        "name": "复制",
+        "type": "event",
+        "action": "EventType(TopoEvent_COPY)",
+        "filter": "isNull(${CANVAS:copy_elements})"
+      },
       {
         "name": "剪切",
         "type": "event",
@@ -81,12 +95,26 @@
         "filter": "isNull(${CANVAS:cut_elements})"
       },
       {
-        "name": "相关高亮",
+        "name": "管理",
         "type": "event",
-        "action": "EventType(TopoEvent_HIGHTLIGHT_CONNECT)",
-        "filter": "(${CANVAS:high_light}==false) and (${CANVAS:high_light_manage}==false)"
+        "action": "EventType(TopoEvent_MANAGE)",
+        "filter": "${visible}==0"
+      },
+      {
+        "name": "取消管理",
+        "type": "event",
+        "action": "EventType(TopoEvent_CANCEL_MANAGE)",
+        "filter": "${visible}==1"
       }
     ]
+  },
+  {
+    "name": "相关高亮",
+    "type": "event",
+    "aweight": "10",
+    "eweight": "110",
+    "action": "EventType(TopoEvent_HIGHTLIGHT_CONNECT)",
+    "filter": "(${CANVAS:high_light}==false) and (${CANVAS:high_light_manage}==false)"
   },
   {
     "name": "添加链接",
@@ -141,11 +169,23 @@
     "active": "true"
   },
   {
+    "name": "编辑",
+    "aweight": "10",
+    "eweight": "100",
+    "type": "event",
+    "action": "EventType(TopoEvent_EDIT_SEGMENT)"
+  },
+  {
     "name": "添加",
     "aweight": "11",
     "eweight": "1",
     "type": "event",
     "item": [
+      {
+        "name": "设备",
+        "type": "event",
+        "action": "EventType(TopoEvent_ADD_DEVICE)"
+      },
       {
         "name": "网段",
         "type": "event",
@@ -187,5 +227,18 @@
     "type": "event",
     "icon": "<i class='icon-search'></i>",
     "action": "EventType(TopoEvent_OPEN_SEARCH)"
+  },
+  {
+    "name": "编辑",
+    "aweight": "10",
+    "eweight": "10",
+    "type": "event",
+    "item": [
+      {
+        "name": "设备类型和属性",
+        "type": "event",
+        "action": "EventType(TopoEvent_EDIT_DEVICE_TYPE_ATTR)"
+      }
+    ]
   }
 ]

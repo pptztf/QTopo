@@ -1,4 +1,4 @@
-
+//这里是绘制页面的代码
 export default iposs => {
     const scene = iposs.scene,
         factory = iposs.factory,

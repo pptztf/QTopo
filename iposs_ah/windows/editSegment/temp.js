@@ -7,14 +7,17 @@ export default function (iposs) {
     win.on("window.open", function () {
         let target = win.data("todo").target;
         util.setFormInput(form, {
-            segmentName: target.$style.textValue
+            name: target.$style.textValue
         });
     });
     util.initFormSubmit(form, data=> {
-        let target = win.data("todo").target;
-        data.flag = 4;
-        data.deviceId = target.data('id');
-        iposs.factory.editNode(data).then(e=> {
+        let target = win.data("todo").target
+        data.id = target.data('id');
+        data.pid = target.$data.pid;
+        data.x = target.$data.x;
+        data.y = target.$data.y;
+        data.type = target.$data.type;
+        iposs.factory.modifyElements(data).then(e=> {
             console.info("修改网段成功!");
             target.$style.textValue= data.segmentName;
         });

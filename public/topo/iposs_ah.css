@@ -276,7 +276,7 @@ body {
     font-size: 16px;
     position: absolute;
     left: 15px;
-    top: 15px;  
+    top: 15px;
     vert-align: middle;
     padding: 5px 20px;
     -webkit-border-radius: 10px;
@@ -287,4 +287,10 @@ body {
 
 .topNav span + span {
     margin-left: 5px;
+}
+.lf{
+    float: left;
+}
+.rg{
+    float: right;
 }

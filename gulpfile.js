@@ -12,6 +12,8 @@ let gulp = require('gulp'),
     modules = ["core", "demo", "iposs", "iposs_sd", "iposs_ah"],
     devModules = modules.map(i => i + '-build'),
     ready = modules.map(i => i + '-ready');
+
+    
 modules.forEach(name => gulp.task(name, shell.task(['cross-env NODE_ENV=dev webpack --config ./webpack/' + name + '.js'])));
 modules.forEach(name => gulp.task(name + '-ready', shell.task(['cross-env NODE_ENV=ready webpack --config ./webpack/' + name + '.js'])));
 gulp.task('default', ['watch', 'serve']);
@@ -72,10 +74,12 @@ gulp.task("concat-files", function () {
 });
 
 function cocatFiles(css, js, path) {
+
     gulp.src(css) //- 需要处理的css文件，放到一个字符串数组里
         .pipe(concat('topo.min.css')) //- 合并后的文件名
         .pipe(minifyCss()) //- 压缩处理成一行
         .pipe(gulp.dest(path));
+
     gulp.src(js)
         .pipe(concat('topo.min.js'))
         .pipe(uglify())
