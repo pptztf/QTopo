@@ -11,7 +11,6 @@ export default function (iposs) {
     });
     return win;
 };
-
 function doWithForm(win, iposs, data) {
     if (_.notNull(win.data("todo"))) {
         let position = win.data("todo").position;

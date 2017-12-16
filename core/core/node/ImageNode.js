@@ -83,15 +83,13 @@ class ImageNode extends Node {
                 if (0 == this.$style.borderRadius) {
                     context.beginPath();
                     context.rect(
-                        -width / 2,
-                        -height / 2,
+                        0, 0,
                         width, height
                     );
                 } else {
                     context.beginPath();
                     context._roundRect(
-                        -width / 2,
-                        -height / 2,
+                        0, 0,
                         width, height,
                         this.$style.borderRadius
                     );

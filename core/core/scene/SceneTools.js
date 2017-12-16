@@ -122,9 +122,9 @@ class SceneTools extends Base {
                 const { left, right, top, bottom } = this.getBoundary(elements);
                 this.$style.translate = [size[0] / 2 - (left + right) / 2, size[1] / 2 - (top + bottom) / 2];
                 this.repaint();
+                return this;
             }
         }
-        return this;
     }
 
     centerZoom() {
@@ -239,39 +239,6 @@ class SceneTools extends Base {
         }
         this.repaint();
         return this;
-    }
-
-    _zoomByPoint(scale, point) {
-        if (point) {
-            const toCenter = this.transIn(point.x, point.y);
-            this.center(toCenter).zoom(scale);
-            const pointNow = this.transIn(point.x, point.y),
-                newCenter = [
-                    2 * toCenter[0] - pointNow[0],
-                    2 * toCenter[1] - pointNow[1]
-                ];
-
-            this.center(newCenter);
-        }
-        return this;
-    }
-
-    transIn(x, y) {
-        const scale = this.$style.scale,
-            [translateX, translateY] = this.getTranslate();
-        return [
-            (x / scale) - translateX,
-            (y / scale) - translateY
-        ];
-    }
-
-    transOut(x, y) {
-        const scale = this.$style.scale,
-            [translateX, translateY] = this.getTranslate();
-        return [
-            (x + translateX) * scale,
-            (y + translateY) * scale
-        ];
     }
 
     getDynamic() {

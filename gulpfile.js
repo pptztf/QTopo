@@ -12,8 +12,6 @@ let gulp = require('gulp'),
     modules = ["core", "demo", "iposs", "iposs_sd", "iposs_ah"],
     devModules = modules.map(i => i + '-build'),
     ready = modules.map(i => i + '-ready');
-
-    
 modules.forEach(name => gulp.task(name, shell.task(['cross-env NODE_ENV=dev webpack --config ./webpack/' + name + '.js'])));
 modules.forEach(name => gulp.task(name + '-ready', shell.task(['cross-env NODE_ENV=ready webpack --config ./webpack/' + name + '.js'])));
 gulp.task('default', ['watch', 'serve']);

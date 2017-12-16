@@ -17,44 +17,6 @@ class Element extends Base {
         });
         this.$style = Object.create(Style.Element);
     }
-    isInStage() {
-        console.error(this, "isInStage need overwrite!");
-        return true;
-    }
-
-    isInBoundary() {
-        console.error(this, "isInBoundary need overwrite!");
-        return true;
-    }
-
-    viewAble() {
-        return this.$state.paintAble && this.$style.visible;
-    }
-
-    eventHandler(name, event) {
-        switch (name) {
-            case 'remove':
-                this.$outLinks.forEach(link => this.$scene.remove(link));
-                this.$outLinks.clear();
-                this.$inLinks.forEach(link => this.$scene.remove(link));
-                this.$inLinks.clear();
-                this.$scene.getDynamic().remove(this);
-                break;
-            case 'selected':
-                this.$state.selected = true;
-                break;
-            case 'unselected':
-                this.$state.selected = false;
-                break;
-            case 'mouseover':
-                this.$state.mouseOver = true;
-                break;
-            case 'mouseout':
-                this.$state.mouseOver = false;
-                break;
-        }
-        return super.eventHandler(name, event);
-    }
 
     $paintDynamic() {
         console.error(this, "paintDynamic need overwrite!");
@@ -103,6 +65,45 @@ class Element extends Base {
     $paintView() {
         console.error(this, "$paintView need overwrite!");
         return this;
+    }
+
+    isInStage() {
+        console.error(this, "isInStage need overwrite!");
+        return true;
+    }
+
+    isInBoundary() {
+        console.error(this, "isInBoundary need overwrite!");
+        return true;
+    }
+
+    viewAble() {
+        return this.$state.paintAble && this.$style.visible;
+    }
+
+    eventHandler(name, event) {
+        switch (name) {
+            case 'remove':
+                this.$outLinks.forEach(link => this.$scene.remove(link));
+                this.$outLinks.clear();
+                this.$inLinks.forEach(link => this.$scene.remove(link));
+                this.$inLinks.clear();
+                this.$scene.getDynamic().remove(this);
+                break;
+            case 'selected':
+                this.$state.selected = true;
+                break;
+            case 'unselected':
+                this.$state.selected = false;
+                break;
+            case 'mouseover':
+                this.$state.mouseOver = true;
+                break;
+            case 'mouseout':
+                this.$state.mouseOver = false;
+                break;
+        }
+        return super.eventHandler(name, event);
     }
 }
 _.isElement = obj => obj instanceof Element;

@@ -35,7 +35,7 @@ function doWithForm(win, iposs, data) {
     iposs.factory.addSegment(data)
         .then(json=> {
             console.info("添加网段成功!");
-            // iposs.addNode(json.Device);
+            iposs.addNode(json.Device);
             iposs.events.TopoEvent_REFRESH();
         });
 }

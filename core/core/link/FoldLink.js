@@ -1,15 +1,14 @@
 import { _ } from "../common";
 import { MathLine } from "../math/line";
 import { Link } from "./Link";
-import { Style } from "../common/style";
+import {Style} from "../common/style";
 
 class FoldLink extends Link {
 
     constructor() {
         super();
         Object.assign(this.$state, {
-            expanded: false,
-            fixedFold: false
+            expanded: false
         });
         this.$style = Object.create(Style.FoldLink);
     }
@@ -21,24 +20,16 @@ class FoldLink extends Link {
 
             if (startPoint && endPoint) {
                 path.push(startPoint);
-
                 if (_.isArray(this.$style.foldPoints) && this.$style.foldPoints.length > 0) {
-
-                    if (this.$state.fixedFold) {
-                        path.push(...this.$style.foldPoints.filter(p => p.length >= 2));
-                    } else {
-                        this.$style.foldPoints.forEach(p =>
-                            p.length >= 2 && path.push(
-                                MathLine.verticalInterParallel(
-                                    MathLine.percentOnLine(_.percent(p[0]), startPoint, endPoint),
-                                    startPoint, endPoint,
-                                    p[1]
-                                )
+                    this.$style.foldPoints.forEach(p =>
+                        p.length >= 2 && path.push(
+                            MathLine.verticalInterParallel(
+                                MathLine.percentOnLine(_.percent(p[0]), startPoint, endPoint),
+                                startPoint, endPoint,
+                                p[1]
                             )
-                        );
-                    }
-
-                    //指定折点数,自适应均分曲折
+                        )
+                    );
                 } else if (_.isNumeric(this.$style.foldPoints)) {
                     let dis = MathLine.lengthBetween(startPoint, endPoint) / (2 * this.$style.foldPoints);
                     dis = this.$style.foldReserve ? -dis : dis;
@@ -53,7 +44,6 @@ class FoldLink extends Link {
                         dis = -dis;
                     }
                 }
-
                 path.push(endPoint);
             }
         }

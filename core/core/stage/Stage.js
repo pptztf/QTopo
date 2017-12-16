@@ -7,7 +7,7 @@ const BREATH = _._breath();
 class Stage extends EventCtrl {
     constructor(dom) {
         super();
-        const { $static, $dynamic, $fps, stopResize, resize } = initDom(dom, this);
+        const { $static, $dynamic, $fps, stopResize } = initDom(dom, this);
         if (!$static || !_.isFunction($static.getContext)) {
             throw new Error("can't create canvas, you may need use IE 9+ or chrome;");
         }
@@ -30,7 +30,6 @@ class Stage extends EventCtrl {
                 repaint: true,
                 continue: false
             },
-            resize,
             $current: null,
             $loop: new Animate(() => this.$paint(context, $fps))
         });
@@ -108,15 +107,14 @@ class Stage extends EventCtrl {
 
     zoom(scale) {
         this.$scenes.forEach(scene => scene.zoom(scale));
-        return this;
-    }
-
-    _zoomByPoint(scale, event = {}) {
-        this.$scenes.forEach(scene => scene._zoomByPoint(scale, event));
     }
 
     size() {
         return [this.$canvas.width, this.$canvas.height];
+    }
+
+    resize() {
+        this.$canvas.$resize();
     }
 
     getPicture(type, hasDynamic) {
@@ -209,8 +207,7 @@ function initDom(dom, stage) {
             } else {
                 window.removeEventListener("resize", resize);
             }
-        },
-        resize
+        }
     };
 
     function resize() {
