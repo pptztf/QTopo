@@ -9,6 +9,7 @@ class ShapeNode extends Node {
         this.$style = Object.create(Style.Shape);
     }
 
+
     $paintBox(context) {
         const shapeType = SHAPE[this.$style.shapeType];
         context.fillStyle = "rgba(" + this.$style.color + ", " + this.$style.alpha + ")";

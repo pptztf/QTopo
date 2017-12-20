@@ -85,23 +85,27 @@ export let initParse = function (iposs) {
         group.data.elementType = json.type;
         return group;
     });
+    //字符串拼接-showLevel 来判断显示几个, 现在的问题是颜色如何控制
     const parseAlarm = json => {
         const alarm = new Map();
+        let level = json.attribute.showLevel;
+        var alarmTip = ['C', 'S', 'M'];
         json.node.map(node => {
             let [color, content] = ["", 0];
-            for (let i = alarmColor.length - 1; i > -1; i--) {
-                let num = parseInt(node[i] || 0);
-                content += num;
-                if (num > 0) {
-                    color = alarmColor[i - 1];
+            let alarmList = [];
+            for (var i = 1; i <=level; i++) {
+                console.log(node[i]);
+                if(node[i]!=0){
+                    alarmList.push({
+                        text:node[i]+alarmTip[i-1],
+                        color:alarmColor[i-1]
+                    })
                 }
             }
-            if (content > 0) {
-                alarm.set(node.id, {
-                    color,
-                    content
-                });
-            }
+            alarm.set(node.id,{
+                color:'red',
+                alarmList:alarmList
+            });
         });
         return alarm;
     };

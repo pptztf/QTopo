@@ -8,8 +8,8 @@ export const initFactory = iposs => {
     iposs.factory = {
         index, goDown, goBack, goTo, refresh, alarm, location,
         save, savePosition, search, vendorList, userGather,
-        deviceIp, deviceMode, deviceMode_withoutOs,
-        resourceList, linkCount, addGroup, addDevice,
+        deviceIp, deviceMode, deviceMode_withoutOs,getBuss,getSwitch,hostRoute,
+        resourceList, linkCount, addGroup, addDevice,locationDevice,
         addSegment, addLink, remove, editNode,modifyElements, manage,
         cancelManage, copy, cut_paste, out_group, in_group, searchGoTo
     };
@@ -89,7 +89,6 @@ export const initFactory = iposs => {
                     objIdArray: scene.map(node => node.data('id'), "node").join(",")
                 }
             }).then(data => {
-                console.info("alarm", data);
                 iposs.progress(100, "绘制完成");
                 return data;
             })
@@ -97,6 +96,40 @@ export const initFactory = iposs => {
         iposs.progress(100, "绘制完成");
     }
 
+    function locationDevice(deviceId) {
+        return httpCtl({
+            url: url.locationdevice,
+            data: {
+                deviceId
+            }
+        }).then(data => {
+            iposs.progress(50, "正在绘制!");
+            return data;
+        })
+    }
+    function getBuss() {
+        return httpCtl({
+            url: url.getbuss,
+        }).then(data => {
+            return data;
+        })
+    }
+    function getSwitch(sourceBussName) {
+        return httpCtl({
+            url: url.getswitch,
+            data: {
+                sourceBussName
+            }
+        }).then(data => {
+            return data;
+        })
+    }
+    function hostRoute(data) {
+        return httpCtl({
+            url: url.hostroute,
+            data:data
+        },e=>e==1)
+    }
     function location() {
         return httpCtl({
             url: url.get_path,
@@ -106,7 +139,6 @@ export const initFactory = iposs => {
             _text: true
         });
     }
-
     function save() {
         return httpCtl({
             url: url.save,

@@ -27,9 +27,8 @@ window.topo = {
         const addEvents = QTopo._initMenu(iposs.dom, iposs.stage, iposs.scene, iposs.menus);
         addEvents(iposs.events);
 
-        //首绘
-        iposs.factory.index().then(data => {iposs.paintLayer(data);});
     }
+
 };
 
 //-------初始化QTopo 得到图层对象
@@ -116,3 +115,6 @@ function initComponent(iposs) {
         }
     });
 }
+
+//得到参数
+

@@ -59,6 +59,7 @@ export let util = {
     setFormInput: function (dom, json) {
         dom.setForm(json);
     },
+    //初始化弹出窗, 增加了弹出窗的行为, 需要页面样式的类名
     initBase: function (dom, win) {
         dom = $(dom);
         win = $(win).hide();

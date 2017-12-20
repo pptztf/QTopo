@@ -232,14 +232,21 @@ body {
 }
 
 /*ÍØÆËµ¼º½*/
+.topBox {
+    text-align: center;
+    padding-top: 15px;
+}
+
 .topNav {
     color: white;
     border: 2px solid #337ab7;
     font-size: 16px;
-    position: absolute;
-    left: 15px;
-    top: 15px;
+    /*position: absolute;*/
+    /*left: 15px;*/
+    /*top: 15px;*/
+    display: inline-block;
     vert-align: middle;
+    /*text-align: center;*/
     padding: 5px 20px;
     border-radius: 10px;
     background-color: rgba(6, 36, 62, 0.8);
@@ -249,9 +256,24 @@ body {
 .topNav span + span {
     margin-left: 5px;
 }
-.lf{
+
+.lf {
     float: left;
 }
-.rg{
+
+.rg {
     float: right;
+}
+.dropdown-menu li{
+    position:relative;
+}
+.dropdown-menu li:hover .list-group{
+    display: block;
+}
+
+.list-group {
+    display: none;
+    position: absolute;
+    right: -129px;
+    top: 5px;
 }

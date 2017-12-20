@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>iposs_topo</title>
-    <link href="./lib/font-awesome.min.css" rel="stylesheet" />
+    <link href="./lib/font-awesome.min.css" rel="stylesheet"/>
     <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/bootstrap/bootstrap.min.js"></script>
+    <link href="./lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="./topo/core.css" rel="stylesheet">
     <link href="./topo/iposs_ah.css" rel="stylesheet">
     <script src="./topo/core.js"></script>
@@ -30,51 +32,55 @@
 </head>
 
 <body>
-    <div id="topo"></div>
-    <script>
-        var image_path = "images/iposs/",
+<div id="topo"></div>
+<script>
+    var image_path = "images/iposs/",
             mock_path = "mock/iposs/",
             basePath = "mock/iposs_ah/"
-        $(function () {
-            $.getJSON("../iposs_ah/menu.json").done(function (data) {
-                topo.init({
-                    dom: document.getElementById    ("topo"),
-                    background: '#06243e',
-                    menus: data,
-                    imagePath: image_path,
-                    alarmColor: ["255,0,0", "255, 102, 0", "255,204,0", "0,0,255"],
-                    url: {
-                        index: basePath + "index.json?topoName=default-topo",//
-                        alarm: "",//
-                        save: mock_path + "save.txt",//
-                        moved: "",//
-                        go_down: basePath + "go_down.json?topoName=default-topo",//
-                        go_back: basePath + "go_back.json?topoName=default-topo",//
-                        go_to: basePath + "go_down.json?topoName=default-topo",//
-                        refresh: basePath + "refresh.json?topoName=default-topo",//
-                        add_group:mock_path+"return1.json",
-                        add_device: mock_path + "return1.json",//
-                        add_segment: mock_path + "add_segment.json",//
-                        add_link: mock_path + "add_link.txt",//
-                        remove: mock_path + "return1.json",
-                        edit_node: "",//
-                        search: mock_path + "search.json",//
-                        manage: mock_path + "return1.json",
-                        cut_paste: mock_path + "return1.json",//
-                        copy: mock_path + "return1.json",//
-                        get_path: mock_path + "get_path.txt",//
-                        get_deviceIp: mock_path + "get_deviceIp.txt",//
-                        get_userGather: mock_path + "get_userGather.json",//
-                        get_vendorList: mock_path + "get_vendorList.json",//
-                        get_deviceMode: mock_path + "get_deviceMode.json",//
-                        get_resList: mock_path + "get_resList.json",//
-                        get_deviceMode_withoutOs: mock_path + "get_deviceModeWithoutOs.json",//
-                        get_linkCount: mock_path + "get_linkCount.json"
-                    }
-                });
+    $(function () {
+        $.getJSON("../iposs_ah/menu.json").done(function (data) {
+            topo.init({
+                dom: document.getElementById("topo"),
+                background: '#06243e',
+                menus: data,
+                imagePath: image_path,
+                alarmColor: ["255,0,0", "255, 102, 0", "255,204,0", "0,0,255"],
+                url: {
+                    index: basePath + "index.json?topoName=default-topo",//
+                    locationdevice: basePath + "go_down.json?topoName=default-topo",//
+                    alarm: mock_path + "alarm.json",//
+                    save: mock_path + "save.txt",//
+                    moved: "",//
+                    getbuss: basePath+"source_end.json",//
+                    getswitch: basePath+"service_list.json",//
+                    hostroute: mock_path+"return1.json",//
+                    go_down: basePath + "go_down.json?topoName=default-topo",//
+                    go_back: basePath + "go_back.json?topoName=default-topo",//
+                    go_to: basePath + "go_down.json?topoName=default-topo",//
+                    refresh: basePath + "refresh.json?topoName=default-topo",//
+                    add_group: mock_path + "return1.json",
+                    add_device: mock_path + "return1.json",//
+                    add_segment: mock_path + "add_segment.json",//
+                    add_link: mock_path + "add_link.txt",//
+                    remove: mock_path + "return1.json",
+                    edit_node: "",//
+                    search: mock_path + "search.json",//
+                    manage: mock_path + "return1.json",
+                    cut_paste: mock_path + "return1.json",//
+                    copy: mock_path + "return1.json",//
+                    get_path: mock_path + "get_path.txt",//
+                    get_deviceIp: mock_path + "get_deviceIp.txt",//
+                    get_userGather: mock_path + "get_userGather.json",//
+                    get_vendorList: mock_path + "get_vendorList.json",//
+                    get_deviceMode: mock_path + "get_deviceMode.json",//
+                    get_resList: mock_path + "get_resList.json",//
+                    get_deviceMode_withoutOs: mock_path + "get_deviceModeWithoutOs.json",//
+                    get_linkCount: mock_path + "get_linkCount.json"
+                }
             });
-        })
-    </script>
+        });
+    })
+</script>
 </body>
 
 </html>
