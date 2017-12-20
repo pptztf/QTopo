@@ -33,14 +33,20 @@ export const initPainter = iposs => {
                 id = node.data("id");
                 if (map.has(id)) {
                     alarm = map.get(id);
+                    console.log('alarmlist',alarm)
                     node.alarm({
                         alarmColor: alarm.color,
-                        alarmText: alarm.content
+                        //alarmText: alarm.content
+                    });
+                    node.alarm({
+                        alarmColor: alarm.color,
+                        alarmList: alarm.alarmList
                     });
                 }
             }, "node");
         }
     }
+
     function paintTopNav(data) {
         let nameArr = data.WebTopo.NetView.p[0].content.split('@_@');
         let pidArr = data.WebTopo.NetView.p[1].content.split('@_@');
@@ -53,7 +59,7 @@ export const initPainter = iposs => {
             }
         })
         var doms = $(iposs.dom).find('.topNav>span:not(.icon-circle-arrow-right)');
-        doms.each((i,ele)=>{
+        doms.each((i, ele)=> {
             $(ele).on('click', function () {
                 iposs.events.TopoEvent_GO_TO(null, null, {id: pidArr[i]});
             })
@@ -74,7 +80,8 @@ export const initPainter = iposs => {
                 iposs.progress(100, "未知错误,请联系管理员!", true);
                 iposs.alert("未知错误,请联系管理员!");
             });
-        };
+        }
+        ;
         paintTopNav(data);
     }
 

@@ -176,6 +176,13 @@
     "action": "EventType(TopoEvent_EDIT_SEGMENT)"
   },
   {
+    "name": "端到端查询",
+    "aweight": "111",
+    "eweight": "11111111111",
+    "type": "event",
+    "action": "EventType(TopoEvent_End_To_End)"
+  },
+  {
     "name": "添加",
     "aweight": "11",
     "eweight": "1",

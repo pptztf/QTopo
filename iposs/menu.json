@@ -130,7 +130,7 @@
         "name": "管理",
         "type": "event",
         "action": "EventType(TopoEvent_MANAGE)",
-        "filter": "${state}==0"
+        "filter": "${state}== 0"
       },
       {
         "name": "取消管理",

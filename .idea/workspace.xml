@@ -18,6 +18,7 @@
     <favorites_list name="QTopo" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="temp.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iposs_ah/windows/addDevice/temp.html">
@@ -80,6 +81,223 @@
         </entry>
       </file>
     </leaf>
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.7695238">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="factory.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/iposs_ah/modules/factory.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
+                  <folding>
+                    <element signature="e#602#725#0" expanded="false" />
+                    <element signature="e#750#920#0" expanded="false" />
+                    <element signature="e#835#912#0" expanded="false" />
+                    <element signature="e#947#1203#0" expanded="false" />
+                    <element signature="e#1009#1104#0" expanded="false" />
+                    <element signature="e#1059#1094#0" expanded="false" />
+                    <element signature="e#1119#1196#0" expanded="false" />
+                    <element signature="e#1230#1486#0" expanded="false" />
+                    <element signature="e#1292#1387#0" expanded="false" />
+                    <element signature="e#1342#1377#0" expanded="false" />
+                    <element signature="e#1402#1479#0" expanded="false" />
+                    <element signature="e#1511#1765#0" expanded="false" />
+                    <element signature="e#1573#1666#0" expanded="false" />
+                    <element signature="e#1621#1656#0" expanded="false" />
+                    <element signature="e#1681#1758#0" expanded="false" />
+                    <element signature="e#1793#2049#0" expanded="false" />
+                    <element signature="e#1855#1950#0" expanded="false" />
+                    <element signature="e#1905#1940#0" expanded="false" />
+                    <element signature="e#1965#2042#0" expanded="false" />
+                    <element signature="e#2233#2337#0" expanded="false" />
+                    <element signature="e#3319#3494#0" expanded="false" />
+                    <element signature="e#3344#3486#0" expanded="false" />
+                    <element signature="e#3395#3451#0" expanded="false" />
+                    <element signature="e#3651#4320#0" expanded="false" />
+                    <element signature="e#3757#4280#0" expanded="false" />
+                    <element signature="e#4081#4229#0" expanded="false" />
+                    <element signature="e#4137#4186#0" expanded="false" />
+                    <element signature="e#4355#4531#0" expanded="false" />
+                    <element signature="e#4380#4523#0" expanded="false" />
+                    <element signature="e#4429#4513#0" expanded="false" />
+                    <element signature="e#4561#4821#0" expanded="false" />
+                    <element signature="e#4623#4722#0" expanded="false" />
+                    <element signature="e#4678#4712#0" expanded="false" />
+                    <element signature="e#4737#4814#0" expanded="false" />
+                    <element signature="e#4875#5446#0" expanded="false" />
+                    <element signature="e#4946#5438#0" expanded="false" />
+                    <element signature="e#4987#5405#0" expanded="false" />
+                    <element signature="e#5051#5245#0" expanded="false" />
+                    <element signature="e#5251#5382#0" expanded="false" />
+                    <element signature="e#5480#5657#0" expanded="false" />
+                    <element signature="e#5685#5846#0" expanded="false" />
+                    <element signature="e#5710#5838#0" expanded="false" />
+                    <element signature="e#5765#5803#0" expanded="false" />
+                    <element signature="e#5904#6418#0" expanded="false" />
+                    <element signature="e#5929#6040#0" expanded="false" />
+                    <element signature="e#5986#6030#0" expanded="false" />
+                    <element signature="e#6055#6411#0" expanded="false" />
+                    <element signature="e#6092#6399#0" expanded="false" />
+                    <element signature="e#6146#6267#0" expanded="false" />
+                    <element signature="e#6273#6385#0" expanded="false" />
+                    <element signature="e#6466#6742#0" expanded="false" />
+                    <element signature="e#6491#6613#0" expanded="false" />
+                    <element signature="e#6558#6603#0" expanded="false" />
+                    <element signature="e#6778#6951#0" expanded="false" />
+                    <element signature="e#6980#7199#0" expanded="false" />
+                    <element signature="e#7005#7113#0" expanded="false" />
+                    <element signature="e#7061#7103#0" expanded="false" />
+                    <element signature="e#7229#7322#0" expanded="false" />
+                    <element signature="e#7254#7314#0" expanded="false" />
+                    <element signature="e#7353#7460#0" expanded="false" />
+                    <element signature="e#7378#7439#0" expanded="false" />
+                    <element signature="e#7492#7599#0" expanded="false" />
+                    <element signature="e#7517#7579#0" expanded="false" />
+                    <element signature="e#7636#8001#0" expanded="false" />
+                    <element signature="e#7661#7974#0" expanded="false" />
+                    <element signature="e#7712#7939#0" expanded="false" />
+                    <element signature="e#8028#8186#0" expanded="false" />
+                    <element signature="e#8053#8165#0" expanded="false" />
+                    <element signature="e#8102#8155#0" expanded="false" />
+                    <element signature="e#8216#8322#0" expanded="false" />
+                    <element signature="e#8241#8301#0" expanded="false" />
+                    <element signature="e#8357#8468#0" expanded="false" />
+                    <element signature="e#8382#8447#0" expanded="false" />
+                    <element signature="e#8493#8696#0" expanded="false" />
+                    <element signature="e#8518#8676#0" expanded="false" />
+                    <element signature="e#8567#8666#0" expanded="false" />
+                    <element signature="e#8728#8932#0" expanded="false" />
+                    <element signature="e#8753#8911#0" expanded="false" />
+                    <element signature="e#8802#8901#0" expanded="false" />
+                    <element signature="e#8967#9227#0" expanded="false" />
+                    <element signature="e#8992#9206#0" expanded="false" />
+                    <element signature="e#9039#9196#0" expanded="false" />
+                    <element signature="e#9267#9558#0" expanded="false" />
+                    <element signature="e#9292#9537#0" expanded="false" />
+                    <element signature="e#9344#9527#0" expanded="false" />
+                    <element signature="e#9589#9695#0" expanded="false" />
+                    <element signature="e#9614#9674#0" expanded="false" />
+                    <element signature="e#9725#9830#0" expanded="false" />
+                    <element signature="e#9750#9809#0" expanded="false" />
+                    <element signature="e#9900#9954#0" expanded="false" />
+                    <element signature="e#10133#10211#0" expanded="false" />
+                    <element signature="e#10509#10640#0" expanded="false" />
+                    <element signature="e#10672#10742#0" expanded="false" />
+                    <element signature="e#10955#11085#0" expanded="false" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/../安徽移动试点更新文件/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.17073171">
+                  <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="parse.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/iposs_ah/parse.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="temp.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-7.046154">
+                  <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/iposs_ah/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/iposs_ah/windows/util.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="temp.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="iposs_ah.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/iposs_ah.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-6.4">
+                  <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="source_end.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/mock/iposs_ah/source_end.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="service_list.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/mock/iposs_ah/service_list.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="temp.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-0.36890244">
+                  <caret line="12" column="51" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="51" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,12 +310,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/core/menu4Demo/controller.js" />
-        <option value="$PROJECT_DIR$/core/menu4Demo/action.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/windows/addSegment/temp.html" />
-        <option value="$PROJECT_DIR$/dist/topo_ah/topo.min.js" />
-        <option value="$PROJECT_DIR$/core/core/common/util.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/windows/addSegment/temp.js" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/TopoNav/temp.html" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/TopoNav/temp.js" />
         <option value="$PROJECT_DIR$/public/iposs.html" />
@@ -107,25 +319,19 @@
         <option value="$PROJECT_DIR$/core/core/common/Box.js" />
         <option value="$PROJECT_DIR$/core/core/node/ImageNode.js" />
         <option value="$PROJECT_DIR$/iposs/modules/painter.js" />
-        <option value="$PROJECT_DIR$/core/core/scene/SceneTools.js" />
         <option value="$PROJECT_DIR$/iposs/parse.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/windows/topoNav/temp.html" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/topoNav/temp.js" />
-        <option value="$PROJECT_DIR$/iposs/modules/events.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/modules/painter.js" />
         <option value="$PROJECT_DIR$/iposs_ah/modules/search.js" />
         <option value="$PROJECT_DIR$/dist/topo_ah/menu.json" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/public/iposs_ah.html" />
         <option value="$PROJECT_DIR$/iposs/windows/editDeviceType/temp.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/windows/util.js" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/editDeviceType/temp.js" />
         <option value="$PROJECT_DIR$/public/mock/iposs/go_to.json" />
-        <option value="$PROJECT_DIR$/iposs_ah/windows/index.js" />
         <option value="$PROJECT_DIR$/public/mock/iposs_ah/go_down.json" />
         <option value="$PROJECT_DIR$/core/component/windows/tips.js" />
         <option value="$PROJECT_DIR$/public/mock/iposs/get_deviceMode.json" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/editDeviceAttr/temp.js" />
+<<<<<<< HEAD
         <option value="$USER_HOME$/index.html" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.html" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.js" />
@@ -133,16 +339,38 @@
         <option value="$PROJECT_DIR$/iposs_ah/menu.json" />
         <option value="$USER_HOME$/安徽移动试点更新文件/index.html" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/editSegment/temp.html" />
+=======
+        <option value="$PROJECT_DIR$/../index.html" />
+        <option value="$PROJECT_DIR$/iposs/modules/factory.js" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         <option value="$PROJECT_DIR$/iposs_ah/windows/editSegment/temp.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/modules/factory.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/modules/events.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/parse.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/index.js" />
-        <option value="$PROJECT_DIR$/iposs_ah/style.css" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/addDevice/temp.html" />
         <option value="$PROJECT_DIR$/iposs_ah/windows/addDevice/temp.js" />
-        <option value="$PROJECT_DIR$/iposs/menu.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/iposs/menu.json" />
+        <option value="$PROJECT_DIR$/core/core/node/ShapeNode.js" />
+        <option value="$PROJECT_DIR$/iposs_ah/index.js" />
+        <option value="$PROJECT_DIR$/iposs/modules/events.js" />
+        <option value="$PROJECT_DIR$/core/core/scene/SceneTools.js" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/topoNav/temp.html" />
+        <option value="$PROJECT_DIR$/iposs_ah/modules/painter.js" />
+        <option value="$PROJECT_DIR$/iposs_ah/parse.js" />
+        <option value="$PROJECT_DIR$/public/mock/iposs/alarm.json" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/index.js" />
+        <option value="$PROJECT_DIR$/iposs_ah/menu.json" />
+        <option value="$PROJECT_DIR$/iposs_ah/modules/events.js" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/util.js" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/editSegment/temp.html" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.html" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.js" />
+        <option value="$PROJECT_DIR$/public/mock/iposs_ah/source_end.json" />
+        <option value="$PROJECT_DIR$/public/mock/iposs_ah/service_list.json" />
+        <option value="$PROJECT_DIR$/iposs_ah/style.css" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.html" />
+        <option value="$PROJECT_DIR$/public/iposs_ah.html" />
+        <option value="$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.js" />
+        <option value="$PROJECT_DIR$/iposs_ah/modules/factory.js" />
+        <option value="$PROJECT_DIR$/../安徽移动试点更新文件/index.html" />
       </list>
     </option>
   </component>
@@ -266,6 +494,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+<<<<<<< HEAD
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -283,6 +512,245 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+=======
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iposs_ah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mock" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iposs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iposs_ah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iposs_ah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="windows" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iposs_ah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="windows" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="endToEnd" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iposs_ah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="windows" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="editDeviceTypeAndAttr" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iposs_ah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="topo_ah" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QTopo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -301,9 +769,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\QTopo\public\lib\bootstrap" />
+      <recent name="C:\Users\Administrator\Desktop\QTopo\iposs_ah\windows\endToEnd" />
+      <recent name="C:\Users\Administrator\Desktop\QTopo\public\mock\iposs_ah" />
       <recent name="C:\Users\Administrator\Desktop\QTopo\iposs_ah\windows" />
       <recent name="C:\Users\Administrator\Desktop\QTopo\iposs_ah\windows\TopoNav" />
-      <recent name="C:\Users\Administrator\Desktop\QTopo\public\mock\iposs_ah" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\QTopo\core\core\stage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -391,6 +864,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="0" y="23" width="1280" height="712" extended-state="0" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19809523" sideWeight="0.538036" order="2" side_tool="true" content_ui="tabs" />
@@ -418,6 +892,56 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
+=======
+    <frame x="-9" y="-9" width="1618" height="870" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19809523" sideWeight="0.5435685" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19809523" sideWeight="0.4536653" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495238" sideWeight="0.48409405" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5878285" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19809523" sideWeight="0.54633474" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5878285" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19809523" sideWeight="0.5435685" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19809523" sideWeight="0.4536653" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2495238" sideWeight="0.48409405" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19809523" sideWeight="0.54633474" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32918397" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -440,78 +964,131 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editDeviceType/temp.js">
+    <entry file="file://$PROJECT_DIR$/iposs/modules/painter.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
+=======
+        <state vertical-scroll-proportion="-1.2156296">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/topo/core.js">
+    <entry file="file://$PROJECT_DIR$/public/mock/demo/alarm.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="1" column="57181" lean-forward="false" selection-start-line="1" selection-start-column="57181" selection-end-line="1" selection-end-column="57181" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs/windows/index.js">
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs/add_segment.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/index.js">
+    <entry file="file://$PROJECT_DIR$/public/iposs.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+=======
+        <state vertical-scroll-proportion="0.21341464">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/component/index.js">
+    <entry file="file://$PROJECT_DIR$/dist/topo_ah/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.89634144">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/component/windows/tips.js">
+    <entry file="file://$PROJECT_DIR$/iposs/index.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="2" column="47" lean-forward="false" selection-start-line="2" selection-start-column="47" selection-end-line="2" selection-end-column="47" />
+=======
+        <state vertical-scroll-proportion="-0.44573084">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mock/iposs/get_vendorList.json">
+    <entry file="file://$PROJECT_DIR$/iposs/modules/events.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/mock/iposs/get_deviceMode.json">
+    <entry file="file://$PROJECT_DIR$/core/core/scene/Scene.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="241" column="16" selection-start-line="241" selection-start-column="8" selection-end-line="241" selection-end-column="16" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editDeviceAttr/temp.js">
+    <entry file="file://$PROJECT_DIR$/core/core/scene/SceneTools.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="213" column="41" selection-start-line="213" selection-start-column="41" selection-end-line="213" selection-end-column="41" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editDeviceAttr/temp.html">
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/topoNav/temp.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="26" column="18" lean-forward="false" selection-start-line="21" selection-start-column="12" selection-end-line="26" selection-end-column="18" />
+=======
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="18" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs/windows/util.js">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="58" column="4" lean-forward="false" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
         </state>
@@ -530,46 +1107,105 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+=======
+        <state vertical-scroll-proportion="0.33282673">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs/modules/painter.js">
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs_ah/go_down.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.042682927">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs_ah/refresh.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs/get_resList.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs/get_userGather.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs/get_deviceModeWithoutOs.json">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs/parse.js">
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs/return0.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="35" column="26" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="26" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core/link/DirectLink.js">
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs/return1.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core/link/Link.js">
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs_ah/index.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="20" column="11" lean-forward="false" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+=======
+        <state vertical-scroll-proportion="4.609756">
+          <caret line="114" column="41" selection-start-line="114" selection-start-column="41" selection-end-line="114" selection-end-column="41" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.html">
+    <entry file="file://$PROJECT_DIR$/core/component/rightMenu/rightMenu.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="24" column="42" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="42" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.js">
+    <entry file="file://$PROJECT_DIR$/core/component/rightMenu/rightMenu.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="51" column="28" lean-forward="false" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
           <caret line="65" column="3" lean-forward="false" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
@@ -577,18 +1213,28 @@
           <caret line="64" column="27" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
           <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
           <caret line="59" column="55" lean-forward="false" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs/modules/factory.js">
+    <entry file="file://$PROJECT_DIR$/core/core/node/ImageNode.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="92" column="30" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs/modules/events.js">
+    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/search.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
         </state>
@@ -599,11 +1245,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="48" column="24" lean-forward="false" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_sd/menu.json">
+    <entry file="file://$PROJECT_DIR$/iposs/parse.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.44573084">
+          <caret line="35" column="26" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs/alarm.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.597561">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/alarmInfo/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="60" column="4" lean-forward="false" selection-start-line="54" selection-start-column="2" selection-end-line="60" selection-end-column="4" />
         </state>
@@ -614,24 +1279,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="12" column="70" lean-forward="false" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/topo_ah/topo.min.js">
+    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/painter.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/alarmInfo/temp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2431259">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iposs_ah/menu.json">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="1653" lean-forward="false" selection-start-line="0" selection-start-column="1653" selection-end-line="0" selection-end-column="1653" />
+=======
+        <state vertical-scroll-proportion="-9.6">
+          <caret line="180" column="29" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="29" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editSegment/temp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/addGroup/temp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -640,127 +1333,214 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/iposs_ah/windows/index.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core/group/Group.js">
+    <entry file="file://$PROJECT_DIR$/public/lib/bootstrap/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/lib/4ie7/excanvas.compiled.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core/group/GroupTools.js">
+    <entry file="file://$PROJECT_DIR$/public/lib/bootstrap/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/parse.js">
-      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="121.935486">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/util.js">
+    <entry file="file://$PROJECT_DIR$/public/lib/bootstrap/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/search.js">
+    <entry file="file://$PROJECT_DIR$/public/lib/bootstrap/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/core/scene/SceneTools.js">
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editSegment/temp.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="435" column="4" lean-forward="false" selection-start-line="435" selection-start-column="4" selection-end-line="435" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/factory.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="128" column="18" lean-forward="false" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="357" column="38" lean-forward="false" selection-start-line="357" selection-start-column="38" selection-end-line="357" selection-end-column="38" />
+=======
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="6" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iposs_ah/index.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="128" column="18" lean-forward="false" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+=======
+        <state vertical-scroll-proportion="2.269175">
+          <caret line="56" column="58" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="58" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.js">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="357" column="38" lean-forward="false" selection-start-line="357" selection-start-column="38" selection-end-line="357" selection-end-column="38" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/editDeviceTypeAndAttr/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+=======
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="6" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/topo_ah/menu.json">
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs_ah/source_end.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/painter.js">
+    <entry file="file://$PROJECT_DIR$/public/mock/iposs_ah/service_list.json">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="64" column="19" lean-forward="false" selection-start-line="64" selection-start-column="19" selection-end-line="64" selection-end-column="19" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/addSegment/temp.html">
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/util.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/addDevice/temp.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
           <folding />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/iposs_ah/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="270" column="19" selection-start-line="270" selection-start-column="19" selection-end-line="270" selection-end-column="19" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/addSegment/temp.js">
+    <entry file="file://$PROJECT_DIR$/iposs_ah/parse.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+=======
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="44" selection-start-line="100" selection-start-column="44" selection-end-line="100" selection-end-column="44" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/iposs_ah/menu.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="176" column="4" lean-forward="false" selection-start-line="176" selection-start-column="4" selection-end-line="176" selection-end-column="4" />
+=======
+    <entry file="file://$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.046154">
+          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -772,14 +1552,128 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/iposs_ah/modules/factory.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="24" selection-start-line="123" selection-start-column="24" selection-end-line="123" selection-end-column="24" />
+          <folding>
+            <element signature="e#602#725#0" expanded="false" />
+            <element signature="e#750#920#0" expanded="false" />
+            <element signature="e#835#912#0" expanded="false" />
+            <element signature="e#947#1203#0" expanded="false" />
+            <element signature="e#1009#1104#0" expanded="false" />
+            <element signature="e#1059#1094#0" expanded="false" />
+            <element signature="e#1119#1196#0" expanded="false" />
+            <element signature="e#1230#1486#0" expanded="false" />
+            <element signature="e#1292#1387#0" expanded="false" />
+            <element signature="e#1342#1377#0" expanded="false" />
+            <element signature="e#1402#1479#0" expanded="false" />
+            <element signature="e#1511#1765#0" expanded="false" />
+            <element signature="e#1573#1666#0" expanded="false" />
+            <element signature="e#1621#1656#0" expanded="false" />
+            <element signature="e#1681#1758#0" expanded="false" />
+            <element signature="e#1793#2049#0" expanded="false" />
+            <element signature="e#1855#1950#0" expanded="false" />
+            <element signature="e#1905#1940#0" expanded="false" />
+            <element signature="e#1965#2042#0" expanded="false" />
+            <element signature="e#2233#2337#0" expanded="false" />
+            <element signature="e#3319#3494#0" expanded="false" />
+            <element signature="e#3344#3486#0" expanded="false" />
+            <element signature="e#3395#3451#0" expanded="false" />
+            <element signature="e#3651#4320#0" expanded="false" />
+            <element signature="e#3757#4280#0" expanded="false" />
+            <element signature="e#4081#4229#0" expanded="false" />
+            <element signature="e#4137#4186#0" expanded="false" />
+            <element signature="e#4355#4531#0" expanded="false" />
+            <element signature="e#4380#4523#0" expanded="false" />
+            <element signature="e#4429#4513#0" expanded="false" />
+            <element signature="e#4561#4821#0" expanded="false" />
+            <element signature="e#4623#4722#0" expanded="false" />
+            <element signature="e#4678#4712#0" expanded="false" />
+            <element signature="e#4737#4814#0" expanded="false" />
+            <element signature="e#4875#5446#0" expanded="false" />
+            <element signature="e#4946#5438#0" expanded="false" />
+            <element signature="e#4987#5405#0" expanded="false" />
+            <element signature="e#5051#5245#0" expanded="false" />
+            <element signature="e#5251#5382#0" expanded="false" />
+            <element signature="e#5480#5657#0" expanded="false" />
+            <element signature="e#5685#5846#0" expanded="false" />
+            <element signature="e#5710#5838#0" expanded="false" />
+            <element signature="e#5765#5803#0" expanded="false" />
+            <element signature="e#5904#6418#0" expanded="false" />
+            <element signature="e#5929#6040#0" expanded="false" />
+            <element signature="e#5986#6030#0" expanded="false" />
+            <element signature="e#6055#6411#0" expanded="false" />
+            <element signature="e#6092#6399#0" expanded="false" />
+            <element signature="e#6146#6267#0" expanded="false" />
+            <element signature="e#6273#6385#0" expanded="false" />
+            <element signature="e#6466#6742#0" expanded="false" />
+            <element signature="e#6491#6613#0" expanded="false" />
+            <element signature="e#6558#6603#0" expanded="false" />
+            <element signature="e#6778#6951#0" expanded="false" />
+            <element signature="e#6980#7199#0" expanded="false" />
+            <element signature="e#7005#7113#0" expanded="false" />
+            <element signature="e#7061#7103#0" expanded="false" />
+            <element signature="e#7229#7322#0" expanded="false" />
+            <element signature="e#7254#7314#0" expanded="false" />
+            <element signature="e#7353#7460#0" expanded="false" />
+            <element signature="e#7378#7439#0" expanded="false" />
+            <element signature="e#7492#7599#0" expanded="false" />
+            <element signature="e#7517#7579#0" expanded="false" />
+            <element signature="e#7636#8001#0" expanded="false" />
+            <element signature="e#7661#7974#0" expanded="false" />
+            <element signature="e#7712#7939#0" expanded="false" />
+            <element signature="e#8028#8186#0" expanded="false" />
+            <element signature="e#8053#8165#0" expanded="false" />
+            <element signature="e#8102#8155#0" expanded="false" />
+            <element signature="e#8216#8322#0" expanded="false" />
+            <element signature="e#8241#8301#0" expanded="false" />
+            <element signature="e#8357#8468#0" expanded="false" />
+            <element signature="e#8382#8447#0" expanded="false" />
+            <element signature="e#8493#8696#0" expanded="false" />
+            <element signature="e#8518#8676#0" expanded="false" />
+            <element signature="e#8567#8666#0" expanded="false" />
+            <element signature="e#8728#8932#0" expanded="false" />
+            <element signature="e#8753#8911#0" expanded="false" />
+            <element signature="e#8802#8901#0" expanded="false" />
+            <element signature="e#8967#9227#0" expanded="false" />
+            <element signature="e#8992#9206#0" expanded="false" />
+            <element signature="e#9039#9196#0" expanded="false" />
+            <element signature="e#9267#9558#0" expanded="false" />
+            <element signature="e#9292#9537#0" expanded="false" />
+            <element signature="e#9344#9527#0" expanded="false" />
+            <element signature="e#9589#9695#0" expanded="false" />
+            <element signature="e#9614#9674#0" expanded="false" />
+            <element signature="e#9725#9830#0" expanded="false" />
+            <element signature="e#9750#9809#0" expanded="false" />
+            <element signature="e#9900#9954#0" expanded="false" />
+            <element signature="e#10133#10211#0" expanded="false" />
+            <element signature="e#10509#10640#0" expanded="false" />
+            <element signature="e#10672#10742#0" expanded="false" />
+            <element signature="e#10955#11085#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/iposs_ah.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.4">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/iposs/menu.json">
+    <entry file="file://$PROJECT_DIR$/../安徽移动试点更新文件/index.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="228">
           <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+=======
+        <state vertical-scroll-proportion="0.17073171">
+          <caret line="82" column="63" selection-start-line="82" selection-start-column="63" selection-end-line="82" selection-end-column="63" />
+>>>>>>> 8f734c298f51db3d383cdae238a6c9bf30d08b7c
           <folding />
         </state>
       </provider>

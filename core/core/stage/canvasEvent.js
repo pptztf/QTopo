@@ -1,5 +1,8 @@
 import { _ } from "../common";
 export let bindCanvas = function (stage, canvas) {
+    var TOUCH_CLICK_DELAY = 300,
+        _lastTouchMoment,
+        _clickTimes = 0;;
     document.oncontextmenu = function () {
         return !1;
     };
@@ -21,6 +24,9 @@ export let bindCanvas = function (stage, canvas) {
         canvas.addEventListener("mousemove", mouseMove);
         canvas.addEventListener("click", click);
         canvas.addEventListener("dblclick", dblClick);
+        canvas.addEventListener("touchstart", touchStart);
+        canvas.addEventListener("touchmove", touchMove);
+        canvas.addEventListener("touchend", touchEnd);
         if (_.isFirefox) {
             canvas.addEventListener("DOMMouseScroll", mouseWheel);
         } else {
@@ -111,34 +117,17 @@ export let bindCanvas = function (stage, canvas) {
     function mouseMove(event) {
         event = getEventObject(event);
         if (stage.$mouseDown) {
-            if (0 == event.button) {
-                stage.$dynamic.stop();
-                const [mouseDownX, mouseDownY] = stage.$mouseDownPoint;
-                event.dragWidth = event.x - mouseDownX;
-                event.dragHeight = event.y - mouseDownY;
-                stage.trigger("mousedrag", event);
-                stage.triggerScenes("mousedrag", event);
-            }
+            stage.$dynamic.stop();
+            const [mouseDownX, mouseDownY] = stage.$mouseDownPoint;
+            event.dragWidth = event.x - mouseDownX;
+            event.dragHeight = event.y - mouseDownY;
+            stage.trigger("mousedrag", event);
+            stage.triggerScenes("mousedrag", event);
         } else {
             stage.trigger("mousemove", event);
             stage.triggerScenes("mousemove", event);
         }
     }
-
-    //function touchMove(event) {
-    //    event = getEventObject(event);
-    //    if (stage.$mouseDown) {
-    //        stage.$dynamic.stop();
-    //        const [mouseDownX,mouseDownY]= stage.$mouseDownPoint;
-    //        event.dragWidth = event.x - mouseDownX;
-    //        event.dragHeight = event.y - mouseDownY;
-    //        stage.trigger("mousedrag", event);
-    //        stage.triggerScenes("mousedrag", event);
-    //    } else {
-    //        stage.trigger("mousemove", event);
-    //        stage.triggerScenes("mousemove", event);
-    //    }
-    //}
 
     function click(event) {
         event = getEventObject(event);
@@ -163,12 +152,55 @@ export let bindCanvas = function (stage, canvas) {
             e.returnValue = !1;
         }
         if ((null == e.wheelDelta ? -e.detail : e.wheelDelta) < 0) {
-            stage.zoom(-0.8);
+            if (e.ctrlKey) {
+                stage._zoomByPoint(-0.8, event);
+            } else {
+                stage.zoom(-0.8);
+            }
         } else {
-            stage.zoom(0.8);
+            if (e.ctrlKey) {
+                stage._zoomByPoint(0.8, event);
+            } else {
+                stage.zoom(0.8);
+            }
         }
     }
 
+    function touchStart(e) {
+        // console.info('touchstart', e);
+        e = getEventObjectOnPhone(e);
+        _lastTouchMoment = new Date();
+        mouseDown(e);
+    }
+    function touchEnd(e) {
+        // console.info('touchend', e);
+        e = getEventObjectOnPhone(e);
+        mouseUp(e);
+        var timeGap = +new Date() - _lastTouchMoment;
+        if (timeGap < TOUCH_CLICK_DELAY) {
+            console.info('click', timeGap);
+            click(e);
+            _clickTimes++;
+            if (_clickTimes > 1) {
+                dblClick(e);
+                console.info('dblClick');
+                _clickTimes = 0;
+            }
+        } else {
+            _clickTimes = 0;
+        }
+    }
+    function touchMove(e) {
+        e = getEventObjectOnPhone(e);
+        mouseMove(e);
+    }
+
+    function getEventObjectOnPhone(e) {
+        e.stopPropagation();
+        return e.type != 'touchend'
+            ? e.targetTouches[0]
+            : e.changedTouches[0];
+    }
     function getEventObject(event) {
         const e = _.cloneEvent(event);
         let sceneX = 0, sceneY = 0;
@@ -194,6 +226,11 @@ export let bindCanvas = function (stage, canvas) {
         e.x = sceneX;
         e.y = sceneY;
         return e;
+    }
+
+    function getBoundingClientRect(el) {
+        // BlackBerry 5, iOS 3 (original iPhone) don't have getBoundingRect
+        return el.getBoundingClientRect ? el.getBoundingClientRect() : { left: 0, top: 0 };
     }
 
 };

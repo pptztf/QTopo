@@ -2,5 +2,9 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/iposs_ah/modules/painter.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/iposs_ah/windows/endToEnd/temp.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/mock/iposs_ah/service_list.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/public/mock/iposs_ah/source_end.json" charset="UTF-8" />
   </component>
 </project>

@@ -31,8 +31,23 @@ class Scene extends SceneTools {
         });
     }
 
+    toSceneEvent(event) {
+        const scale = this.$style.scale,
+            [translateX, translateY] = this.getTranslate();
+        const newEvent = _.cloneEvent(event);
+        Object.assign(newEvent, {
+            x: (event.x / scale) - translateX,
+            y: (event.y / scale) - translateY,
+            dragWidth: event.dragWidth / scale,
+            dragHeight: event.dragHeight / scale,
+            target: this.$current,
+            scene: this
+        });
+        return newEvent
+    }
+
     eventHandler(name, event) {
-        event = toSceneEvent(this, event);
+        event = this.toSceneEvent(event);
         switch (name) {
             case "mousedown":
                 mouseDown(this, event);
@@ -171,20 +186,6 @@ function dblClick(scene, event) {
     }
 }
 //-----------------工具
-function toSceneEvent(scene, event) {
-    const scale = scene.$style.scale,
-        [translateX, translateY] = scene.getTranslate();
-    const newEvent = _.cloneEvent(event);
-    Object.assign(newEvent, {
-        x: (event.x / scale) - translateX,
-        y: (event.y / scale) - translateY,
-        dragWidth: event.dragWidth / scale,
-        dragHeight: event.dragHeight / scale,
-        target: scene.$current,
-        scene
-    });
-    return newEvent
-}
 function addAreaSelect(scene, event) {
     let { map, indexMap } = scene.$children,
         mouseDownEvent = scene.$mouseDown,

@@ -9,7 +9,27 @@ export const initEvents = (iposs) => {
             iposs.alert("未知错误,请联系管理员!");
         };
     let linkCache = {};
+    let params = getParams();
+    //判断是否是拓扑定位
+    if (_.notNull(params.searchDevice)) {
+        const deviceId = params.searchDevice;
+        iposs.factory.locationDevice(deviceId)
+            .then(data => {
+                iposs.paintLayer(data);
+                scene.map(el => {
+                    if (el.data('id') == deviceId) {
+                        //目标元素居中且选中
+                        scene.moveToNode(el);
+                        return false;
+                    }
+                })
+            });
 
+
+    } else {
+        //首绘
+        iposs.factory.index().then(data => iposs.paintLayer(data));
+    }
     //注册事件
     iposs.events = {
         TopoEvent_DEBUG,
@@ -48,7 +68,8 @@ export const initEvents = (iposs) => {
         TopoEvent_GROUP_EXPANDED_TOGGLE,
         TopoEvent_LINK_EXPANDED_TOGGLE,
         TopoEvent_EDIT_DEVICE_TYPE_ATTR,
-        TopoEvent_OUT_GROUP
+        TopoEvent_OUT_GROUP,
+        TopoEvent_End_To_End
     };
 
 
@@ -118,7 +139,12 @@ export const initEvents = (iposs) => {
             target: element
         })
     }
-
+    //修改设备类型和属性
+    function  TopoEvent_End_To_End(position, element, properties){
+        windows("endToEnd", {
+            target: element
+        })
+    }
     function TopoEvent_ADD_SEGMENT(position, element, properties) {
         windows("addSegment", {
             position: position
@@ -444,3 +470,12 @@ function manageIcon(img, visible){
     }
 }
 
+function getParams() {
+    const paramArr = location.search.substr(1).split("&"),
+        params = {};
+    paramArr.forEach(p => {
+        p = p.split("=");
+        params[p[0]] = p[1];
+    });
+    return params;
+}

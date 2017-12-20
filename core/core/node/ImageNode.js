@@ -2,6 +2,7 @@ import { Animate, _ } from "../common";
 import { Node } from "./Node";
 import { Style } from "../common/style";
 
+const alarmPadding = 5;
 class ImageNode extends Node {
     constructor() {
         super();
@@ -9,16 +10,21 @@ class ImageNode extends Node {
             $image: ""
         });
         Object.assign(this.$state, {
-            paintAlarm: false
+            showAlarm: false
         });
         this.$style = Object.create(Style.Image);
     }
 
     alarm(config) {
-        if (_.notNull(config)) {
-            Object.assign(this.$style, config);
-        }
         this.$state.showAlarm = true;
+        if (config) {
+            if (_.isArray(config.alarmList)) {
+                this.$style.alarmList = config.alarmList;
+            } else {
+                this.$style.alarmText = config.alarmText;
+            }
+            this.$style.alarmColor = config.alarmColor;
+        }
         if (_.notNull(this.$style.image)) {
             _.colorImageCache(this.$style.image, this.$style.alarmColor);
         }
@@ -83,13 +89,15 @@ class ImageNode extends Node {
                 if (0 == this.$style.borderRadius) {
                     context.beginPath();
                     context.rect(
-                        0, 0,
+                        -width / 2,
+                        -height / 2,
                         width, height
                     );
                 } else {
                     context.beginPath();
                     context._roundRect(
-                        0, 0,
+                        -width / 2,
+                        -height / 2,
                         width, height,
                         this.$style.borderRadius
                     );
@@ -127,40 +135,74 @@ class ImageNode extends Node {
     }
 
     $paintAlarm(context) {
-        if (this.$state.showAlarm&&this.$style.alarmText != "") {
+        if (this.$state.showAlarm) {
             context.font = this.$style.alarmTextSize + "px " + this.$style.alarmTextFamily;
             context.textBaseline = "bottom";
             context.textAlign = "start";
-            const lineWidth = context.measureText(this.$style.alarmText).width,
-                fontWidth = context.measureText("田").width,
-                padding = this.$style.alarmPadding,
-                startX = -this.$style.borderWidth - this.$style.size[0] / 2 - lineWidth / 2 - padding,
-                startY = -this.$style.borderWidth - this.$style.size[1] / 2 - fontWidth - padding * 2 - 5,
-                panelWidth = lineWidth + padding * 2,
-                panelHeight = fontWidth + padding * 2;
-            context.strokeStyle = "rgba(" + this.$style.alarmColor + ", " + this.$style.alarmAlpha + ")";
-            context.fillStyle = "rgba(" + this.$style.alarmColor + ", " + this.$style.alarmAlpha + ")";
-            context.lineWidth = 1;
-            context.beginPath();
-            context.rect(
-                startX,
-                startY,
-                panelWidth,
-                panelHeight
-            );
-            context.moveTo(startX + panelWidth / 2 - 8, startY + panelHeight);
-            context.lineTo(startX + panelWidth / 2, startY + panelHeight + 8);
-            context.lineTo(startX + panelWidth / 2 + 8, startY + panelHeight);
-            context.fill();
-            context.fillStyle = "rgba(" + this.$style.alarmTextColor + ", " + this.$style.alarmAlpha + ")";
-            context.fillText(
-                this.$style.alarmText,
-                startX + padding,
-                startY + fontWidth + padding
-            );
+            const fontWidth = context.measureText("田").width;
+
+            if (this.$style.alarmList && this.$style.alarmList.length > 0) {
+                let totalWidth = 0, widthStore = [], lineWidth;
+                //收集总长度,确定起始位置
+                this.$style.alarmList.forEach(v => {
+                    lineWidth = context.measureText(v.text).width;
+                    widthStore.push(lineWidth);
+                    totalWidth += lineWidth + 2 * alarmPadding;
+                });
+                let startX = -this.$style.borderWidth - this.$style.size[0] / 2 - totalWidth / 2,
+                    startY = -this.$style.borderWidth - this.$style.size[1] / 2 - fontWidth - alarmPadding * 2 - 5;
+                //开始绘制
+                this.$style.alarmList.forEach((v, i) => {
+                    paintAlarm(
+                        context, v.text, fontWidth,
+                        startX, startY,
+                        v.color || this.$style.alarmColor,
+                        v.textColor || this.$style.alarmTextColor,
+                        v.alpha || this.$style.alarmAlpha
+                    );
+                    startX += widthStore[i] + 2 * alarmPadding;
+                });
+
+            }
+            else if (this.$style.alarmText !== "") {
+                const lineWidth = context.measureText(this.$style.alarmText).width,
+                    startX = -this.$style.borderWidth - this.$style.size[0] / 2 - lineWidth / 2 - alarmPadding / 2,
+                    startY = -this.$style.borderWidth - this.$style.size[1] / 2 - fontWidth - alarmPadding * 2 - 5;
+
+                paintAlarm(
+                    context, this.$style.alarmText,
+                    fontWidth, startX, startY,
+                    this.$style.alarmColor,
+                    this.$style.alarmTextColor,
+                    this.$style.alarmAlpha
+                );
+
+            }
         }
         return this;
     }
 }
 export { ImageNode };
 
+function paintAlarm(ctx, text, fontWidth, x, y, color, textColor, alpha) {
+    const lineWidth = ctx.measureText(text).width,
+        panelWidth = lineWidth + alarmPadding * 2,
+        panelHeight = fontWidth + alarmPadding * 2;
+    ctx.strokeStyle = "rgba(" + color + ", " + alpha + ")";
+    ctx.fillStyle = "rgba(" + color + ", " + alpha + ")";
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.rect(
+        x,
+        y,
+        panelWidth,
+        panelHeight
+    );
+    ctx.fill();
+    ctx.fillStyle = "rgba(" + textColor + ", " + alpha + ")";
+    ctx.fillText(
+        text,
+        x + alarmPadding,
+        y + fontWidth + alarmPadding
+    );
+}
