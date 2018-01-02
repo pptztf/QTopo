@@ -29,13 +29,15 @@ function initEvent(win, factory) {
 function doWithForm(win, iposs, data) {
     //设置网段的额xy轴坐标
     [data.x = 0, data.y = 0] = win.data("todo").position;
-    [data.visible, data.zindex, data.style, data.icon]=[1, 0, '', 'yun5.png'];
+    [data.visible, data.zindex]=[1, 0];
+    data.style=" ";
+    data.icon = "yun5.png";
     //设置父亲网段的id
     data.pid = iposs.scene.data("pid");
     iposs.factory.addSegment(data)
         .then(json=> {
             console.info("添加网段成功!");
             iposs.addNode(json.Device);
-            iposs.events.TopoEvent_REFRESH();
+            //iposs.events.TopoEvent_REFRESH();
         });
 }

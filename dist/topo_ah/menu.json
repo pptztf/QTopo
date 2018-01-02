@@ -15,6 +15,98 @@
     "filter": "(${CANVAS:high_light}==true) or (${CANVAS:high_light_manage}==true)"
   },
   {
+    "name": "设备告警",
+    "aweight": "11",
+    "eweight": "10",
+    "type":"url",
+    "action":"/ldims/liposs/webtopo/event/deviceEvent.action?objId=${id}"
+  },
+  {
+    "name": "属性",
+    "aweight": "11",
+    "eweight": "10",
+    "type":"url",
+    "action":"/ldims/Resource/DeviceShow.jsp?device_id=${mo_id}"
+  },
+  {
+    "name": "链路流量",
+    "aweight": "111",
+    "eweight": "1000",
+    "type":"url",
+    "action":"/ldims/Visualman/now_main.jsp?linkid=${linkParm[linkid]}&from=${linkParm[from]}&to=${linkParm[to]}&from_ip=${linkParm[from_ip]}&to_ip=${linkParm[to_ip]}&from_id=${linkParm[from_id]}&to_id=${linkParm[to_id]}&isShield=false"
+  },
+  {
+    "name": "设备实时性能",
+    "aweight": "11",
+    "eweight": "10",
+    "type":"url",
+    "action":"/ldims/webtopo/webtopo_dbPM.jsp?device_id=${mo_id}"
+  },
+  {
+    "name": "设备信息",
+    "aweight": "11",
+    "eweight": "10",
+    "type":"url",
+    "item": [
+      {
+        "name": "系统信息",
+        "type": "url",
+        "action": "/ldims/webtopo/webtop_SysInfo.jsp?title=sys&className=ReadDeviceInfo&device_id=${mo_id}"
+      },
+      {
+        "name": "端口信息",
+        "type": "url",
+        "action": "/ldims/webtopo/webtop_SysInfo.jsp?title=port&className=ReadDevicePort&device_id=${mo_id}"
+      },
+      {
+        "name": "端口面板",
+        "type": "url",
+        "action": "/ldims//iposs/element/resource/simulateview/port/ViewAction.action?deviceID=${mo_id}"
+      },
+      {
+        "name": "设备流量",
+        "type": "url",
+        "action": "/ldims/iposs/element/performance/report/flux/tuopu/devport/devPortReportAction!toTabFrm.action?deviceId=${mo_id}"
+      },
+      {
+        "name": "设备性能",
+        "type": "url",
+        "action": "/ldims/webtopo/webtop_xinnen.jsp?device_id=${mo_id}"
+      }
+    ]
+  },
+  {
+    "name": "实用工具",
+    "aweight": "11",
+    "eweight": "10",
+    "type":"url",
+    "item": [
+      {
+        "name": "ping",
+        "type": "url",
+        "action": "/ldims/webtopo/webtop_ping.jsp?device_id=${mo_id}"
+      }
+    ]
+  },
+  {
+    "name": "设备配置",
+    "aweight": "11",
+    "eweight": "10",
+    "type":"url",
+    "item": [
+      {
+        "name": "流量配置",
+        "type": "url",
+        "action": "/ldims/iposs/config/flux/configFlux.action?device_id=${mo_id}"
+      },
+      {
+        "name": "性能配置",
+        "type": "url",
+        "action": "/ldims/iposs/config/pmee/configPmee.action?device_id=${mo_id}"
+      }
+    ]
+  },
+  {
     "name": "黏贴-剪切",
     "aweight": "11",
     "eweight": "1",
@@ -176,9 +268,9 @@
     "action": "EventType(TopoEvent_EDIT_SEGMENT)"
   },
   {
-    "name": "端到端查询",
+    "name": "主机业务路由跟踪",
     "aweight": "111",
-    "eweight": "11111111111",
+    "eweight": "111111111110111",
     "type": "event",
     "action": "EventType(TopoEvent_End_To_End)"
   },

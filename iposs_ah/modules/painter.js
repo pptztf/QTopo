@@ -33,7 +33,6 @@ export const initPainter = iposs => {
                 id = node.data("id");
                 if (map.has(id)) {
                     alarm = map.get(id);
-                    console.log('alarmlist',alarm)
                     node.alarm({
                         alarmColor: alarm.color,
                         //alarmText: alarm.content
@@ -76,7 +75,6 @@ export const initPainter = iposs => {
                 paintAlarm(alarmData);
                 windows("alarmInfo", alarmData.all);
             }).catch(e => {
-                console.info(e);
                 iposs.progress(100, "未知错误,请联系管理员!", true);
                 iposs.alert("未知错误,请联系管理员!");
             });

@@ -86,12 +86,13 @@ export const initFactory = iposs => {
             return httpCtl({
                 url: url.alarm,
                 data: {
-                    objIdArray: scene.map(node => node.data('id'), "node").join(",")
+                    id: scene.data("pid"),
+                    objids: scene.map(node => node.data('id'), "node").join(",")
                 }
             }).then(data => {
                 iposs.progress(100, "绘制完成");
                 return data;
-            })
+            });
         }
         iposs.progress(100, "绘制完成");
     }
@@ -250,13 +251,15 @@ export const initFactory = iposs => {
             .then(data => data.forEach(option => select.append(`<option value=${option.resourceTypeId}>${option.descr}</option>`)));
     }
 
-    function linkCount(id) {
+    function linkCount(id ,fromId,toId) {
         return httpCtl({
             url: url.get_linkCount,
             data: {
-                linkId: id
+                linkId: id,
+                fromId:fromId,
+                toId:toId
             }
-        }).then(data => _.reduce(data, (value, name) => name + " : " + value + "</br>"));
+        })
     }
 
     function addGroup(data) {

@@ -24,7 +24,7 @@ export let initWindows = iposs=> {
         windows = {
             addGroup,
             addDevice,
-            alarmInfo,
+            // alarmInfo,
             addSegment,
             editDeviceAttr,
             editDeviceType,

@@ -231,22 +231,22 @@ body {
     font-size: 16px;
 }
 
-/*ÍØÆËµ¼º½*/
-.topBox {
+/*ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½*/
+/* .topBox {
     text-align: center;
     padding-top: 15px;
-}
+} */
 
 .topNav {
     color: white;
     border: 2px solid #337ab7;
     font-size: 16px;
-    /*position: absolute;*/
-    /*left: 15px;*/
-    /*top: 15px;*/
+    position: absolute;
+    left: 15px;
+    top: 15px;
     display: inline-block;
     vert-align: middle;
-    /*text-align: center;*/
+    text-align: center;
     padding: 5px 20px;
     border-radius: 10px;
     background-color: rgba(6, 36, 62, 0.8);
@@ -274,6 +274,14 @@ body {
 .list-group {
     display: none;
     position: absolute;
-    right: -129px;
+    left: 100%;
     top: 5px;
+}
+.sourceList .btn{
+    width: 100%;
+    overflow: hidden
+}
+.targetList .btn{
+    width: 100%;
+    overflow: hidden
 }

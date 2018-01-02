@@ -1,10 +1,11 @@
 import "./style.css";
-import { initEvents } from "./modules/events";
-import { initFactory } from "./modules/factory";
-import { initSearch } from "./modules/search";
-import { initPainter } from "./modules/painter";
-import { initWindows } from "./windows";
-import { initParse } from "./parse";
+import {initEvents} from "./modules/events";
+import {initFactory} from "./modules/factory";
+import {initSearch} from "./modules/search";
+import {initPainter} from "./modules/painter";
+import {initWindows} from "./windows";
+import {initParse} from "./parse";
+
 const _ = QTopo.util;
 
 window.topo = {
@@ -35,16 +36,23 @@ window.topo = {
 
 function initTopo(iposs) {
     const stage = QTopo(iposs.dom, {
-        background: iposs.background
-    }), //场景对象
+            background: iposs.background
+        }), //场景对象
         scene = stage.add(), //场景中增加一个图层
         moved = new Set();
     iposs.stage = stage;
     iposs.scene = scene;
     initComponent(iposs);
     scene.on("mousedrag", function (e) {
-        if (e.target && (_.isNode(e.target) || e.target.$data.type=='group')) {
-            moved.add(e.target);
+        if (e.target && (_.isNode(e.target) || e.target.$data.type == 'group')) {
+            if(e.target.$data.type=='group'){
+                moved.add(e.target);
+                for(var item of e.target.$children){
+                    moved.add(item)
+                }
+            }else{
+                moved.add(e.target);
+            }
         }
     });
     scene.on("mouseup", function (e) {
@@ -86,6 +94,46 @@ function initComponent(iposs) {
             type: 0,
             logo: iposs.imagePath + "logo.png"
         });
+    let timeoutId = null, preTargt = null;
+    iposs.scene
+        .on('mousemove', e => {
+            var element = e.target;
+            // if (_.isNode(element)) {
+            //     tips.open(
+            //         element.$data.title,
+            //         e.offsetX, e.offsetY,
+            //         'top'
+            //     );
+            //     clearTimeout(timeoutId);
+            // } else l
+            if (_.isLink(element) && element.$path[0].$data.type=='node' && element.$path[1].$data.type=='node') {
+                if (preTargt !== element) {
+                    clearTimeout(timeoutId);
+                    var start = element.$path[0],
+                        end = element.$path[1];
+                    timeoutId = setTimeout(
+                        function () {
+                            iposs.factory.linkCount(element.$id,element.$data.from,element.$data.to)
+                                .then(data => {
+                                    data==undefined　&& (data={链路数量: "N/A"})
+                                    for(let k in data){
+                                        tips.open(`<div>${k} : ${data[k]}</div>`, e.offsetX, e.offsetY, 'top')
+                                    }
+                                });
+                        },
+                        5000
+                    );
+                }
+            } else {
+                tips.close();
+                clearTimeout(timeoutId);
+            }
+            preTargt = e.target;
+        })
+        .on("mousedown", function () {
+            clearTimeout(timeoutId);
+            tips.close();
+        });
     Object.assign(iposs, {
         tips,
         loading,
@@ -117,4 +165,5 @@ function initComponent(iposs) {
 }
 
 //得到参数
+
 

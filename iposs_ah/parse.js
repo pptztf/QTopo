@@ -12,18 +12,18 @@ export let initParse = function (iposs) {
             api: {
                 position: [x + offset[0], y + offset[1]],
                 id: json.id,
-                image: imagePath + (json.visible==1?json.icon:(json.icon.substring(0,json.icon.indexOf('.png'))+'_glory.png'))
+                image: imagePath + (json.visible == 1 ? json.icon : (json.icon.substring(0, json.icon.indexOf('.png')) + '_glory.png'))
             },
             style: {
                 textValue: json.name,
                 size: [width, height]
             },
-            data: json
+            data: filterNodeJson(json)
         };
         node.data.elementType = json.type;
         return node;
     });
-    const parseLink = _check(json => {
+    const parseLink = _check((json,nodeAndSegmentJson) => {
         const link = {
             type: "DirectLink",
             api: {
@@ -34,14 +34,12 @@ export let initParse = function (iposs) {
                     speed: 1,
                 }
             },
-            style: {
-
-            },
+            style: {},
             state: {
                 showStartArrow: false,
                 showEndArrow: false
             },
-            data: json
+            data: filterLinkJson(nodeAndSegmentJson,json)
         };
         if (_.notNull(json.color)) {
             link.style.color = _.transColor(json.color);
@@ -50,6 +48,7 @@ export let initParse = function (iposs) {
         return link;
     });
     const parseGroup = _check((json, offset = scene.data("offset")) => {
+        console.log(json,'group');
         let children = [];
         if (json.Node) {
             if (_.isArray(json.Node)) {
@@ -85,7 +84,7 @@ export let initParse = function (iposs) {
         group.data.elementType = json.type;
         return group;
     });
-    //×Ö·û´®Æ´½Ó-showLevel À´ÅÐ¶ÏÏÔÊ¾¼¸¸ö, ÏÖÔÚµÄÎÊÌâÊÇÑÕÉ«ÈçºÎ¿ØÖÆ
+    //ï¿½Ö·ï¿½ï¿½ï¿½Æ´ï¿½ï¿½-showLevel ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É«ï¿½ï¿½Î¿ï¿½ï¿½ï¿½
     const parseAlarm = json => {
         const alarm = new Map();
         let level = json.attribute.showLevel;
@@ -93,19 +92,22 @@ export let initParse = function (iposs) {
         json.node.map(node => {
             let [color, content] = ["", 0];
             let alarmList = [];
-            for (var i = 1; i <=level; i++) {
-                console.log(node[i]);
-                if(node[i]!=0){
+            let flag = 0;
+            for (var i = 1; i <= level; i++) {
+                if (node[i] != 0) {
+                    flag = 1;
                     alarmList.push({
-                        text:node[i]+alarmTip[i-1],
-                        color:alarmColor[i-1]
+                        text: node[i] + alarmTip[i - 1],
+                        color: alarmColor[i - 1]
                     })
                 }
             }
-            alarm.set(node.id,{
-                color:'red',
-                alarmList:alarmList
-            });
+            if (flag) {
+                alarm.set(node.id, {
+                    color: 'red',
+                    alarmList: alarmList
+                });
+            }
         });
         return alarm;
     };
@@ -135,7 +137,7 @@ export let initParse = function (iposs) {
             segmentData = parseNode(json.Segments.Segment, data.offset),
             ObjectData = parseNode(json.Objects.Object, data.offset),
             GroupData = parseGroup(json.Groups.Group, data.offset),
-            linkData = parseLink(json.Links.Link);
+            linkData = parseLink(json.Links.Link,[].concat(json.Segments.Segment,json.Nodes.Node));
         return {
             data,
             elements: {
@@ -154,6 +156,7 @@ export let initParse = function (iposs) {
         parseLayer
     };
 };
+
 //-----------------
 function _check(parser) {
     return function (json, ...arr) {
@@ -166,6 +169,54 @@ function _check(parser) {
         return [];
     }
 }
+
 function _checkNum(num) {
     return Number(num) || 0;
+}
+
+function filterLinkJson(nodeAndSegmentJson,json) {
+    var linkParm = {
+        linkid:json.id,
+        from_id:json.from,
+        to_id:json.to
+    };
+    nodeAndSegmentJson.forEach(e=>{
+        if(e!=undefined){
+            if(e.id==json.from){
+                linkParm.from=e.name
+                if(e.p){
+                    linkParm.from_ip = parseObjToMap(e.p).get("mo_id")
+                }else{
+                    linkParm.from_ip=e.name
+                }
+            }else if(e.id==json.to){
+                linkParm.to=e.name
+                if(e.p){
+                    linkParm.to_ip = parseObjToMap(e.p).get("mo_id");
+                }else{
+                    linkParm.to_ip=e.name
+                }
+            }
+        }
+    })
+    json.linkParm = linkParm;
+    return json;
+}
+
+function filterNodeJson(json) {
+    // json.p==undefined? json:parseObjToMap(json.p).get("deviceMode")
+    if(json.p){
+        json.mo_id = parseObjToMap(json.p).get("mo_id");
+        return json
+    }else{
+        return json;
+    }
+}
+
+function parseObjToMap(arr) {
+    var pMap = new Map();
+    arr.forEach((ele) => {
+        pMap.set(ele.k, ele.content);
+    })
+    return pMap;
 }
